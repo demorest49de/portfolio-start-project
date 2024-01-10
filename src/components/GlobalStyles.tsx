@@ -18,8 +18,10 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    min-width: 320px;
+    min-width: 360px;
     min-height: 100vh;
+    
+    background-color: #1F1F20;
   }
 
   picture{

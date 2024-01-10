@@ -1,16 +1,14 @@
-import styled from 'styled-components';
-import {GlobalStyles} from "./components/GlobalStyles";
+import {Header} from "./layout/header/Header";
 
 
 function App() {
     return (
         <div className="App">
-            <GlobalStyles/>
 
 
-        {/*  Header  */}
-        {/*  Main  */}
-        {/*   Footer */}
+            <Header/>
+            {/*  Main  */}
+            {/*   Footer */}
 
 
         </div>
