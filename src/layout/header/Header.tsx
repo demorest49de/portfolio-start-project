@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from "styled-components";
-import {Container} from "../../components/Container";
+import {HeaderContainer} from "./HeaderContainer";
 
 export const Header = () => {
     return (
         <SHeader>
-            <Container/>
+            <HeaderContainer/>
         </SHeader>
     )
 }
 
 const SHeader = styled.header`
-    min-height: 1024px;
-  background-color: rgba(31, 31, 32, 0.90);
+  max-height: 1024px;
+  background-color: rgba(50 50 63 / 90%);
 `
