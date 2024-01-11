@@ -1,5 +1,5 @@
 import {createGlobalStyle} from "styled-components";
-import myTheme from "../Theme.Styled";
+import myTheme from "./Theme.Styled";
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     -webkit-font-smoothing: antialiased;
