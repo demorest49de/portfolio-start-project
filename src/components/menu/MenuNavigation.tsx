@@ -1,12 +1,17 @@
 import styled from "styled-components";
 import myTheme from "../../styles/Theme.Styled";
 
-export const MenuNavigation = (props: { menuItems: Array<string> }) => {
+type menuSettings = {
+    items: Array<string>, isVisible: boolean,
+}
+
+// export const MenuNavigation = (props: {settings: {items: Array<string>, isVisible: boolean}}) => {
+export const MenuNavigation = (props: { settings: menuSettings }) => {
     return (
         <SMenuNavigation>
             <ul>
                 {
-                    props.menuItems.map((item, index) => {
+                    props.settings.items.map((item, index) => {
                         return <li key={index}>
                             <a href="#" aria-label={item}>{item}
                             </a></li>

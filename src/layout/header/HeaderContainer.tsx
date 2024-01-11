@@ -11,13 +11,16 @@ type CloseBtnProps = {
 
 export const HeaderContainer = () => {
     const size = '24';
-    const items = ["Home","Skills","Works","Testimony","Contact"]
+    const settings = {
+        items: ["Home", "Skills", "Works", "Testimony", "Contact"],
+        isVisible: false,
+    }
     return (
         <SHeaderContainer>
             <SCloseBtn width={size} height={size}>
                 <Icon iconId={'closebtn'} width={size} height={size}/>
             </SCloseBtn>
-            <MenuNavigation menuItems={items}/>
+            <MenuNavigation settings={settings}/>
         </SHeaderContainer>
     )
 }
