@@ -10,11 +10,11 @@ type CloseBtnProps = {
 }
 
 export const HeaderContainer = () => {
-    const size = '21';
+    const size = '24';
     return (
         <SHeaderContainer>
             <SCloseBtn width={size} height={size}>
-                <Icon iconId={'telegram'} width={size} height={size}/>
+                <Icon iconId={'closebtn'} width={size} height={size}/>
             </SCloseBtn>
             <MenuNavigation/>
         </SHeaderContainer>

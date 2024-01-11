@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import myTheme from "../Theme.Styled";
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -21,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     min-width: 360px;
     min-height: 100vh;
     
-    background-color: #1F1F20;
+    background-color: ${myTheme.backgroundColor};
   }
 
   picture{

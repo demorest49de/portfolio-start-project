@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import {HeaderContainer} from "./HeaderContainer";
+import myTheme from "../../styles/Theme.Styled";
 
 export const Header = () => {
     return (
@@ -12,7 +13,7 @@ export const Header = () => {
 
 const SHeader = styled.header`
   max-height: 1024px;
-  background-color: rgba(35, 35, 38, 0.9);
+  background-color: ${myTheme.header.backgroundColor};
   //opacity: 0;
   //visibility: hidden;
 `
