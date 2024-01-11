@@ -13,5 +13,4 @@ export const SContainer = styled.div`
   margin: 0 auto;
   padding-left: 150px;
   padding-right: 150px;
-  min-height: inherit;
 `
