@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import myTheme from "../../styles/Theme.Styled";
 
 export const MenuNavigation = () => {
     return(
@@ -27,7 +28,7 @@ const SMenuNavigation = styled.nav`
     align-items: center;
   }
   li {
-    color: #7572D5;
+    color: ${myTheme.header.menuNav.color};
     font-family: Josefin Sans;
     font-size: 50px;
     font-weight: 400;
