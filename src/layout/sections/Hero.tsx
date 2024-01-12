@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
-import {Container, SContainer} from "../../components/container/Container";
+import {SContainer} from "../../components/container/Container";
 import myTheme from "../../styles/Theme.Styled";
+import DeveloperPhoto from './../../assets/images/7b1f8f2f0bdbca351355bd3fe1aab143.jpg'
 
-const _class = "hero";
 const Hero = () => {
     return (
         <SHeroSection id="Hero">
@@ -31,7 +31,7 @@ const HeroContent = () => {
             </SHeroDiv2>
             <SHeroDiv3>
                 <picture>
-                    <img src="./../../assets/images/7b1f8f2f0bdbca351355bd3fe1aab143.jpg" alt="Svetlana Dyablo"/>
+                    <img src={DeveloperPhoto} alt="Svetlana Dyablo"/>
                 </picture>
             </SHeroDiv3>
         </SHeroDiv1>
@@ -82,6 +82,8 @@ const SHeroDiv3 = styled.div`
     top: 24px;
     min-width: 350px;
     height: 430px;
+    object-fit: cover;
+    //object-position: -95px -69px;
   }
 `
 

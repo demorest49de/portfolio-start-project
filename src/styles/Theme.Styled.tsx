@@ -9,7 +9,10 @@ const myTheme = {
         regular: "400",
         bold: "700",
     },
-    backgroundColor: "#1F1F20",
+    backgroundColor: {
+        primary: "#1F1F20",
+        secondary: "#2d2d2f",
+    },
     header: {
         backgroundColor: "#39393C",
         menuNav: {
