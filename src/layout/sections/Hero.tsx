@@ -1,23 +1,25 @@
 import React from 'react';
 import Section from "../../components/section/Section";
 
-const className = "hero";
+const _class = "hero";
 const Hero = () => {
     return (
-        <Section id="Hero" class={className}/>
+        <Section id="Hero" class={_class} content={<HeroContent/>}/>
     );
 };
 
-const Content = () => {
+const HeroContent = () => {
     return (
-        <div className={`${className}__about-me`}>
-            <p className={`${className}__hi`}>Hi There</p>
-            <p className={`${className}__introduce-me`}>I'am Svetlana Dyablo</p>
-            <p className={`${className}__who-am-i`}>A WEB Developer.</p>
-            <div className={`${className}__image-outline-block`}>
-                <img src="" alt=""/>
+        <>
+            <div className={`${_class}__text-block`}>
+                <p className={`${_class}__text-hi`}>Hi There</p>
+                <p className={`${_class}__text-`}>I'am Svetlana Dyablo</p>
+                <p className={`${_class}__text-`}>A WEB Developer.</p>
             </div>
-        </div>
+            <div className={`${_class}__image-block`}>
+                <img className={`${_class}__`} src="" alt="Svetlana Dyablo"/>
+            </div>
+        </>
     )
 }
 
