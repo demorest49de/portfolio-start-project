@@ -11,5 +11,5 @@ export const Header = () => {
 }
 
 const SHeader = styled.header`
-  max-height: 100px;
+  min-height: 100px;
 `
