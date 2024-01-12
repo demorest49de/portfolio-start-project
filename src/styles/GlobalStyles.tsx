@@ -21,8 +21,8 @@ export const GlobalStyles = createGlobalStyle`
 
     min-width: 360px;
     min-height: 100vh;
-    
     background-color: ${myTheme.backgroundColor};
+    color: ${myTheme.colors.primary};
   }
 
   picture{

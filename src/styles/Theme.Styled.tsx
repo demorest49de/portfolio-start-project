@@ -1,12 +1,14 @@
 const myTheme = {
-    // colors: {
-    //     primary: "gold",
-    //     secondary: "pink",
-    //     grey: {
-    //         dark: "#403e3e",
-    //         light: "#6e6e6e",
-    //     },
-    // },
+    colors: {
+        primary: "#FFFFFF",
+    },
+    fonts: {
+        JosefinSans: "Josefin Sans",
+    },
+    fontWeight: {
+        regular: "400",
+        bold: "700",
+    },
     backgroundColor: "#1F1F20",
     header: {
         backgroundColor: "#39393C",
