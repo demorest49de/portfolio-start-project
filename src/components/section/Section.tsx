@@ -1,10 +1,9 @@
-import React, {ReactElement} from 'react';
-import styled from 'styled-components';
+import React, {ReactNode} from 'react';
 
-const Section = (props: { id: string, class: string, content: ReactElement }) => {
+const Section = (props: { id: string, class: string, children: ReactNode }) => {
     return (
         <section id={props.id} className={props.class}>
-            {props.content}
+            {props.children}
         </section>
     );
 };
