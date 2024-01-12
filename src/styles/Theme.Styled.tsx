@@ -1,6 +1,8 @@
 const myTheme = {
     colors: {
         primary: "#FFFFFF",
+        pink: "#7572D5",
+        darkGrey: "#39393C",
     },
     fonts: {
         JosefinSans: "Josefin Sans",
@@ -12,12 +14,6 @@ const myTheme = {
     backgroundColor: {
         primary: "#1F1F20",
         secondary: "#2d2d2f",
-    },
-    header: {
-        backgroundColor: "#39393C",
-        menuNav: {
-            color: "#7572D5",
-        },
     },
 }
 

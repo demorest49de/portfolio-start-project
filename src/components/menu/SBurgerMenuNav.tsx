@@ -17,7 +17,7 @@ export const SBurgerMenuNav = styled.nav`
   }
 
   li {
-    color: ${myTheme.header.menuNav.color};
+    color: ${myTheme.colors.darkGrey};
     font-family: Josefin Sans;
     font-size: 50px;
     font-weight: 400;

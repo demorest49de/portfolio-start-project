@@ -26,8 +26,10 @@ const HeroContent = () => {
         <SHeroDiv1>
             <SHeroDiv2>
                 <p>Hi There</p>
-                <p>I am Svetlana Dyablo</p>
+                <p>I am Svetlana Dyablo
+                </p>
                 <p>A Web Developer. |</p>
+                <SHeroRectangle></SHeroRectangle>
             </SHeroDiv2>
             <SHeroDiv3>
                 <picture>
@@ -38,6 +40,17 @@ const HeroContent = () => {
     )
 }
 
+const SHeroRectangle = styled.div`
+  position: absolute;
+  width: 426px;
+  height: 20px;
+  top: 59px;
+  left: 137px;
+  background-color: ${myTheme.colors.pink};
+  opacity: .8;
+  z-index: -1;
+`
+
 const SHeroDiv1 = styled.div`
   display: flex;
   justify-content: space-between;
@@ -45,6 +58,8 @@ const SHeroDiv1 = styled.div`
 `
 
 const SHeroDiv2 = styled.div`
+  position: relative;
+
   p:nth-child(1) {
     font-weight: ${myTheme.fontWeight.regular};
     font-size: 14px;

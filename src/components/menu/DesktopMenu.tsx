@@ -19,7 +19,7 @@ export default DesktopMenu;
 
 
 const SDesktopMenu = styled.div`
-  background-color: ${myTheme.header.backgroundColor};
+  background-color: ${myTheme.colors.darkGrey};
   opacity: 0;
   visibility: hidden;
 `

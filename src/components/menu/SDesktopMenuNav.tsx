@@ -15,7 +15,7 @@ const SDesktopMenuNav = styled.nav`
   }
 
   li {
-    color: ${myTheme.header.menuNav.color};
+    color: ${myTheme.colors.pink};
     font-family: Josefin Sans;
     font-size: 50px;
     font-weight: 400;
