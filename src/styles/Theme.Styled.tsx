@@ -2,7 +2,8 @@ const myTheme = {
     colors: {
         primary: "#FFFFFF",
         pink: "#7572D5",
-        darkGrey: "#39393C",
+        greyOne: "#39393C",
+        greyTwo: "#4A4A4A",
     },
     fonts: {
         JosefinSans: "Josefin Sans",

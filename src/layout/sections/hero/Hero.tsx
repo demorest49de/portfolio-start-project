@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import {SContainer} from "../../components/container/Container";
-import myTheme from "../../styles/Theme.Styled";
-import DeveloperPhoto from './../../assets/images/7b1f8f2f0bdbca351355bd3fe1aab143.jpg'
+import {SContainer} from "../../../components/container/Container";
+import myTheme from "../../../styles/Theme.Styled";
+import DeveloperPhoto from '../../../assets/images/7b1f8f2f0bdbca351355bd3fe1aab143.jpg'
 
 const Hero = () => {
     return (

@@ -32,7 +32,7 @@ const SCloseBtn = styled(SMenuButton)<CloseBtnProps>`
 `
 
 const SBurgerMenu = styled.div`
-  background-color: ${myTheme.colors.darkGrey};
+  background-color: ${myTheme.colors.greyOne};
   opacity: 0;
   visibility: hidden;
 `

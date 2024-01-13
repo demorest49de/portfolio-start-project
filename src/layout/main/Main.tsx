@@ -1,6 +1,6 @@
 import React from 'react';
-import Hero from '../sections/Hero';
-import Skills from "../sections/Skills";
+import Hero from '../sections/hero/Hero';
+import {Skills} from "../sections/skills/Skills";
 
 const Main = () => {
     return (
