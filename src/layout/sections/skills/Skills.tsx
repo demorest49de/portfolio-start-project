@@ -4,7 +4,7 @@ import {SContainer} from "../../../components/container/Container";
 import myTheme from "../../../styles/Theme.Styled";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import SectionTitle from '../../../components/headers/SectionHeader';
-import { Skill } from '../skills/Skill';
+import {Skill} from '../skills/Skill';
 
 export const Skills = () => {
     return (
@@ -12,7 +12,10 @@ export const Skills = () => {
             <SContainer>
                 <SectionTitle text={"My Skills"}/>
                 <FlexWrapper wrap={'wrap'}>
-                    <Skill/>
+                    <Skill skillIconId={"code"}
+                           skillTitle={'html5'}
+                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
+                    />
                 </FlexWrapper>
             </SContainer>
         </SSkillsSection>

@@ -2,21 +2,44 @@ import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import React from "react";
 import styled from "styled-components";
 import myTheme from "../../../styles/Theme.Styled";
-import Icon, {StyledIcon} from "../../../components/Icon/Icon";
+import Icon from "../../../components/Icon/Icon";
 
-export const Skill = () => {
+type SkillPropsType = {
+    skillText: string,
+    skillTitle: string,
+    skillIconId: string,
+}
+
+export const Skill = (props: SkillPropsType) => {
     return (
-        <FlexWrapper justify={"center"} direction={"column"}>
+        <StyledSkillBlock justify={"start"} direction={"column"} align={'center'}>
             <SRhombus justify={"center"} align={'center'}>
-                <Icon iconId={"code"} width={"50"} height={"50"} rotate={"-45"}/>
+                <Icon iconId={props.skillIconId} width={"50"} height={"50"} rotate={"-45"}/>
             </SRhombus>
-        </FlexWrapper>
+            <SkillTitle>{props.skillTitle}</SkillTitle>
+            <SkillText>{props.skillText}</SkillText>
+        </StyledSkillBlock>
     )
 };
+
+const StyledSkillBlock = styled(FlexWrapper)`
+  width: 380px;
+  height: 338px;
+  padding: 70px 20px 0px 20px;
+`
 
 const SRhombus = styled(FlexWrapper)`
   transform: rotate(45deg);
   background-color: ${myTheme.colors.greyTwo};
   width: 80px;
   height: 80px;
+  margin-bottom: 40px;
+`
+
+const SkillTitle = styled.h3`
+    margin-bottom: 15px;
+`
+
+const SkillText = styled.p`
+    text-align: center;
 `
