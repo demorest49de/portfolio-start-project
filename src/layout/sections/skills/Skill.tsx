@@ -38,8 +38,15 @@ const SRhombus = styled(FlexWrapper)`
 
 const SkillTitle = styled.h3`
     margin-bottom: 15px;
+  font-family: ${myTheme.fonts.JosefinSans};
+  font-size: 16px;
+  font-weight: ${myTheme.fontWeight.bold};
+  letter-spacing: 1px;
+  text-transform: uppercase;
 `
 
 const SkillText = styled.p`
     text-align: center;
+  font-size: 14px;
+  font-weight:  ${myTheme.fontWeight.regular};
 `
