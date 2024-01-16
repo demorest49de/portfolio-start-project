@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
-import {SContainer} from "../../../components/container/Container";
+import {Container} from "../../../components/container/Container";
 import myTheme from "../../../styles/Theme.Styled";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import SectionTitle from '../../../components/headers/SectionHeader';
 import {HeaderPropsType} from "../hero/Hero";
-import {Navigation} from "../../../components/menu/Navigation";
+import {Menu} from "../../../components/menu/Menu";
 import {StyledWork} from "./StyledWork";
 
 const items = ["All", "landing page", "React", "spa"];
@@ -13,14 +13,14 @@ const items = ["All", "landing page", "React", "spa"];
 export const Work = (props: HeaderPropsType) => {
     return (
         <SSkillsSection id={props.headerName}>
-            <SContainer>
+            <Container>
                 <SectionTitle text={`My ${props.headerName}`} mb={"69px"}/>
                 <FlexWrapper wrap={'wrap'} justify={'center'} minHeight={'30px'}>
                     <StyledWork>
-                        <Navigation menuItems={items}/>
+                        <Menu menuItems={items}/>
                     </StyledWork>
                 </FlexWrapper>
-            </SContainer>
+            </Container>
         </SSkillsSection>
     );
 };

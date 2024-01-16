@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from "../Icon/Icon";
-import {Navigation} from "./Navigation";
+import {Menu} from "./Menu";
 import styled from "styled-components";
 import {SMenuButton} from "../button/menuButton";
 import myTheme from "../../styles/Theme.Styled";
@@ -19,7 +19,7 @@ export const BurgerMenu = (props: { menuItems: string[] }) => {
                 <Icon iconId={'closebtn'} width={size} height={size}/>
             </SCloseBtn>
             <StyledBurgerNav>
-                <Navigation menuItems={props.menuItems}/>
+                <Menu menuItems={props.menuItems}/>
             </StyledBurgerNav>
         </StyledBurgerMenu>
     )

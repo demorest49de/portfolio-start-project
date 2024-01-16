@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {SContainer} from "../../../components/container/Container";
+import {Container} from "../../../components/container/Container";
 import myTheme from "../../../styles/Theme.Styled";
 import DeveloperPhoto from '../../../assets/images/7b1f8f2f0bdbca351355bd3fe1aab143.jpg'
 
@@ -11,9 +11,9 @@ export type HeaderPropsType = {
 const Hero = (props: HeaderPropsType) => {
     return (
         <SHeroSection id={props.headerName}>
-            <SContainer>
+            <Container>
                 <HeroContent/>
-            </SContainer>
+            </Container>
         </SHeroSection>
 
     );
@@ -21,8 +21,9 @@ const Hero = (props: HeaderPropsType) => {
 
 
 const SHeroSection = styled.section`
-  padding-top: 172px;
-  padding-bottom: 282px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 `
 
 const HeroContent = () => {

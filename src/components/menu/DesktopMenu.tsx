@@ -1,25 +1,21 @@
 import React from "react";
-import {Navigation} from "./Navigation";
+import {Menu} from "./Menu";
 import Logo from "../logo/Logo";
 import {StyledDesktopNav} from "./StyledDesktopNav";
 import styled from "styled-components";
+import FlexWrapper from "../flexWrapper/FlexWrapper";
 
 
 const DesktopMenu = (props: { menuItems: string[] }) => {
 
     return (
-        <StyledDesktopMenu>
+        <FlexWrapper justify={"space-between"}>
             <Logo/>
             <StyledDesktopNav>
-                <Navigation menuItems={props.menuItems}/>
+                <Menu menuItems={props.menuItems}/>
             </StyledDesktopNav>
-        </StyledDesktopMenu>
+        </FlexWrapper>
     )
 };
 
 export default DesktopMenu;
-
-const StyledDesktopMenu = styled.div`
-  display: flex;
-  justify-content: space-between;
-`

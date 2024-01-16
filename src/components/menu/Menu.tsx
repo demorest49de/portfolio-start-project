@@ -1,5 +1,5 @@
 
-export const Navigation = (props: { menuItems: string[] }) => {
+export const Menu = (props: { menuItems: string[] }) => {
     return (
         <ul>
             {

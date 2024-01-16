@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {SContainer} from "../../../components/container/Container";
+import {Container} from "../../../components/container/Container";
 import myTheme from "../../../styles/Theme.Styled";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import SectionTitle from '../../../components/headers/SectionHeader';
@@ -10,7 +10,7 @@ import {HeaderPropsType} from "../hero/Hero";
 export const Skills = (props: HeaderPropsType) => {
     return (
         <SSkillsSection id={props.headerName}>
-            <SContainer>
+            <Container>
                 <SectionTitle text={`My ${props.headerName}`} mb={'80px'}/>
                 <FlexWrapper wrap={'wrap'}>
                     <Skill skillIconId={"code"}
@@ -38,7 +38,7 @@ export const Skills = (props: HeaderPropsType) => {
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
                     />
                 </FlexWrapper>
-            </SContainer>
+            </Container>
         </SSkillsSection>
     );
 };
