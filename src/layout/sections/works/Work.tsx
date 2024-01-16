@@ -10,7 +10,7 @@ export const Work = () => {
     return (
         <SSkillsSection id="Works">
             <SContainer>
-                <SectionTitle text={"My Works"} mb={"69px"}/>
+                <SectionTitle text={`My ${'Works'}`} mb={"69px"}/>
                 <FlexWrapper wrap={'wrap'} justify={'center'}>
 
                 </FlexWrapper>

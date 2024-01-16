@@ -2,10 +2,10 @@ import React from 'react'
 import styled from "styled-components";
 import {HeaderContainer} from "./HeaderContainer";
 
-export const Header = () => {
+export const Header = (props: {items: string[]}) => {
     return (
         <SHeader>
-            <HeaderContainer/>
+            <HeaderContainer items={props.items}/>
         </SHeader>
     )
 }

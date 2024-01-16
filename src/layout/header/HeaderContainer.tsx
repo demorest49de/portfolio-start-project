@@ -2,9 +2,9 @@ import styled from "styled-components";
 import {SContainer} from "../../components/container/Container";
 import DesktopMenu from "../../components/menu/DesktopMenu";
 
-export const HeaderContainer = () => {
+export const HeaderContainer = (props: {items: string[]}) => {
     const settings = {
-        items: ["Home", "Skills", "Works", "Testimony", "Contact"],
+        items: props.items,
         BurgerMenuVisible: false,
     }
     return (
