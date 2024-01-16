@@ -15,6 +15,4 @@ const SHeaderContainer = styled(SContainer)`
   
   // высота блока через заполнение контентом
   min-height: fit-content;
-  display: flex;
-  justify-content: space-between;
 `

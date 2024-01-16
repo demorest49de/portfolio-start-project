@@ -5,14 +5,20 @@ import myTheme from "../../../styles/Theme.Styled";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import SectionTitle from '../../../components/headers/SectionHeader';
 import {HeaderPropsType} from "../hero/Hero";
+import {Navigation} from "../../../components/menu/Navigation";
+import {StyledWork} from "./StyledWork";
+
+const items = ["All", "landing page", "React", "spa"];
 
 export const Work = (props: HeaderPropsType) => {
     return (
         <SSkillsSection id={props.headerName}>
             <SContainer>
                 <SectionTitle text={`My ${props.headerName}`} mb={"69px"}/>
-                <FlexWrapper wrap={'wrap'} justify={'center'}>
-
+                <FlexWrapper wrap={'wrap'} justify={'center'} minHeight={'30px'}>
+                    <StyledWork>
+                        <Navigation menuItems={items}/>
+                    </StyledWork>
                 </FlexWrapper>
             </SContainer>
         </SSkillsSection>
@@ -27,4 +33,6 @@ const SSkillsSection = styled.section`
 `
 
 const menuButtons = ['all', 'landing page', 'react', 'spa'];
+
+
 

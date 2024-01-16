@@ -1,25 +1,25 @@
-import styled from "styled-components";
-import myTheme from "../../styles/Theme.Styled";
 import React from "react";
-import {menuSettings, Navigation} from "./Navigation";
+import {Navigation} from "./Navigation";
 import Logo from "../logo/Logo";
+import {StyledDesktopNav} from "./StyledDesktopNav";
+import styled from "styled-components";
 
 
 const DesktopMenu = (props: { menuItems: string[] }) => {
 
     return (
-        <>
+        <StyledDesktopMenu>
             <Logo/>
-            <Navigation menuItems={props.menuItems}/>
-        </>
+            <StyledDesktopNav>
+                <Navigation menuItems={props.menuItems}/>
+            </StyledDesktopNav>
+        </StyledDesktopMenu>
     )
 };
 
 export default DesktopMenu;
 
-
-const SDesktopMenu = styled.div`
-  background-color: ${myTheme.colors.greyOne};
-  opacity: 0;
-  visibility: hidden;
+const StyledDesktopMenu = styled.div`
+  display: flex;
+  justify-content: space-between;
 `
