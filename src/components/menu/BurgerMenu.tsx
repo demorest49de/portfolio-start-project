@@ -10,14 +10,14 @@ type CloseBtnProps = {
     height: string,
 }
 
-const BurgerMenu = (props: {settings: menuSettings}) => {
+const BurgerMenu = (props: {menuItems: string[]}) => {
     const size = '24';
     return (
         <SBurgerMenu>
             <SCloseBtn width={size} height={size}>
                 <Icon iconId={'closebtn'} width={size} height={size}/>
             </SCloseBtn>
-            <Navigation settings={props.settings}/>
+            <Navigation menuItems={props.menuItems}/>
         </SBurgerMenu>
     )
 };

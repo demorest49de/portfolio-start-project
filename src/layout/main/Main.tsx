@@ -3,11 +3,11 @@ import Hero from '../sections/hero/Hero';
 import {Skills} from "../sections/skills/Skills";
 import {Work} from '../sections/works/Work';
 
-const Main = (props: { items: string[] }) => {
+const Main = (props: { menuItems: string[] }) => {
 
-    const itemsObj: { [index: string]: any } = {};
+    const itemsObj: { [index: string]: string } = {};
 
-    props.items.forEach((item) =>
+    props.menuItems.forEach((item) =>
         itemsObj[`${item}`] = item)
 
     console.log(' itemsObj: ', itemsObj);

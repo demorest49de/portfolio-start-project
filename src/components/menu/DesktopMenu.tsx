@@ -5,12 +5,12 @@ import {menuSettings, Navigation} from "./Navigation";
 import Logo from "../logo/Logo";
 
 
-const DesktopMenu = (props: { settings: menuSettings }) => {
+const DesktopMenu = (props: { menuItems: string[] }) => {
 
     return (
         <>
             <Logo/>
-            <Navigation settings={props.settings}/>
+            <Navigation menuItems={props.menuItems}/>
         </>
     )
 };

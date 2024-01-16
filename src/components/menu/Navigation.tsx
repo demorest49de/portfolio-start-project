@@ -5,12 +5,12 @@ export type menuSettings = {
     items: Array<string>, BurgerMenuVisible: boolean,
 }
 
-export const Navigation = (props: { settings: menuSettings }) => {
+export const Navigation = (props: { menuItems: string[] }) => {
     return (
         <SDesktopMenuNav>
             <ul>
                 {
-                    props.settings.items.map((item, index) => {
+                    props.menuItems.map((item, index) => {
                         return <li key={index}>
                             <a href="#" aria-label={item}>{item}
                             </a></li>
