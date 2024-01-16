@@ -15,8 +15,6 @@ export const Header = (props: { menuItems: string[] }) => {
 
 const SHeader = styled.header`
   min-height: 100px;
-  position: fixed;
+  position: absolute;
   min-width: 100vw;
-  z-index: 99999;
-  background-color: transparent;
 `
