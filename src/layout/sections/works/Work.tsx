@@ -4,13 +4,13 @@ import {SContainer} from "../../../components/container/Container";
 import myTheme from "../../../styles/Theme.Styled";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import SectionTitle from '../../../components/headers/SectionHeader';
-import {Skill} from '../skills/Skill';
+import {HeaderPropsType} from "../hero/Hero";
 
-export const Work = () => {
+export const Work = (props: HeaderPropsType) => {
     return (
-        <SSkillsSection id="Works">
+        <SSkillsSection id={props.headerName}>
             <SContainer>
-                <SectionTitle text={`My ${'Works'}`} mb={"69px"}/>
+                <SectionTitle text={`My ${props.headerName}`} mb={"69px"}/>
                 <FlexWrapper wrap={'wrap'} justify={'center'}>
 
                 </FlexWrapper>

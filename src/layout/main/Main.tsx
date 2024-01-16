@@ -13,9 +13,9 @@ const Main = (props: { items: string[] }) => {
     console.log(' itemsObj: ', itemsObj);
     return (
         <main>
-            <Hero/>
-            <Skills/>
-            <Work/>
+            <Hero headerName={itemsObj.Home}/>
+            <Skills headerName={itemsObj.Skills}/>
+            <Work headerName={itemsObj.Works}/>
             {/*<Testimony/>*/}
             {/*<Contact/>*/}
         </main>

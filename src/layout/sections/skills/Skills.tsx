@@ -5,12 +5,13 @@ import myTheme from "../../../styles/Theme.Styled";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import SectionTitle from '../../../components/headers/SectionHeader';
 import {Skill} from '../skills/Skill';
+import {HeaderPropsType} from "../hero/Hero";
 
-export const Skills = () => {
+export const Skills = (props: HeaderPropsType) => {
     return (
-        <SSkillsSection id="Skills">
+        <SSkillsSection id={props.headerName}>
             <SContainer>
-                <SectionTitle text={"My Skills"} mb={'80px'}/>
+                <SectionTitle text={`My ${props.headerName}`} mb={'80px'}/>
                 <FlexWrapper wrap={'wrap'}>
                     <Skill skillIconId={"code"}
                            skillTitle={'html5'}
