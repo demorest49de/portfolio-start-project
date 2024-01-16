@@ -10,8 +10,28 @@ export const Skills = () => {
     return (
         <SSkillsSection id="Skills">
             <SContainer>
-                <SectionTitle text={"My Skills"}/>
+                <SectionTitle text={"My Skills"} mb={'80px'}/>
                 <FlexWrapper wrap={'wrap'}>
+                    <Skill skillIconId={"code"}
+                           skillTitle={'html5'}
+                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
+                    />
+                     <Skill skillIconId={"css3"}
+                           skillTitle={'html5'}
+                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
+                    />
+                    <Skill skillIconId={"react"}
+                           skillTitle={'html5'}
+                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
+                    />
+                    <Skill skillIconId={"code"}
+                           skillTitle={'html5'}
+                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
+                    />
+                    <Skill skillIconId={"code"}
+                           skillTitle={'html5'}
+                           skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
+                    />
                     <Skill skillIconId={"code"}
                            skillTitle={'html5'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}

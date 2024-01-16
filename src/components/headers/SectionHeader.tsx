@@ -3,14 +3,19 @@ import styled from "styled-components";
 import myTheme from "../../styles/Theme.Styled";
 import FlexWrapper from "../flexWrapper/FlexWrapper";
 
-const SectionHeader = (props: { text: string }) => {
+type SectionHeaderPropsType = {
+    text: string,
+    mb: string,
+}
+
+const SectionHeader = (props: SectionHeaderPropsType) => {
     return (
-        <FlexWrapper justify={'center'} direction={"column"} align={'center'}>
+        <FWSectionHeader justify={'center'} direction={"column"} align={'center'} mb={props.mb}>
             <SH2>
                 {props.text}
             </SH2>
             <SUnderline/>
-        </FlexWrapper>
+        </FWSectionHeader>
     )
 };
 
@@ -18,7 +23,6 @@ const SUnderline = styled.div`
   width: 55px;
   height: 1px;
   background-color: ${myTheme.colors.pink};
-  margin-bottom: 80px;
 `
 
 const SH2 = styled.h2`
@@ -27,6 +31,11 @@ const SH2 = styled.h2`
   letter-spacing: 3px;
   font-weight: ${myTheme.fontWeight.bold};
   margin-bottom: 30px;
+`
+
+const FWSectionHeader = styled(FlexWrapper)`
+    margin-bottom: ${props => props.mb || "0px"}
+    };
 `
 
 export default SectionHeader;
