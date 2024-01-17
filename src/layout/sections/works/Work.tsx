@@ -7,6 +7,7 @@ import SectionTitle from '../../../components/headers/SectionHeader';
 import {HeaderPropsType} from "../hero/Hero";
 import {Menu} from "../../../components/menu/Menu";
 import {StyledWork} from "./StyledWork";
+import {StyledSection} from "../../../components/section/Section";
 
 const items = ["All", "landing page", "React", "spa"];
 
@@ -26,10 +27,8 @@ export const Work = (props: HeaderPropsType) => {
 };
 
 
-const SSkillsSection = styled.section`
-  padding-top: 100px;
-  padding-bottom: 108px;
-  background-color: ${myTheme.backgroundColor.secondary};
+const SSkillsSection = styled(StyledSection)`
+  // background-color: ${myTheme.backgroundColor.secondary};
 `
 
 const menuButtons = ['all', 'landing page', 'react', 'spa'];

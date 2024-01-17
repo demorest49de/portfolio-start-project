@@ -6,6 +6,7 @@ import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import SectionTitle from '../../../components/headers/SectionHeader';
 import {Skill} from '../skills/Skill';
 import {HeaderPropsType} from "../hero/Hero";
+import {StyledSection} from "../../../components/section/Section";
 
 export const Skills = (props: HeaderPropsType) => {
     return (
@@ -44,8 +45,6 @@ export const Skills = (props: HeaderPropsType) => {
 };
 
 
-const SSkillsSection = styled.section`
-  padding-top: 100px;
-  padding-bottom: 140px;
+const SSkillsSection = styled(StyledSection)`
   background-color: ${myTheme.backgroundColor.secondary};
 `
