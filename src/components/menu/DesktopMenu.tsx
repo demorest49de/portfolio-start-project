@@ -9,13 +9,17 @@ import FlexWrapper from "../flexWrapper/FlexWrapper";
 const DesktopMenu = (props: { menuItems: string[] }) => {
 
     return (
-        <FlexWrapper justify={"space-between"}>
+        <StyledWrapper justify={"space-between"}>
             <Logo/>
             <StyledDesktopNav>
                 <Menu menuItems={props.menuItems}/>
             </StyledDesktopNav>
-        </FlexWrapper>
+        </StyledWrapper>
     )
 };
 
 export default DesktopMenu;
+
+const StyledWrapper = styled(FlexWrapper)`
+  position: relative;
+`

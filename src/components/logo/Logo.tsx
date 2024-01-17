@@ -16,6 +16,6 @@ const SLogo = styled.a`
   height: 100px;
   width: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 `

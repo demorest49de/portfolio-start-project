@@ -60,6 +60,7 @@ const SHeroDiv1 = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 `
 
 const SHeroDiv2 = styled.div`
@@ -93,15 +94,14 @@ const SHeroDiv3 = styled.div`
 
   picture {
     display: block;
-    position: relative;
   }
 
   img {
-    position: absolute;
+    transform: translate(-34px, 24px);
     right: 34px;
     top: 24px;
-    min-width: 350px;
-    height: 430px;
+    max-width: 350px;
+    min-height: 430px;
     object-fit: cover;
     //object-position: -95px -69px;
   }
