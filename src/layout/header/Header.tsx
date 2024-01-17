@@ -20,10 +20,10 @@ const SHeader = styled.header`
   z-index: 2;
   top: 0;
   backdrop-filter: blur(4px);
-  background-color: rgba(31, 31, 32, .8);
+  background-color: rgba(31, 31, 32, .6);
 `
 
 const StyledHeaderContainer = styled(Container)`
-  border: 3px solid #82132c;
+  //border: 3px solid #82132c;
   max-width: 1370px;
 `
