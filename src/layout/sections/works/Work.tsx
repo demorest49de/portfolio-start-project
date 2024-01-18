@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import theme from "../../../styles/Theme.Styled";
+import {StyledButton} from "../../../components/button/Button";
 
 
 type WorkPropsType = {
@@ -14,6 +15,7 @@ export const Work = (props: WorkPropsType) => {
         <StyledWorkCards>
             <ImageWrapper>
                 <Image src={props.src} alt=""/>
+                <StyledButton>view project</StyledButton>
             </ImageWrapper>
             <StyledAboutSubblock>
                 <Title>{props.title}</Title>
@@ -33,7 +35,6 @@ const ImageWrapper = styled.div`
   margin-bottom: 25px;
 
   &:hover {
-
     &::before {
       position: absolute;
       content: '';
@@ -48,8 +49,23 @@ const ImageWrapper = styled.div`
       backdrop-filter: blur(4px);
     }
 
+    ${StyledButton} {
+      opacity: 1;
+    }
   }
 
+  ${StyledButton} {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &:before {
+      width: 100%;
+      height: 100%;
+    }
+  }
 `
 
 const StyledWorkCards = styled.div`

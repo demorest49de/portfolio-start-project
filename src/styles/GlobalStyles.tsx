@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html{
+  html {
     scroll-behavior: smooth;
   }
 
@@ -16,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-    
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -26,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${theme.colors.white};
   }
 
-  picture{
+  picture {
     width: 100%;
     height: auto;
   }
@@ -43,6 +43,9 @@ export const GlobalStyles = createGlobalStyle`
   button {
     cursor: pointer;
     padding: 0;
+    background-color: unset;
+    border: none;
+    color: ${theme.colors.white}
   }
 
   a {
@@ -76,7 +79,7 @@ export const GlobalStyles = createGlobalStyle`
     overflow: hidden;
   }
 
-  address{
+  address {
     font-style: unset;
   }
 `
