@@ -66,13 +66,16 @@ const ListItem = styled.li`
     transform: scale(0);
   }
 
-  &:hover {
 
+  &:hover {
     &::before {
+      transition: all .3s ease-in-out;
       transform: scale(1);
     }
 
     ${Mask} {
+
+      transition: all .3s ease-in-out;
       transform: skewX(12deg) translateX(5px);
       color: ${theme.colors.white};
 

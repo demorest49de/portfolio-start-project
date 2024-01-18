@@ -1,37 +1,35 @@
-import React from 'react';
 import styled from "styled-components";
-import {Container} from "../../../components/container/Container";
-import theme from "../../../styles/Theme.Styled";
-import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
-import SectionTitle from '../../../components/headers/SectionHeader';
-import {HeaderPropsType} from "../hero/Hero";
-import {Menu} from "../../../components/menu/Menu";
-import {StyledWork} from "./StyledWork";
-import {StyledSection} from "../../../components/section/Section";
 
-const items = ["All", "landing page", "React", "spa"];
 
-export const Work = (props: HeaderPropsType) => {
+export const Work = () => {
     return (
-        <SSkillsSection id={props.headerName}>
-            <Container>
-                <SectionTitle text={`My ${props.headerName}`} mb={"69px"}/>
-                <FlexWrapper wrap={'wrap'} justify={'center'} minHeight={'30px'}>
-                    <StyledWork>
-                        <Menu menuItems={items}/>
-                    </StyledWork>
-                </FlexWrapper>
-            </Container>
-        </SSkillsSection>
+        <StyledWorkCards>
+
+            <Image src="" alt="" srcset=""/>
+            <Title></Title>
+            <Text></Text>
+            <Link></Link>
+            <Link></Link>
+        </StyledWorkCards>
     );
 };
 
+const StyledWorkCards = styled.div`
 
-const SSkillsSection = styled(StyledSection)`
-  // background-color: ${theme.backgroundColor.secondary};
 `
 
-const menuButtons = ['all', 'landing page', 'react', 'spa'];
+const Image = styled.img`
 
+`
 
+const Title = styled.h3`
 
+`
+
+const Text = styled.p`
+
+`
+
+const Link = styled.a`
+
+`

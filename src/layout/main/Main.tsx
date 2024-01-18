@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../sections/hero/Hero';
 import {Skills} from "../sections/skills/Skills";
-import {Work} from '../sections/works/Work';
+import {Works} from '../sections/works/Works';
 
 const Main = (props: { menuItems: string[] }) => {
 
@@ -15,7 +15,7 @@ const Main = (props: { menuItems: string[] }) => {
         <main>
             <Hero headerName={itemsObj.Home}/>
             <Skills headerName={itemsObj.Skills}/>
-            <Work headerName={itemsObj.Works}/>
+            <Works headerName={itemsObj.Works}/>
             {/*<Testimony/>*/}
             {/*<Contact/>*/}
         </main>

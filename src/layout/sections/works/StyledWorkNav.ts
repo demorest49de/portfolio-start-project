@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import theme from '../../../styles/Theme.Styled';
 
-export const StyledWork = styled.nav`
+export const StyledWorkNav = styled.nav`
 
   display: flex;
   align-items: center;
