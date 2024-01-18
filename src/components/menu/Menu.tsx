@@ -37,7 +37,7 @@ const Mask = styled.span`
   position: absolute;
   top: 0;
   left: 0;
-  display: inline-block;
+  //display: inline-block;
   height: 50%;
   overflow-y: hidden;
   //outline: 1px solid darkorange;
