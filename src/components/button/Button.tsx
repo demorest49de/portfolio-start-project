@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const MenuButton = () => {
+const Button = () => {
     return (
-        <SMenuButton></SMenuButton>
+        <SMenuButton>
+
+        </SMenuButton>
     );
 };
 
-export default MenuButton;
+export default Button;
 
 export const SMenuButton = styled.button`
   border-style: none;

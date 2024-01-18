@@ -33,7 +33,6 @@ const ImageWrapper = styled.div`
   margin-bottom: 25px;
 
   &:hover {
-    transition: all .3s ease-in-out;
 
     &::before {
       position: absolute;
@@ -43,7 +42,8 @@ const ImageWrapper = styled.div`
       top: 0;
       bottom: 0;
 
-
+      //todo ne rabotaet transition
+      transition: all .3s ease-in-out;
       background-color: rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(4px);
     }

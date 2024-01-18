@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from "../Icon/Icon";
 import {Menu} from "./Menu";
 import styled from "styled-components";
-import {SMenuButton} from "../button/menuButton";
+import {SMenuButton} from "../button/Button";
 import theme from "../../styles/Theme.Styled";
 import {StyledBurgerNav} from "./StyledBurgerNav";
 
