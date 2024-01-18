@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import myTheme from "../../styles/Theme.Styled";
+import theme from "../../styles/Theme.Styled";
 import FlexWrapper from "../flexWrapper/FlexWrapper";
 
 type SectionHeaderPropsType = {
@@ -22,14 +22,14 @@ const SectionHeader = (props: SectionHeaderPropsType) => {
 const SUnderline = styled.div`
   width: 55px;
   height: 1px;
-  background-color: ${myTheme.colors.pink};
+  background-color: ${theme.colors.pink};
 `
 
 const SH2 = styled.h2`
-  font-family: ${myTheme.fonts.JosefinSans};
+  font-family: ${theme.fonts.JosefinSans};
   font-size: 36px;
   letter-spacing: 3px;
-  font-weight: ${myTheme.fontWeight.bold};
+  font-weight: ${theme.fontWeight.bold};
   margin-bottom: 30px;
 `
 

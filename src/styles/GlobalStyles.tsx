@@ -1,5 +1,5 @@
 import {createGlobalStyle} from "styled-components";
-import myTheme from "./Theme.Styled";
+import theme from "./Theme.Styled";
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -22,8 +22,8 @@ export const GlobalStyles = createGlobalStyle`
 
     min-width: 360px;
     min-height: 100vh;
-    background-color: ${myTheme.backgroundColor.primary};
-    color: ${myTheme.colors.primary};
+    background-color: ${theme.backgroundColor.primary};
+    color: ${theme.colors.white};
   }
 
   picture{

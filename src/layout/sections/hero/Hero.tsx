@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
-import myTheme from "../../../styles/Theme.Styled";
+import theme from "../../../styles/Theme.Styled";
 import DeveloperPhoto from '../../../assets/images/7b1f8f2f0bdbca351355bd3fe1aab143.jpg'
 
 export type HeaderPropsType = {
@@ -51,7 +51,7 @@ const SHeroRectangle = styled.div`
   height: 20px;
   top: 59px;
   left: 137px;
-  background-color: ${myTheme.colors.pink};
+  background-color: ${theme.colors.pink};
   opacity: .8;
   z-index: -1;
 `
@@ -67,22 +67,22 @@ const SHeroDiv2 = styled.div`
   position: relative;
 
   p:nth-child(1) {
-    font-weight: ${myTheme.fontWeight.regular};
+    font-weight: ${theme.fontWeight.regular};
     font-size: 14px;
     margin-bottom: 10px;
   }
 
   p:nth-child(2) {
-    font-weight: ${myTheme.fontWeight.bold};
+    font-weight: ${theme.fontWeight.bold};
     font-size: 50px;
     letter-spacing: 2.5px;
-    font-family: ${myTheme.fonts.JosefinSans};
+    font-family: ${theme.fonts.JosefinSans};
     width: 578px;
     margin-bottom: 10px;
   }
 
   p:nth-child(3) {
-    font-weight: ${myTheme.fontWeight.regular};
+    font-weight: ${theme.fontWeight.regular};
     font-size: 27px;
   }
 `

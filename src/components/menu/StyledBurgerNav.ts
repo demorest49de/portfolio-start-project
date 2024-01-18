@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import myTheme from "../../styles/Theme.Styled";
+import theme from "../../styles/Theme.Styled";
 
 
 export const StyledBurgerNav = styled.nav`
@@ -17,7 +17,7 @@ export const StyledBurgerNav = styled.nav`
   }
 
   li {
-    color: ${myTheme.colors.greyOne};
+    color: ${theme.colors.greyOne};
     font-family: ;
     font-size: 50px;
     font-weight: 400;

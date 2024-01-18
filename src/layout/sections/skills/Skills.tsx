@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
-import myTheme from "../../../styles/Theme.Styled";
+import theme from "../../../styles/Theme.Styled";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import SectionTitle from '../../../components/headers/SectionHeader';
 import {Skill} from '../skills/Skill';
@@ -46,5 +46,5 @@ export const Skills = (props: HeaderPropsType) => {
 
 
 const SSkillsSection = styled(StyledSection)`
-  background-color: ${myTheme.backgroundColor.secondary};
+  background-color: ${theme.backgroundColor.secondary};
 `

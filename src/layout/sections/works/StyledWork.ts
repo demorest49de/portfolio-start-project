@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import myTheme from '../../../styles/Theme.Styled';
+import theme from '../../../styles/Theme.Styled';
 
 export const StyledWork = styled.nav`
 
@@ -17,7 +17,7 @@ export const StyledWork = styled.nav`
 
   li {
     font-size: 14px;
-    font-weight: ${myTheme.fontWeight.regular};
+    font-weight: ${theme.fontWeight.regular};
     letter-spacing: 1px;
     text-transform: uppercase;
   }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import myTheme from "../../styles/Theme.Styled";
+import theme from "../../styles/Theme.Styled";
 
 export const Menu = (props: { menuItems: string[] }) => {
     return (
@@ -8,19 +8,17 @@ export const Menu = (props: { menuItems: string[] }) => {
                 props.menuItems.map((item, index) => {
                     return (
                         <ListItem key={index}>
-                            <a href={`#${item}`} aria-label={item}>
+                            <Link href={`#${item}`} aria-label={item}>
                                 {item}
                                 <Mask>
-                                    {/*<span>*/}
-                                        {item}
-                                    {/*</span>*/}
+                                    {item}
                                 </Mask>
                                 <Mask>
                                     <span>
                                         {item}
                                     </span>
                                 </Mask>
-                            </a>
+                            </Link>
                         </ListItem>
                     )
                 })
@@ -29,19 +27,17 @@ export const Menu = (props: { menuItems: string[] }) => {
     )
 }
 
-const ListItem = styled.li`
-  position: relative;
+const Link = styled.a`
+color: transparent;
 `
 
 const Mask = styled.span`
+color: ${theme.colors.pink};
   position: absolute;
   top: 0;
   left: 0;
-  //display: inline-block;
   height: 50%;
   overflow-y: hidden;
-  //outline: 1px solid darkorange;
-    //color: ${myTheme.colors.pink};
 
   & + & {
     top: 50%;
@@ -51,4 +47,40 @@ const Mask = styled.span`
       transform: translateY(-50%);
     }
   }
+`
+
+const ListItem = styled.li`
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 4px;
+    background-color: ${theme.colors.pink};
+
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    right: -10px;
+
+    transform: scale(0);
+  }
+
+  &:hover {
+
+    &::before {
+      transform: scale(1);
+    }
+
+    ${Mask} {
+      transform: skewX(12deg) translateX(5px);
+      color: ${theme.colors.white};
+
+      & + ${Mask} {
+        transform: skewX(12deg) translateX(-5px);
+      }
+    }
+
+  }
+
 `

@@ -1,6 +1,6 @@
-const myTheme = {
+const theme = {
     colors: {
-        primary: "#FFFFFF",
+        white: "#FFFFFF",
         pink: "#7572D5",
         greyOne: "#39393C",
         greyTwo: "#4A4A4A",
@@ -18,4 +18,4 @@ const myTheme = {
     },
 }
 
-export default myTheme;
+export default theme;

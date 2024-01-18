@@ -4,13 +4,13 @@ import './index.scss';
 import App from './App';
 import {GlobalStyles} from "./styles/GlobalStyles";
 import {ThemeProvider} from "styled-components";
-import myTheme from "./styles/Theme.Styled";
+import theme from "./styles/Theme.Styled";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
-    <ThemeProvider theme={myTheme}>
+    <ThemeProvider theme={theme}>
         <GlobalStyles/>
         <App/>
     </ThemeProvider>

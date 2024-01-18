@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import myTheme from "../../styles/Theme.Styled";
+import theme from "../../styles/Theme.Styled";
 
 export const StyledDesktopNav = styled.nav`
   display: flex;
@@ -15,7 +15,7 @@ export const StyledDesktopNav = styled.nav`
   }
 
   li {
-    color: ${myTheme.colors.pink};
+    color: ${theme.colors.pink};
     font-family: Josefin Sans;
     font-size: 50px;
     font-weight: 400;

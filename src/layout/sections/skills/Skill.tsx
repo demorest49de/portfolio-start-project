@@ -1,7 +1,7 @@
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import React from "react";
 import styled from "styled-components";
-import myTheme from "../../../styles/Theme.Styled";
+import theme from "../../../styles/Theme.Styled";
 import Icon from "../../../components/Icon/Icon";
 
 type SkillPropsType = {
@@ -30,7 +30,7 @@ const StyledSkillBlock = styled(FlexWrapper)`
 
 const SRhombus = styled(FlexWrapper)`
   transform: rotate(45deg);
-  background-color: ${myTheme.colors.greyTwo};
+  background-color: ${theme.colors.greyTwo};
   width: 80px;
   height: 80px;
   margin-bottom: 40px;
@@ -38,9 +38,9 @@ const SRhombus = styled(FlexWrapper)`
 
 const SkillTitle = styled.h3`
     margin-bottom: 15px;
-  font-family: ${myTheme.fonts.JosefinSans};
+  font-family: ${theme.fonts.JosefinSans};
   font-size: 16px;
-  font-weight: ${myTheme.fontWeight.bold};
+  font-weight: ${theme.fontWeight.bold};
   letter-spacing: 1px;
   text-transform: uppercase;
 `
@@ -48,5 +48,5 @@ const SkillTitle = styled.h3`
 const SkillText = styled.p`
     text-align: center;
   font-size: 14px;
-  font-weight:  ${myTheme.fontWeight.regular};
+  font-weight:  ${theme.fontWeight.regular};
 `

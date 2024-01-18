@@ -3,7 +3,7 @@ import Icon from "../Icon/Icon";
 import {Menu} from "./Menu";
 import styled from "styled-components";
 import {SMenuButton} from "../button/menuButton";
-import myTheme from "../../styles/Theme.Styled";
+import theme from "../../styles/Theme.Styled";
 import {StyledBurgerNav} from "./StyledBurgerNav";
 
 type CloseBtnProps = {
@@ -33,6 +33,6 @@ const SCloseBtn = styled(SMenuButton)<CloseBtnProps>`
 `
 
 const StyledBurgerMenu = styled.div`
-  background-color: ${myTheme.colors.greyOne};
+  background-color: ${theme.colors.greyOne};
 
 `
