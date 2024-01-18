@@ -6,6 +6,8 @@ export const StyledWorkNav = styled.nav`
 
   display: flex;
   align-items: center;
+  margin-bottom: 50px;
+  color: ${theme.colors.accent};
   
   ul {
     min-height: inherit;

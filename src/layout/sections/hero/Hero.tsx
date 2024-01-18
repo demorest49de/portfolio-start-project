@@ -51,7 +51,7 @@ const SHeroRectangle = styled.div`
   height: 20px;
   top: 59px;
   left: 137px;
-  background-color: ${theme.colors.pink};
+  background-color: ${theme.colors.accent};
   opacity: .8;
   z-index: -1;
 `

@@ -32,7 +32,7 @@ color: transparent;
 `
 
 const Mask = styled.span`
-color: ${theme.colors.pink};
+color: ${theme.colors.accent};
   position: absolute;
   top: 0;
   left: 0;
@@ -56,7 +56,7 @@ const ListItem = styled.li`
     content: "";
     display: inline-block;
     height: 4px;
-    background-color: ${theme.colors.pink};
+    background-color: ${theme.colors.accent};
 
     position: absolute;
     top: 50%;

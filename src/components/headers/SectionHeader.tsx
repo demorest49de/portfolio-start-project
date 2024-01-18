@@ -22,7 +22,7 @@ const SectionHeader = (props: SectionHeaderPropsType) => {
 const SUnderline = styled.div`
   width: 55px;
   height: 1px;
-  background-color: ${theme.colors.pink};
+  background-color: ${theme.colors.accent};
 `
 
 const SH2 = styled.h2`

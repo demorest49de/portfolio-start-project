@@ -8,6 +8,7 @@ type FlexWrapperPropsType = {
     wrap?: string,
     mb?: string,
     minHeight?: string,
+    gap?: string,
 }
 
 const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -16,7 +17,8 @@ const FlexWrapper = styled.div<FlexWrapperPropsType>`
   justify-content: ${props => props.justify || "flex-start"};
   align-items: ${props => props.align || "stretch"};
   flex-wrap: ${props => props.wrap || "nowrap"};
-  min-height: ${props => props.minHeight || "unset"};;
+  min-height: ${props => props.minHeight || "unset"};
+  gap: ${props => props.gap || "unset"};
 `
 
 export default FlexWrapper;

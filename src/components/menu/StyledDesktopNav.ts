@@ -15,7 +15,7 @@ export const StyledDesktopNav = styled.nav`
   }
 
   li {
-    color: ${theme.colors.pink};
+    color: ${theme.colors.accent};
     font-family: Josefin Sans;
     font-size: 50px;
     font-weight: 400;

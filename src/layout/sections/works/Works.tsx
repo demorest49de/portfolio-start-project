@@ -9,6 +9,9 @@ import {Menu} from "../../../components/menu/Menu";
 import {StyledWorkNav} from "./StyledWorkNav";
 import {StyledSection} from "../../../components/section/Section";
 import {Work} from "./Work";
+import timer from './../../../assets/images/0c92c8a2d9105549989393fee63d52d5.png'
+import socialImg from './../../../assets/images/0f6c9eae25a0122b383d52e1e9a7182e.png'
+import {MenuWork} from "./MenuWork";
 
 const items = ["All", "landing page", "React", "spa"];
 
@@ -19,9 +22,18 @@ export const Works = (props: HeaderPropsType) => {
                 <SectionTitle text={`My ${props.headerName}`} mb={"69px"}/>
                 <FlexWrapper wrap={'wrap'} justify={'center'} minHeight={'30px'}>
                     <StyledWorkNav>
-                        <Menu menuItems={items}/>
+                        <MenuWork menuItems={items}/>
                     </StyledWorkNav>
-                    <Work/>
+                    <FlexWrapper wrap={'wrap'} gap={'60px'}>
+                        <Work title={'Social Network'}
+                              src={socialImg}
+                              text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.'}
+                        />
+                        <Work title={'Timer'}
+                              src={timer}
+                              text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque autem consectetur cumque dolorem eaque fuga fugit iure magni nemo, nihil odio officia optio quas quis ratione soluta, sunt ullam?'}
+                        />
+                    </FlexWrapper>
                 </FlexWrapper>
             </Container>
         </SSkillsSection>
@@ -30,7 +42,7 @@ export const Works = (props: HeaderPropsType) => {
 
 
 const SSkillsSection = styled(StyledSection)`
-  // background-color: ${theme.backgroundColor.secondary};
+    // background-color: ${theme.backgroundColor.secondary};
 `
 
 const menuButtons = ['all', 'landing page', 'react', 'spa'];
