@@ -34,6 +34,7 @@ const ImageWrapper = styled.div`
   max-height: 260px;
   margin-bottom: 25px;
 
+  //todo как работает стилизация одной кнопки для всех
   &:hover {
     &::before {
       position: absolute;
@@ -53,7 +54,6 @@ const ImageWrapper = styled.div`
       opacity: 1;
     }
   }
-
   ${StyledButton} {
     opacity: 0;
     position: absolute;
