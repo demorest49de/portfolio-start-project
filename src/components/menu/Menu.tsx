@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import myTheme from "../../styles/Theme.Styled";
 
 export const Menu = (props: { menuItems: string[] }) => {
     return (
@@ -7,14 +8,19 @@ export const Menu = (props: { menuItems: string[] }) => {
                 props.menuItems.map((item, index) => {
                     return (
                         <ListItem key={index}>
-                            <Link href={`#${item}`} aria-label={item}>
+                            <a href={`#${item}`} aria-label={item}>
+                                {item}
                                 <Mask>
-                                    {item}
+                                    {/*<span>*/}
+                                        {item}
+                                    {/*</span>*/}
                                 </Mask>
                                 <Mask>
-                                    {item}
+                                    <span>
+                                        {item}
+                                    </span>
                                 </Mask>
-                            </Link>
+                            </a>
                         </ListItem>
                     )
                 })
@@ -24,13 +30,25 @@ export const Menu = (props: { menuItems: string[] }) => {
 }
 
 const ListItem = styled.li`
-    
-`
-
-const Link = styled.a`
-
+  position: relative;
 `
 
 const Mask = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 50%;
+  overflow-y: hidden;
+  //outline: 1px solid darkorange;
+    //color: ${myTheme.colors.pink};
 
+  & + & {
+    top: 50%;
+
+    span {
+      display: inline-block;
+      transform: translateY(-50%);
+    }
+  }
 `
