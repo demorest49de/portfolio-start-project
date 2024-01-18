@@ -62,7 +62,7 @@ const ListItem = styled.li`
     top: 50%;
     left: -10px;
     right: -10px;
-
+    z-index: 3;
     transform: scale(0);
   }
 
