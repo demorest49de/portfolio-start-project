@@ -40,7 +40,7 @@ const StyledForm = styled.form<StyledFormProps>`
   }
   
   textarea {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
   }
 `
 
