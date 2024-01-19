@@ -5,8 +5,8 @@ import theme from "../../../styles/Theme.Styled";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import SectionTitle from '../../../components/headers/SectionHeader';
 import {Skill} from '../skills/Skill';
-import {HeaderPropsType} from "../hero/Hero";
 import {StyledSection} from "../../../components/section/Section";
+import {HeaderPropsType} from '../../../components/types/types';
 
 export const Skills = (props: HeaderPropsType) => {
     return (
@@ -18,7 +18,7 @@ export const Skills = (props: HeaderPropsType) => {
                            skillTitle={'html5'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
                     />
-                     <Skill skillIconId={"css3"}
+                    <Skill skillIconId={"css3"}
                            skillTitle={'html5'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
                     />

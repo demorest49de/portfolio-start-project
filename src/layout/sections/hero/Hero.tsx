@@ -3,10 +3,7 @@ import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
 import theme from "../../../styles/Theme.Styled";
 import DeveloperPhoto from '../../../assets/images/7b1f8f2f0bdbca351355bd3fe1aab143.jpg'
-
-export type HeaderPropsType = {
-    headerName: string,
-}
+import { HeaderPropsType } from '../../../components/types/types';
 
 const Hero = (props: HeaderPropsType) => {
     return (

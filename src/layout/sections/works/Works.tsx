@@ -4,13 +4,12 @@ import {Container} from "../../../components/container/Container";
 import theme from "../../../styles/Theme.Styled";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import SectionTitle from '../../../components/headers/SectionHeader';
-import {HeaderPropsType} from "../hero/Hero";
-import {Menu} from "../../../components/menu/Menu";
 import {StyledWorkNav} from "./StyledWorkNav";
 import {StyledSection} from "../../../components/section/Section";
 import {Work} from "./Work";
 import timer from './../../../assets/images/0c92c8a2d9105549989393fee63d52d5.png'
 import socialImg from './../../../assets/images/0f6c9eae25a0122b383d52e1e9a7182e.png'
+import { HeaderPropsType } from '../../../components/types/types';
 import {MenuWork} from "./MenuWork";
 
 const items = ["All", "landing page", "React", "spa"];

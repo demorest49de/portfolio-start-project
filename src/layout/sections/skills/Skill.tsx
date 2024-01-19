@@ -13,14 +13,22 @@ type SkillPropsType = {
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkillBlock justify={"start"} direction={"column"} align={'center'}>
-            <SRhombus justify={"center"} align={'center'}>
-                <Icon iconId={props.skillIconId} width={"50"} height={"50"} rotate={"-45"}/>
-            </SRhombus>
+            <RombusWithIcon skillIconId={props.skillIconId}/>
             <SkillTitle>{props.skillTitle}</SkillTitle>
             <SkillText>{props.skillText}</SkillText>
         </StyledSkillBlock>
     )
 };
+
+
+export const RombusWithIcon = (props: {skillIconId: string}) => {
+    return (
+        <SRhombus justify={"center"} align={'center'}>
+            <Icon iconId={props.skillIconId} width={"50"} height={"50"} rotate={"-45"}/>
+        </SRhombus>
+    )
+}
+
 
 const StyledSkillBlock = styled(FlexWrapper)`
   width: 380px;
@@ -37,7 +45,7 @@ const SRhombus = styled(FlexWrapper)`
 `
 
 const SkillTitle = styled.h3`
-    margin-bottom: 15px;
+  margin-bottom: 15px;
   font-family: ${theme.fonts.JosefinSans};
   font-size: 16px;
   font-weight: ${theme.fontWeight.bold};
@@ -46,7 +54,7 @@ const SkillTitle = styled.h3`
 `
 
 const SkillText = styled.p`
-    text-align: center;
+  text-align: center;
   font-size: 14px;
-  font-weight:  ${theme.fontWeight.regular};
+  font-weight: ${theme.fontWeight.regular};
 `
