@@ -3,6 +3,7 @@ import Hero from '../sections/hero/Hero';
 import {Skills} from "../sections/skills/Skills";
 import {Works} from '../sections/works/Works';
 import {Testimony} from "../sections/testimony/Testimony";
+import {Contact} from "../sections/contact/Contact";
 
 const Main = (props: { menuItems: string[] }) => {
 
@@ -22,7 +23,7 @@ const Main = (props: { menuItems: string[] }) => {
                `}
             spanText={'@ivan ivanow'}
             />
-            {/*<Contact/>*/}
+            <Contact headerName={itemsObj.Contact}/>
         </main>
     );
 };

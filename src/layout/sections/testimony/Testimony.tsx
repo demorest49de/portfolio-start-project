@@ -1,10 +1,8 @@
 import React from 'react';
-import styled from "styled-components";
 import {StyledSection} from "../../../components/section/Section";
 import SectionHeader from "../../../components/headers/SectionHeader";
 import {RombusWithIcon} from "../skills/Skill";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
-import {StyledParagraph} from "../../../components/paragraph";
 import theme from "../../../styles/Theme.Styled";
 import {Slider} from "../../../components/slider/Slider";
 
