@@ -21,6 +21,7 @@ export const Button = styled.button`
       width: 100%;
       z-index: -1;
       min-height: 43px;
+      transition: all .3s ease-in-out;
     }
   }
 
