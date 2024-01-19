@@ -5,6 +5,7 @@ import {RombusWithIcon} from "../skills/Skill";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import theme from "../../../styles/Theme.Styled";
 import {Slider} from "../../../components/slider/Slider";
+import {Container} from "../../../components/container/Container";
 
 type TestimonyPropsType = {
     headerName: string,
@@ -15,18 +16,20 @@ type TestimonyPropsType = {
 
 export const Testimony = (props: TestimonyPropsType) => {
     return (
-        <StyledSection
-            backGrColor={theme.backgroundColor.secondary}
+        <StyledSection id={props.headerName}
+                       backGrColor={theme.backgroundColor.secondary}
         >
-            <SectionHeader text={props.headerName} mb={'60px'}/>
-            <FlexWrapper justify={'center'} direction={'column'} align={'center'}>
-                <RombusWithIcon skillIconId={'code'}/>
-                <Slider
-                    paragraphText={props.paragraphText}
-                    spanText={props.spanText}
-                />
+            <Container>
+                <SectionHeader text={props.headerName} mb={'60px'}/>
+                <FlexWrapper justify={'center'} direction={'column'} align={'center'}>
+                    <RombusWithIcon skillIconId={'code'}/>
+                    <Slider
+                        paragraphText={props.paragraphText}
+                        spanText={props.spanText}
+                    />
 
-            </FlexWrapper>
+                </FlexWrapper>
+            </Container>
         </StyledSection>
     );
 };

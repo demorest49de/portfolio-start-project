@@ -2,7 +2,7 @@ import styled from "styled-components";
 import theme from "../../styles/Theme.Styled";
 
 
-//todo dobavit' tipy iz theme.background
+//todo kak dobavit' iz theme.background
 type SectionPropsType = {
     paddingTop?: string,
     paddingBottom?: string,
