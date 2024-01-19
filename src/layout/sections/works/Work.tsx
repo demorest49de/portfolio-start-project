@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import theme from "../../../styles/Theme.Styled";
-import {StyledButton} from "../../../components/button/Button";
 
 
 type WorkPropsType = {
@@ -15,7 +14,7 @@ export const Work = (props: WorkPropsType) => {
         <StyledWorkCards>
             <ImageWrapper>
                 <Image src={props.src} alt=""/>
-                <StyledButton>view project</StyledButton>
+                <Button>view project</Button>
             </ImageWrapper>
             <StyledAboutSubblock>
                 <Title>{props.title}</Title>
@@ -28,6 +27,37 @@ export const Work = (props: WorkPropsType) => {
         </StyledWorkCards>
     );
 };
+
+const Button = styled.button`
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 170px;
+  height: 32px;
+  
+  &:hover{
+    &::before{
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 10px;
+    width: 50%;
+    background-color: ${theme.colors.accent};
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+`
+
 
 const ImageWrapper = styled.div`
   position: relative;
@@ -50,11 +80,11 @@ const ImageWrapper = styled.div`
       backdrop-filter: blur(4px);
     }
 
-    ${StyledButton} {
+    ${Button} {
       opacity: 1;
     }
   }
-  ${StyledButton} {
+  ${Button} {
     opacity: 0;
     position: absolute;
     left: 50%;
