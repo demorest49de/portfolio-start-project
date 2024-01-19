@@ -16,7 +16,9 @@ const items = ["All", "landing page", "React", "spa"];
 
 export const Works = (props: HeaderPropsType) => {
     return (
-        <SSkillsSection id={props.headerName}>
+        <StyledSection
+            id={props.headerName}
+        >
             <Container>
                 <SectionTitle text={`My ${props.headerName}`} mb={"69px"}/>
                 <FlexWrapper wrap={'wrap'} justify={'center'} minHeight={'30px'}>
@@ -35,13 +37,6 @@ export const Works = (props: HeaderPropsType) => {
                     </FlexWrapper>
                 </FlexWrapper>
             </Container>
-        </SSkillsSection>
+        </StyledSection>
     );
 };
-
-
-const SSkillsSection = styled(StyledSection)`
-    // background-color: ${theme.backgroundColor.secondary};
-`
-
-const menuButtons = ['all', 'landing page', 'react', 'spa'];

@@ -19,6 +19,8 @@ const FlexWrapper = styled.div<FlexWrapperPropsType>`
   flex-wrap: ${props => props.wrap || "nowrap"};
   min-height: ${props => props.minHeight || "unset"};
   gap: ${props => props.gap || "unset"};
+  margin-bottom: ${props => props.mb || "unset"};
+  
 `
 
 export default FlexWrapper;

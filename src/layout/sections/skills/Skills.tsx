@@ -10,7 +10,10 @@ import {HeaderPropsType} from '../../../components/types/types';
 
 export const Skills = (props: HeaderPropsType) => {
     return (
-        <SSkillsSection id={props.headerName}>
+        <StyledSection
+            id={props.headerName}
+            backGrColor={theme.backgroundColor.secondary}
+        >
             <Container>
                 <SectionTitle text={`My ${props.headerName}`} mb={'80px'}/>
                 <FlexWrapper wrap={'wrap'}>
@@ -40,7 +43,7 @@ export const Skills = (props: HeaderPropsType) => {
                     />
                 </FlexWrapper>
             </Container>
-        </SSkillsSection>
+        </StyledSection>
     );
 };
 
