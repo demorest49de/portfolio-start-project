@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import FlexWrapper, {FlexWrapperPropsType} from "../../../components/flexWrapper/FlexWrapper";
 import theme from "../../../styles/Theme.Styled";
 import {Link} from "../../../components/link/Link";
+import { Button } from "../../../components/button/Button";
 
 
 type WorkPropsType = {
@@ -44,37 +44,6 @@ const ListItem = styled.li`
   z-index: 1;
 `
 
-const Button = styled.button`
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  width: 170px;
-  height: 32px;
-
-  &:hover {
-    &::before {
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  &:before {
-    content: "";
-    display: inline-block;
-    height: 10px;
-    width: 50%;
-    background-color: ${theme.colors.accent};
-
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    z-index: -1;
-    transform: translateX(-50%);
-  }
-`
-
-
 const ImageWrapper = styled.div`
   position: relative;
   max-height: 260px;
@@ -90,13 +59,13 @@ const ImageWrapper = styled.div`
       top: 0;
       bottom: 0;
 
-      //todo ne rabotaet transition
-      transition: all .3s ease-in-out;
+      //todo ne rabotaet transition dlja blur effekta
       background-color: rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(4px);
     }
 
     ${Button} {
+      transition: all .3s ease-in-out;
       opacity: 1;
     }
   }
@@ -107,7 +76,6 @@ const ImageWrapper = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
     &:before {
       width: 100%;
       height: 100%;
