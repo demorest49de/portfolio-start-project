@@ -13,7 +13,7 @@ const Main = (props: { menuItems: string[] }) => {
     props.menuItems.forEach((item) =>
         itemsObj[`${item}`] = item)
 
-    console.log(' itemsObj: ', itemsObj);
+
     return (
         <main>
             <Hero headerName={itemsObj.Home}/>

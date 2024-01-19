@@ -16,16 +16,16 @@ export const Footer = () => {
                 <FlexWrapper justify={'center'}>
                     <SocialsList>
                         <SocialLink>
-                            <Icon iconId={'instagram'} width={'21px'} height={'21px'}/>
+                            <Icon iconId={'instagram'} width={'21'} height={'21'}/>
                         </SocialLink>
                         <SocialLink>
-                            <Icon iconId={'telegram'} width={'21px'} height={'21px'}/>
+                            <Icon iconId={'telegram'} width={'21'} height={'21'}/>
                         </SocialLink>
                         <SocialLink>
-                            <Icon iconId={'vk'} width={'21px'} height={'21px'}/>
+                            <Icon iconId={'vk'} width={'21'} height={'21'}/>
                         </SocialLink>
                         <SocialLink>
-                            <Icon iconId={'linkedin'} width={'21px'} height={'21px'}/>
+                            <Icon iconId={'linkedin'} width={'21'} height={'21'}/>
                         </SocialLink>
                     </SocialsList>
                 </FlexWrapper>
