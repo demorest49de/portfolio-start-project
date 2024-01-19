@@ -6,12 +6,13 @@ import FlexWrapper from "../flexWrapper/FlexWrapper";
 type SectionHeaderPropsType = {
     text: string,
     mb: string,
+    fontSize?: string,
 }
 
 const SectionHeader = (props: SectionHeaderPropsType) => {
     return (
         <FWSectionHeader justify={'center'} direction={"column"} align={'center'} mb={props.mb}>
-            <SH2>
+            <SH2 fontSize={props.fontSize}>
                 {props.text}
             </SH2>
             <SUnderline/>
@@ -25,9 +26,14 @@ const SUnderline = styled.div`
   background-color: ${theme.colors.accent};
 `
 
-const SH2 = styled.h2`
+type Sh2PropsType = {
+    fontSize?: string,
+}
+
+
+const SH2 = styled.h2<Sh2PropsType>`
   font-family: ${theme.fonts.JosefinSans};
-  font-size: 36px;
+  font-size: ${props => props.fontSize || "36px"};
   letter-spacing: 3px;
   font-weight: ${theme.fontWeight.bold};
   margin-bottom: 30px;

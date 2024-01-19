@@ -24,6 +24,5 @@ const SHeader = styled.header`
 `
 
 const StyledHeaderContainer = styled(Container)`
-  //border: 3px solid #82132c;
   max-width: 1370px;
 `

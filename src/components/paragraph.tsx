@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import theme from "../styles/Theme.Styled";
 
 
 type ParagraphPropsType = {
@@ -10,6 +11,7 @@ type ParagraphPropsType = {
     maxHeight?: string,
     clamp?: string,
     mb?: string,
+    color?: string,
 }
 
 export const StyledParagraph = styled.p<ParagraphPropsType>`
@@ -21,6 +23,7 @@ export const StyledParagraph = styled.p<ParagraphPropsType>`
   width: 100%;
   height: 100%;
 
+  color: ${props => props.color || theme.colors.white};
 
   overflow: hidden;
   display: -webkit-box;
