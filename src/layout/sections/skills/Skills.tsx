@@ -22,23 +22,23 @@ export const Skills = (props: HeaderPropsType) => {
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
                     />
                     <Skill skillIconId={"css3"}
-                           skillTitle={'html5'}
+                           skillTitle={'css3'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
                     />
                     <Skill skillIconId={"react"}
-                           skillTitle={'html5'}
+                           skillTitle={'react'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
                     />
-                    <Skill skillIconId={"code"}
-                           skillTitle={'html5'}
+                    <Skill skillIconId={"typescript"}
+                           skillTitle={'typescript'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
                     />
-                    <Skill skillIconId={"code"}
-                           skillTitle={'html5'}
+                    <Skill skillIconId={"styledcomponents"}
+                           skillTitle={'styled components'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
                     />
-                    <Skill skillIconId={"code"}
-                           skillTitle={'html5'}
+                    <Skill skillIconId={"figma"}
+                           skillTitle={'figma'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}
                     />
                 </FlexWrapper>

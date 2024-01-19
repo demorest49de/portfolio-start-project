@@ -1,6 +1,7 @@
 import React from 'react';
 import iconsSprite from '../../assets/images/icons-sprite.svg'
 import styled from "styled-components";
+import theme from "../../styles/Theme.Styled";
 
 type IconTypeProps = {
     iconId: string,
@@ -22,5 +23,3 @@ const Icon = (props: IconTypeProps) => {
 };
 
 export default Icon;
-
-export const StyledIcon = styled(Icon)``
