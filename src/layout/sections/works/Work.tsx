@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
+import FlexWrapper, {FlexWrapperPropsType} from "../../../components/flexWrapper/FlexWrapper";
 import theme from "../../../styles/Theme.Styled";
+import {Link} from "../../../components/link/Link";
 
 
 type WorkPropsType = {
@@ -19,14 +20,29 @@ export const Work = (props: WorkPropsType) => {
             <StyledAboutSubblock>
                 <Title>{props.title}</Title>
                 <Text>{props.text}</Text>
-                <FlexWrapper gap={'20px'}>
-                    <Link href={'#'}>demo</Link>
-                    <Link href={'#'}>code</Link>
-                </FlexWrapper>
+                <LinkList>
+                    <ListItem>
+                        <Link href={'#'}>demo</Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link href={'#'}>code</Link>
+                    </ListItem>
+                </LinkList>
             </StyledAboutSubblock>
         </StyledWorkCards>
     );
 };
+
+const LinkList = styled.ul`
+  display: flex;
+  gap: 20px;
+`
+
+const ListItem = styled.li`
+  position: relative;
+  padding: 0 2px;
+  z-index: 1;
+`
 
 const Button = styled.button`
   font-size: 14px;
@@ -35,9 +51,9 @@ const Button = styled.button`
   text-transform: uppercase;
   width: 170px;
   height: 32px;
-  
-  &:hover{
-    &::before{
+
+  &:hover {
+    &::before {
       height: 100%;
       width: 100%;
     }
@@ -84,6 +100,7 @@ const ImageWrapper = styled.div`
       opacity: 1;
     }
   }
+
   ${Button} {
     opacity: 0;
     position: absolute;
@@ -123,10 +140,6 @@ const Text = styled.p`
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-`
-
-const Link = styled.a`
-  text-transform: uppercase;
 `
 
 const StyledAboutSubblock = styled.div`
