@@ -8,25 +8,33 @@ import Icon from "../../components/Icon/Icon";
 
 export const Footer = () => {
     return (
-        <StyledFooter>
+        <StyledFooter id={'footer'}>
             <Container>
                 <SectionHeader text={
                     "Svetlana"
                 } mb={'26px'} fontSize={'22px'}/>
                 <FlexWrapper justify={'center'}>
                     <SocialsList>
-                        <SocialLink>
-                            <Icon iconId={'instagram'} width={'21'} height={'21'}/>
-                        </SocialLink>
-                        <SocialLink>
-                            <Icon iconId={'telegram'} width={'21'} height={'21'}/>
-                        </SocialLink>
-                        <SocialLink>
-                            <Icon iconId={'vk'} width={'21'} height={'21'}/>
-                        </SocialLink>
-                        <SocialLink>
-                            <Icon iconId={'linkedin'} width={'21'} height={'21'}/>
-                        </SocialLink>
+                        <ListItem>
+                            <SocialLink href={"https://instagram.com"}>
+                                <Icon iconId={'instagram'} width={'21'} height={'21'}/>
+                            </SocialLink>
+                        </ListItem>
+                        <ListItem>
+                            <SocialLink href={"https://telegram.org"}>
+                                <Icon iconId={'telegram'} width={'21'} height={'21'}/>
+                            </SocialLink>
+                        </ListItem>
+                        <ListItem>
+                            <SocialLink href={"https://vk.com"}>
+                                <Icon iconId={'vk'} width={'21'} height={'21'}/>
+                            </SocialLink>
+                        </ListItem>
+                        <ListItem>
+                            <SocialLink href={"https://linkedin.com"}>
+                                <Icon iconId={'linkedin'} width={'21'} height={'21'}/>
+                            </SocialLink>
+                        </ListItem>
                     </SocialsList>
                 </FlexWrapper>
                 <StyledParagraph
@@ -54,11 +62,15 @@ const SocialsList = styled.ul<FlexWrapperPropsType>`
   gap: 20px;
 `
 
-const SocialLink = styled.li`
+const ListItem = styled.li`
   width: 35px;
   height: 35px;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.10);
+`
+
+const SocialLink = styled.a`
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
