@@ -13,15 +13,19 @@ type IconTypeProps = {
 
 const Icon = (props: IconTypeProps) => {
     return (
-        <svg width={props.width}
-             height={props.height}
-             transform={`rotate(${props.rotate || '0'} 0 0)`}
-             viewBox={`0 0 ${props.width} ${props.height}`}
-             fill={props.fill || theme.colors.accent}
-             xmlns="http://www.w3.org/2000/svg">
+        <StyledIcon width={props.width}
+                    height={props.height}
+                    transform={`rotate(${props.rotate || '0'} 0 0)`}
+                    viewBox={`0 0 ${props.width} ${props.height}`}
+                    // fill={props.fill || theme.colors.accent}
+                    xmlns="http://www.w3.org/2000/svg">
             <use xlinkHref={`${iconsSprite}#${props.iconId}`}/>
-        </svg>
+        </StyledIcon>
     );
 };
 
 export default Icon;
+
+const StyledIcon = styled.svg`
+  color: ${theme.colors.accent}
+`

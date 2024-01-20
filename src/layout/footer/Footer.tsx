@@ -5,6 +5,7 @@ import SectionHeader from "../../components/headers/SectionHeader";
 import {StyledParagraph} from "../../components/paragraph";
 import FlexWrapper, {FlexWrapperPropsType} from "../../components/flexWrapper/FlexWrapper";
 import Icon from "../../components/Icon/Icon";
+import theme from '../../styles/Theme.Styled';
 
 export const Footer = () => {
     return (
@@ -67,6 +68,20 @@ const ListItem = styled.li`
   height: 35px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.10);
+
+  &:hover {
+    background-color: ${theme.colors.accent};
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out;
+
+    svg {
+      color: black;
+    }
+  }
+  
+  &:not(:hover){
+    transition: all .3s ease-in-out;
+  }
 `
 
 const SocialLink = styled.a`
