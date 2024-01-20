@@ -5,6 +5,7 @@ import styled, {css} from 'styled-components';
 import FlexWrapper, {FlexWrapperPropsType} from "../../../components/flexWrapper/FlexWrapper";
 import {Container} from "../../../components/container/Container";
 import {Button} from "../../../components/button/Button";
+import theme from "../../../styles/Theme.Styled";
 
 export const Contact = (props: { headerName: string }) => {
     return (
@@ -41,17 +42,33 @@ const StyledForm = styled.form<StyledFormProps>`
   
   textarea {
     margin-bottom: 35px;
+    height: 179px;
+    resize: none;
+  }
+
+  input:not(:nth-last-child(1)) {
+    margin-bottom: 16px;
+    max-height: 32px;
+    height: 100%;
   }
 `
 
 const StyledField = styled.input`
   width: 100%;
-  max-height: 32px;
-  height: 100%;
 
-  &:not(:nth-last-child(2)) {
-    margin-bottom: 16px;
+  border: 1px solid ${theme.colors.greyTwo};
+  background-color: ${theme.backgroundColor.third};
+
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  padding: 0 15px;
+  
+  outline: 1px solid ${theme.colors.greyTwo}; 
+
+  &::placeholder {
+    color: ${theme.colors.greyThree};
   }
-
 `
 

@@ -26,6 +26,10 @@ export const GlobalStyles = createGlobalStyle`
     color: ${theme.colors.white};
   }
 
+  input, textarea {
+    color: ${theme.colors.white};
+  }
+
   picture {
     width: 100%;
     height: auto;
