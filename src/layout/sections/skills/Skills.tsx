@@ -16,7 +16,7 @@ export const Skills = (props: HeaderPropsType) => {
         >
             <Container>
                 <SectionTitle text={`My ${props.headerName}`} mb={'80px'}/>
-                <FlexWrapper wrap={'wrap'}>
+                <FlexWrapper wrap={'wrap'} justify={'center'}>
                     <Skill skillIconId={"code"}
                            skillTitle={'html5'}
                            skillText={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci debitis molestias nam odit quo temporibus?'}

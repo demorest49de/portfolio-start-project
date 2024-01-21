@@ -10,9 +10,9 @@ function App() {
     return (
         <div className="App">
             <h1 className={"visually-hidden"}>Web Developer, Svetlana Dyablo, promo page</h1>
-            <Header menuItems={menuItems}/>
+            {/*<Header menuItems={menuItems}/>*/}
             <Main menuItems={menuItems}/>
-            <Footer/>
+            {/*<Footer/>*/}
         </div>
     );
 }

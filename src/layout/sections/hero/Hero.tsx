@@ -29,10 +29,9 @@ const HeroContent = () => {
         <SHeroDiv1>
             <SHeroDiv2>
                 <p>Hi There</p>
-                <p>I am Svetlana Dyablo
-                </p>
+                <StyledWhoAmI>I am Svetlana Dyablo
+                </StyledWhoAmI>
                 <p>A Web Developer. |</p>
-                <SHeroRectangle></SHeroRectangle>
             </SHeroDiv2>
             <SHeroDiv3>
                 <picture>
@@ -43,22 +42,31 @@ const HeroContent = () => {
     )
 }
 
-const SHeroRectangle = styled.div`
-  position: absolute;
-  width: 426px;
-  height: 20px;
-  top: 59px;
-  left: 137px;
-  background-color: ${theme.colors.accent};
-  opacity: .8;
-  z-index: -1;
+const StyledWhoAmI = styled.p`
+  
+ &::before{
+   content: "";
+   position: absolute;
+   width: 75.5%;
+   height: 20px;
+   top: 64px;
+   right: 1px;
+   background-color: ${theme.colors.accent};
+   opacity: .8;
+   z-index: -1;
+ }
 `
 
 const SHeroDiv1 = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
+  
+  @media screen and (max-width: 998px){
+    justify-content: center;
+  }
 `
 
 const SHeroDiv2 = styled.div`
@@ -75,13 +83,17 @@ const SHeroDiv2 = styled.div`
     font-size: 50px;
     letter-spacing: 2.5px;
     font-family: ${theme.fonts.JosefinSans};
-    width: 578px;
+    max-width: 578px;
     margin-bottom: 10px;
   }
 
   p:nth-child(3) {
     font-weight: ${theme.fontWeight.regular};
     font-size: 27px;
+  }
+  
+  @media screen and (max-width: 597px){
+    max-width: 404px;
   }
 `
 
