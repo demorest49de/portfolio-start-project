@@ -24,7 +24,7 @@ export const Works = (props: HeaderPropsType) => {
                     <StyledWorkNav>
                         <TabMenu menuItems={items}/>
                     </StyledWorkNav>
-                    <FlexWrapper wrap={'wrap'} gap={'60px'}>
+                    <FlexWrapper wrap={'wrap'} gap={'60px'} justify={'center'}>
                         <Work title={'Social Network'}
                               src={socialImg}
                               text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.'}
@@ -48,4 +48,9 @@ const StyledWorkNav = styled.nav`
   align-items: center;
   margin-bottom: 50px;
   color: ${theme.colors.accent};
+
+
+  @media ${theme.media.tablet}{
+    margin-bottom: 25px;
+  }
 `

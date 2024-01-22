@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Link} from "../../../components/link/Link";
+import theme from "../../../styles/Theme.Styled";
 
 export const TabMenu = (props: { menuItems: string[] }) => {
     return (
@@ -26,6 +27,10 @@ const StyledTabMenu = styled.ul`
   gap: 20px;
   align-items: center;
   justify-content: space-between;
+
+  @media ${theme.media.tablet}{
+    gap: 10px;
+  }
 `
 
 const ListItem = styled.li`

@@ -37,6 +37,7 @@ const SH2 = styled.h2<Sh2PropsType>`
   letter-spacing: 3px;
   font-weight: ${theme.fontWeight.bold};
   margin-bottom: 30px;
+  text-align: center;
 `
 
 const FWSectionHeader = styled(FlexWrapper)`
