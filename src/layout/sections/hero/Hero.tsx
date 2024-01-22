@@ -103,7 +103,7 @@ const SHeroDiv3 = styled.div`
   width: 350px;
   height: 430px;
   position: relative;
-  transform: translateX(-34px);
+  //transform: translateX(-34px);
   @media screen and (max-width: 597px) {
     width: 310px;
     height: 380px;
@@ -147,7 +147,7 @@ const SHeroDiv1 = styled.div`
     justify-content: center;
   }
   
-  @media screen and (max-width: 397px) {
+  @media screen and (max-width: 414px) {
     justify-content: start;
   }
 `
