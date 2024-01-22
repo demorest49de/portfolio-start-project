@@ -21,7 +21,9 @@ const theme = {
 
     media: {
         tablet: "screen and (max-width: 768px)",
+        mobile597px: "screen and (max-width: 597px)",
         mobile: "screen and (max-width: 576px)",
+        mobile459px: "screen and (max-width: 459px)",
     }
 }
 

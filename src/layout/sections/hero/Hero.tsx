@@ -29,7 +29,7 @@ const HeroContent = () => {
         <SHeroDiv1>
             <SHeroDiv2>
                 <p>Hi There</p>
-                <StyledWhoAmI>I am Svetlana Dyablo
+                <StyledWhoAmI><li>I am</li> <li><span>Svetlana</span> <span>Dyablo</span></li>
                 </StyledWhoAmI>
                 <p>A Web Developer. |</p>
             </SHeroDiv2>
@@ -40,26 +40,73 @@ const HeroContent = () => {
     )
 }
 
-const StyledWhoAmI = styled.p`
+const StyledWhoAmI = styled.ul`
+
+  font-weight: ${theme.fontWeight.bold};
+  font-size: 50px;
+  letter-spacing: 2.5px;
+  font-family: ${theme.fonts.JosefinSans};
+  max-width: 578px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 15px;
+
+  @media ${theme.media.mobile597px} {
+    flex-direction: column;
+  }
+
+  @media ${theme.media.mobile459px} {
+    font-size: 36px;
+    gap: 0px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 76%;
+    height: 20px;
+    top: 64px;
+    right: 1px;
+    background-color: ${theme.colors.accent};
+    opacity: .8;
+    z-index: -1;
+
+    @media ${theme.media.mobile597px} {
+      width: 0;
+    }
+  }
+
+  //todo razobratsja
+  @media ${theme.media.mobile597px} {
+
+    span {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 98%;
+        height: 20px;
+        top: 32px;
+        right: 2px;
+        background-color: ${theme.colors.accent};
+        opacity: .8;
+        z-index: -1;
+      }
+    }
+  }
+
+  //todo razobratsja
+  @media ${theme.media.mobile459px} {
+
+    span {
+      &::before {
+        top: 23px;
+        right: 2px;
+      }
+    }
+  }
   
- &::before{
-   content: "";
-   position: absolute;
-   width: 75.5%;
-   height: 20px;
-   top: 64px;
-   right: 1px;
-   background-color: ${theme.colors.accent};
-   opacity: .8;
-   z-index: -1;
-   
-   //todo popravit' sinjuju polosku
-   @media screen and (max-width: 437px) {
-     width: 1%;
-     right: 0;
-     left: 1px;
-   }
- }
 `
 
 
@@ -70,15 +117,6 @@ const SHeroDiv2 = styled.div`
   p:nth-child(1) {
     font-weight: ${theme.fontWeight.regular};
     font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  p:nth-child(2) {
-    font-weight: ${theme.fontWeight.bold};
-    font-size: 50px;
-    letter-spacing: 2.5px;
-    font-family: ${theme.fonts.JosefinSans};
-    max-width: 578px;
     margin-bottom: 10px;
   }
 
