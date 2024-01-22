@@ -22,7 +22,6 @@ const StyledHeader = styled.header`
 
   }
 
-  //todo na position fixed ne rabotaet padding sleva
   position: fixed;
   max-width: 1170px;
   display: flex;

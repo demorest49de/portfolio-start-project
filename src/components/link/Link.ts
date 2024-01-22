@@ -15,8 +15,8 @@ export const Link = styled.a`
     }
   }
 
+  // TODO transition ne rabotaet tabmenu
   &:before {
-    //todo transition ne rabotaet tabmenu
     transition: all .3s ease-in-out;
     content: '';
     display: inline-block;

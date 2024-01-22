@@ -59,7 +59,7 @@ const ImageWrapper = styled.div`
       top: 0;
       bottom: 0;
 
-      //todo ne rabotaet transition dlja blur effekta
+      // todo ne rabotaet transition dlja blur effekta
       background-color: rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(4px);
     }

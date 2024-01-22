@@ -76,7 +76,7 @@ const StyledWhoAmI = styled.ul`
     }
   }
 
-  //todo razobratsja
+  // todo razobratsja
   @media ${theme.media.mobile597px} {
 
     span {
@@ -96,7 +96,6 @@ const StyledWhoAmI = styled.ul`
     }
   }
 
-  //todo razobratsja
   @media ${theme.media.mobile459px} {
 
     span {
