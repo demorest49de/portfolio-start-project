@@ -57,17 +57,6 @@ const StyledWhoAmI = styled.p`
  }
 `
 
-const SHeroDiv1 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  
-  @media screen and (max-width: 998px){
-    justify-content: center;
-  }
-`
 
 const SHeroDiv2 = styled.div`
   position: relative;
@@ -91,14 +80,20 @@ const SHeroDiv2 = styled.div`
     font-weight: ${theme.fontWeight.regular};
     font-size: 27px;
   }
-  
-  @media screen and (max-width: 597px){
-    max-width: 404px;
+
+  @media screen and (max-width: 597px) {
+    p:nth-child(2) {
+      font-size: 36px;
+      letter-spacing: 1.8px;
+    }
+
+    p:nth-child(3) {
+      font-size: 20px;
+    }
   }
 `
 
 const SHeroDiv3 = styled.div`
-  min-width: 360px;
   height: 485px;
   border: 5px solid #7572D5;
 
@@ -111,9 +106,30 @@ const SHeroDiv3 = styled.div`
     right: 34px;
     top: 24px;
     max-width: 350px;
+    width: 100%;
     min-height: 430px;
     object-fit: cover;
-    //object-position: -95px -69px;
+    @media screen and (max-width: 597px) {
+      transform: translate(-20px, 20px);
+    }
+  }
+`
+
+const SHeroDiv1 = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media screen and (max-width: 998px) {
+    justify-content: center;
+  }
+
+  ${SHeroDiv2}, ${SHeroDiv3} {
+    @media screen and (max-width: 597px) {
+      max-width: 300px;
+    }
   }
 `
 
