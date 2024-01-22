@@ -2,23 +2,26 @@ import React from "react";
 import {DesktopMenu} from "./desktopMenu/DesktopMenu";
 import Logo from "../../components/logo/Logo";
 import styled from "styled-components";
-import FlexWrapper from "../../components/flexWrapper/FlexWrapper";
+import {Container} from "../../components/container/Container";
 import {MobileMenu} from "./mobileMenu/MobileMenu";
 
 
 const HeaderMenu = (props: { menuItems: string[] }) => {
 
     return (
-        <StyledWrapper justify={"space-between"}>
+        <StyledHeaderContainer>
             <Logo/>
-            <DesktopMenu menuItems={props.menuItems}/>
             <MobileMenu menuItems={props.menuItems}/>
-        </StyledWrapper>
+            <DesktopMenu menuItems={props.menuItems}/>
+        </StyledHeaderContainer>
     )
 };
 
 export default HeaderMenu;
 
-const StyledWrapper = styled(FlexWrapper)`
-  position: relative;
+const StyledHeaderContainer = styled(Container)`
+  max-width: 1170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `

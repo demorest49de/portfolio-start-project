@@ -5,13 +5,13 @@ export const MobileMenu = (props: { menuItems: string[] }) => {
     return (
         <StyledNavigation>
             <BurgerButton
-                isOpen={true}
+                isOpen={false}
             >
                 <span>
                 </span>
             </BurgerButton>
             <MobileMenuPopup
-                isOpen={true}
+                isOpen={false}
             >
                 <StyledListNavigation>
                     {
@@ -43,11 +43,12 @@ const StyledNavigation = styled.nav`
   display: none;
   justify-content: end;
   padding: 0;
-  height: 100px;
+  width: 0;
+  height: 0;
 
-  /* @media ${theme.media.tablet} {
+  @media ${theme.media.tablet} {
     display: flex;
-   }*/
+  }
 `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
@@ -56,27 +57,29 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   height: 200px;
   top: -100px;
   right: -100px;
+  z-index: 3;
 
   // srednjaja cherta burger menu
   span {
     display: block;
     width: 36px;
     height: 2px;
-    color: ${theme.colors.white};
+    background-color: ${theme.colors.white};
     position: absolute;
     left: 40px;
     bottom: 50px;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
-      color: rgb(255, 255, 255, 0);
+      background-color: rgba(255, 255, 255, 0);
       //pochemu ne opacity => togda k before i after tozhe primenitsja opacity 
     `}
+    
     &::before {
       content: '';
       display: block;
       width: 36px;
       height: 2px;
-      color: ${theme.colors.white};
+      background-color: ${theme.colors.white};
       position: absolute;
       transform: translateY(-10px);
 
@@ -90,7 +93,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 24px;
       height: 2px;
-      color: ${theme.colors.white};
+      background-color: ${theme.colors.white};
       position: absolute;
       transform: translateY(10px);
 
@@ -108,10 +111,11 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 99999;
+  z-index: 2;
   background-color: rgba(31, 31, 32, 0.9);
 
   display: none;
+  
   // propisivaem chto budet pri otkritii popupa
   ${props => props.isOpen && css<{ isOpen: boolean }>`
     display: flex;

@@ -33,6 +33,7 @@ const StyledNavigation = styled.nav`
   display: flex;
   justify-content: end;
   padding: 0;
+  width: fit-content;
 
   li {
     color: ${theme.colors.accent};

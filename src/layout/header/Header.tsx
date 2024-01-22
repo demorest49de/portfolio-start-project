@@ -1,29 +1,32 @@
 import React from 'react'
-import styled from "styled-components";
-import {Container} from "../../components/container/Container";
 import HeaderMenu from "./HeaderMenu";
+import styled from "styled-components";
+import theme from "../../styles/Theme.Styled";
 
 export const Header = (props: { menuItems: string[] }) => {
     return (
         <StyledHeader>
-            <StyledHeaderContainer>
                 <HeaderMenu menuItems={props.menuItems}/>
-            </StyledHeaderContainer>
         </StyledHeader>
     )
 }
 
 const StyledHeader = styled.header`
-  min-height: 50px;
-  padding: 20px 0;
-  position: fixed;
+  height: 50px;
   width: 100%;
-  z-index: 2;
-  top: 0;
-  backdrop-filter: blur(4px);
-  background-color: rgba(31, 31, 32, .6);
-`
 
-const StyledHeaderContainer = styled(Container)`
-  max-width: 1170px;
+  @media ${theme.media.tablet} {
+    width: 0;
+    height: 0;
+  }
+
+  //todo na position fixed ne rabotaet padding sleva
+  //position: absolute;
+  //width: 1170px;
+  //left: 15px;
+  //right: 15px;
+  //z-index: 2;
+  //top: 0px;
+  //backdrop-filter: blur(4px);
+  //background-color: rgba(31, 31, 32, .6);
 `
