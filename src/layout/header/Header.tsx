@@ -15,9 +15,9 @@ export const Header = (props: { menuItems: string[] }) => {
 
 const StyledHeader = styled.header`
   min-height: 50px;
-  padding-top: 20px;
+  padding: 20px 0;
   position: fixed;
-  min-width: 100vw;
+  width: 100%;
   z-index: 2;
   top: 0;
   backdrop-filter: blur(4px);
@@ -25,5 +25,5 @@ const StyledHeader = styled.header`
 `
 
 const StyledHeaderContainer = styled(Container)`
-  max-width: 1370px;
+  max-width: 1170px;
 `

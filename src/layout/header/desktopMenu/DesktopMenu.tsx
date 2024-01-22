@@ -4,7 +4,7 @@ import theme from "../../../styles/Theme.Styled";
 export const DesktopMenu = (props: { menuItems: string[] }) => {
     return (
         <StyledNavigation>
-            <ul>
+            <StyledListNavigation>
                 {
                     props.menuItems.map((item, index) => {
                         return (
@@ -24,7 +24,7 @@ export const DesktopMenu = (props: { menuItems: string[] }) => {
                         )
                     })
                 }
-            </ul>
+            </StyledListNavigation>
         </StyledNavigation>
     )
 }
@@ -33,12 +33,6 @@ const StyledNavigation = styled.nav`
   display: flex;
   justify-content: end;
   padding: 0;
-
-  ul {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
 
   li {
     color: ${theme.colors.accent};
@@ -51,6 +45,12 @@ const StyledNavigation = styled.nav`
   @media ${theme.media.tablet} {
     display: none;
   }
+`
+
+const StyledListNavigation = styled.ul`
+  display: flex;
+  gap: 20px;
+  align-items: center;
 `
 
 const Mask = styled.span`

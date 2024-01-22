@@ -3,7 +3,7 @@ import {DesktopMenu} from "./desktopMenu/DesktopMenu";
 import Logo from "../../components/logo/Logo";
 import styled from "styled-components";
 import FlexWrapper from "../../components/flexWrapper/FlexWrapper";
-import theme from "../../styles/Theme.Styled";
+import {MobileMenu} from "./mobileMenu/MobileMenu";
 
 
 const HeaderMenu = (props: { menuItems: string[] }) => {
@@ -12,6 +12,7 @@ const HeaderMenu = (props: { menuItems: string[] }) => {
         <StyledWrapper justify={"space-between"}>
             <Logo/>
             <DesktopMenu menuItems={props.menuItems}/>
+            <MobileMenu menuItems={props.menuItems}/>
         </StyledWrapper>
     )
 };
