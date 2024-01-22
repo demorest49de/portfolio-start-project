@@ -34,9 +34,7 @@ const HeroContent = () => {
                 <p>A Web Developer. |</p>
             </SHeroDiv2>
             <SHeroDiv3>
-                <picture>
                     <img src={DeveloperPhoto} alt="Svetlana Dyablo"/>
-                </picture>
             </SHeroDiv3>
         </SHeroDiv1>
     )
@@ -54,12 +52,19 @@ const StyledWhoAmI = styled.p`
    background-color: ${theme.colors.accent};
    opacity: .8;
    z-index: -1;
+   //todo popravit' sinjuju polosku
+   @media screen and (max-width: 437px) {
+     width: 1%;
+     right: 0;
+     left: 1px;
+   }
  }
 `
 
 
 const SHeroDiv2 = styled.div`
   position: relative;
+  margin-bottom: 45px;
 
   p:nth-child(1) {
     font-weight: ${theme.fontWeight.regular};
@@ -94,24 +99,39 @@ const SHeroDiv2 = styled.div`
 `
 
 const SHeroDiv3 = styled.div`
-  height: 485px;
-  border: 5px solid #7572D5;
+  width: 350px;
+  height: 430px;
+  position: relative;
 
-  picture {
-    display: block;
+  @media screen and (max-width: 597px) {
+    width: 310px;
+    height: 380px;
   }
 
-  img {
-    transform: translate(-34px, 24px);
-    right: 34px;
-    top: 24px;
-    max-width: 350px;
-    width: 100%;
-    min-height: 430px;
-    object-fit: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 480px;
+    z-index: -1;
+    border: 5px solid #7572D5;
+    top: -34px;
+    left: 24px;
     @media screen and (max-width: 597px) {
-      transform: translate(-20px, 20px);
+      width: 314px;
+      height: 434px;
     }
+
+    @media screen and (max-width: 368px) {
+      width: 305px;
+    }
+  }
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `
 
@@ -125,11 +145,9 @@ const SHeroDiv1 = styled.div`
   @media screen and (max-width: 998px) {
     justify-content: center;
   }
-
-  ${SHeroDiv2}, ${SHeroDiv3} {
-    @media screen and (max-width: 597px) {
-      max-width: 300px;
-    }
+  
+  @media screen and (max-width: 397px) {
+    justify-content: start;
   }
 `
 
