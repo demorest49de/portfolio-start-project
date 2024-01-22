@@ -16,8 +16,8 @@ export const Link = styled.a`
   }
 
   &:before {
-    //todo transition ne rabotaet
-    //transition: all .3s ease-in-out;
+    //todo transition ne rabotaet tabmenu
+    transition: all .3s ease-in-out;
     content: '';
     display: inline-block;
     position: absolute;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import {Container} from "../../components/container/Container";
-import DesktopMenu from "../../components/menu/DesktopMenu";
+import DesktopMenu from "./HeaderMenu/DesktopMenu";
 
 export const Header = (props: { menuItems: string[] }) => {
     return (

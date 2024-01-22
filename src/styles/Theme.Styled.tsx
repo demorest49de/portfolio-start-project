@@ -18,6 +18,11 @@ const theme = {
         secondary: "#2d2d2f",
         third: "#252527",
     },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
+    }
 }
 
 export default theme;

@@ -1,29 +1,29 @@
 import React from "react";
-import {Menu} from "./Menu";
-import Logo from "../logo/Logo";
+import {Menu} from "../../../components/menu/Menu";
+import Logo from "../../../components/logo/Logo";
 import styled from "styled-components";
-import FlexWrapper from "../flexWrapper/FlexWrapper";
-import theme from "../../styles/Theme.Styled";
+import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
+import theme from "../../../styles/Theme.Styled";
 
 
-const DesktopMenu = (props: { menuItems: string[] }) => {
+const MobileMenu = (props: { menuItems: string[] }) => {
 
     return (
         <StyledWrapper justify={"space-between"}>
             <Logo/>
-            <StyledDesktopNav>
+            <StyledMobileNav>
                 <Menu menuItems={props.menuItems}/>
-            </StyledDesktopNav>
+            </StyledMobileNav>
         </StyledWrapper>
     )
 };
 
-export default DesktopMenu;
+export default MobileMenu;
 
 const StyledWrapper = styled(FlexWrapper)`
   position: relative;
 `
-const StyledDesktopNav = styled.nav`
+const StyledMobileNav = styled.nav`
   display: flex;
   justify-content: end;
   padding: 0;
@@ -42,8 +42,8 @@ const StyledDesktopNav = styled.nav`
     font-weight: 400;
     line-height: 55px;
   }
-  
-  @media screen and (max-width: 740px){
-    
+
+  @media ${theme.media.tablet} {
+    display: none;
   }
 `
