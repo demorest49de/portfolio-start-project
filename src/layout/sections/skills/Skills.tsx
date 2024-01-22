@@ -50,7 +50,7 @@ export const Skills = (props: HeaderPropsType) => {
                 <SectionTitle text={`My ${props.headerName}`} mb={'80px'}/>
                 <FlexWrapper wrap={'wrap'} justify={'center'}>
                     {skillStuff.map((item, index) => {
-                        return <Skill skillIconId={item.skillIconId}
+                        return <Skill key={index} skillIconId={item.skillIconId}
                                       skillTitle={item.skillTitle}
                                       skillText={item.skillText}
                         />

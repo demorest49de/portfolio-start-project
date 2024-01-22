@@ -38,8 +38,12 @@ const StyledDesktopNav = styled.nav`
   li {
     color: ${theme.colors.accent};
     font-family: Josefin Sans;
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 400;
     line-height: 55px;
+  }
+  
+  @media screen and (max-width: 740px){
+    
   }
 `

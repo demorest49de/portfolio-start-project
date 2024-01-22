@@ -14,12 +14,12 @@ export const BurgerMenu = (props: { menuItems: string[] }) => {
     const size = '24';
     return (
         <StyledBurgerMenu>
-            <SCloseBtn width={size} height={size}>
-                <Icon iconId={'closebtn'} width={size} height={size}/>
-            </SCloseBtn>
-            <StyledBurgerNav>
-                <Menu menuItems={props.menuItems}/>
-            </StyledBurgerNav>
+            {/*<SCloseBtn width={size} height={size}>*/}
+            {/*    <Icon iconId={'closebtn'} width={size} height={size}/>*/}
+            {/*</SCloseBtn>*/}
+            {/*<StyledBurgerNav>*/}
+            {/*    <Menu menuItems={props.menuItems}/>*/}
+            {/*</StyledBurgerNav>*/}
         </StyledBurgerMenu>
     )
 };

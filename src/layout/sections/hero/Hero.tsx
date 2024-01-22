@@ -54,11 +54,6 @@ const StyledWhoAmI = styled.p`
    z-index: -1;
    
    //todo popravit' sinjuju polosku
-   //todo popravit' sinjuju polosku
-   //todo popravit' sinjuju polosku
-   //todo popravit' sinjuju polosku
-   //todo popravit' sinjuju polosku
-   //todo popravit' sinjuju polosku
    @media screen and (max-width: 437px) {
      width: 1%;
      right: 0;

@@ -8,14 +8,16 @@ export const Link = styled.a`
   letter-spacing: 1px;
   text-transform: uppercase;
   color: ${theme.colors.white};
-  
-  &:hover{
-    &:before{
+
+  &:hover {
+    &:before {
       height: 10px;
     }
   }
 
   &:before {
+    //todo transition ne rabotaet
+    //transition: all .3s ease-in-out;
     content: '';
     display: inline-block;
     position: absolute;
