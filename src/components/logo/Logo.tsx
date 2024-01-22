@@ -15,11 +15,8 @@ export default Logo;
 
 const SLogo = styled.a`
   width: 50px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  
-  @media ${theme.media.tablet}{
-    display: none;
-  }
+
+  // @media ${theme.media.tablet}{
+  //   display: none;
+  // }
 `

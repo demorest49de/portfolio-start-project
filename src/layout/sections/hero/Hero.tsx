@@ -103,7 +103,7 @@ const SHeroDiv3 = styled.div`
   width: 350px;
   height: 430px;
   position: relative;
-
+  transform: translateX(-34px);
   @media screen and (max-width: 597px) {
     width: 310px;
     height: 380px;

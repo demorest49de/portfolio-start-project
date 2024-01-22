@@ -12,7 +12,7 @@ export const Header = (props: { menuItems: string[] }) => {
 }
 
 const StyledHeader = styled.header`
-  height: 65px;
+  height: 60px;
   width: 100%;
 
   @media ${theme.media.tablet} {
@@ -21,12 +21,12 @@ const StyledHeader = styled.header`
   }
 
   //todo na position fixed ne rabotaet padding sleva
-  //position: absolute;
-  //width: 1170px;
-  //left: 15px;
-  //right: 15px;
-  //z-index: 2;
-  //top: 0px;
-  //backdrop-filter: blur(4px);
-  //background-color: rgba(31, 31, 32, .6);
+  position: fixed;
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  backdrop-filter: blur(4px);
+  background-color: rgba(31, 31, 32, .6);
 `

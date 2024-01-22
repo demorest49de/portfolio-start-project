@@ -41,13 +41,13 @@ export const MobileMenu = (props: { menuItems: string[] }) => {
 
 const StyledNavigation = styled.nav`
   display: none;
-  justify-content: end;
   padding: 0;
   width: 0;
   height: 0;
 
   @media ${theme.media.tablet} {
-    display: flex;
+    display: block;
+    
   }
 `
 
