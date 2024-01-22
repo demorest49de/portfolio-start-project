@@ -11,8 +11,8 @@ const HeaderMenu = (props: { menuItems: string[] }) => {
     return (
         <StyledHeaderContainer>
             <Logo/>
-            <MobileMenu menuItems={props.menuItems}/>
             <DesktopMenu menuItems={props.menuItems}/>
+            <MobileMenu menuItems={props.menuItems}/>
         </StyledHeaderContainer>
     )
 };

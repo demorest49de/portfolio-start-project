@@ -16,8 +16,10 @@ const StyledHeader = styled.header`
   width: 100%;
 
   @media ${theme.media.tablet} {
-    width: 0;
-    height: 0;
+    //width: 0;
+    //height: 0;
+    height: 80px;
+
   }
 
   //todo na position fixed ne rabotaet padding sleva
