@@ -52,11 +52,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   height: 200px;
   top: -100px;
   right: -100px;
-  
-  ${props => props.isOpen && css<{ isOpen: boolean }>`
-  
-  `}
 
+  // srednjaja cherta burger menu
   span {
     display: block;
     width: 36px;
@@ -66,6 +63,11 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     left: 40px;
     bottom: 50px;
 
+    ${props => props.isOpen && css<{ isOpen: boolean }>`
+      color: rgb(255, 255, 255, 0);
+      //pochemu ne opacity => togda k before i after tozhe primenitsja opacity 
+    `}
+    
     &::before {
       content: '';
       display: block;
