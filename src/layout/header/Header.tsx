@@ -5,15 +5,15 @@ import DesktopMenu from "../../components/menu/DesktopMenu";
 
 export const Header = (props: { menuItems: string[] }) => {
     return (
-        <SHeader>
+        <StyledHeader>
             <StyledHeaderContainer>
                 <DesktopMenu menuItems={props.menuItems}/>
             </StyledHeaderContainer>
-        </SHeader>
+        </StyledHeader>
     )
 }
 
-const SHeader = styled.header`
+const StyledHeader = styled.header`
   min-height: 100px;
   position: fixed;
   min-width: 100vw;

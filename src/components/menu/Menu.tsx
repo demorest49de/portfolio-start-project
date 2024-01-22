@@ -27,12 +27,8 @@ export const Menu = (props: { menuItems: string[] }) => {
     )
 }
 
-const Link = styled.a`
-color: transparent;
-`
-
 const Mask = styled.span`
-color: ${theme.colors.accent};
+  color: ${theme.colors.accent};
   position: absolute;
   top: 0;
   left: 0;
@@ -86,4 +82,8 @@ const ListItem = styled.li`
 
   }
 
+`
+
+const Link = styled.a`
+  color: transparent;
 `

@@ -16,11 +16,13 @@ const Main = (props: { menuItems: string[] }) => {
 
     return (
         <main>
-            <Hero headerName={itemsObj.Home}/>
+            <Hero headerName={itemsObj.Hero}/>
             <Skills headerName={itemsObj.Skills}/>
             <Works headerName={itemsObj.Works}/>
             <Testimony headerName={itemsObj.Testimony} paragraphText={`
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci amet, commodi consectetur corporis cum, distinctio dolorem, doloribus earum enim est fugit harum impedit molestias nam quaerat qui voluptate! Eligendi!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci amet,
+             commodi consectetur corporis cum, distinctio dolorem, doloribus earum enim 
+             est fugit harum impedit molestias nam quaerat qui voluptate! Eligendi!
             `}
                        spanText={'@ivan ivanow'}
             />
