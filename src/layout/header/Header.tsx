@@ -1,20 +1,21 @@
 import React from 'react'
 import styled from "styled-components";
 import {Container} from "../../components/container/Container";
-import DesktopMenu from "./HeaderMenu/DesktopMenu";
+import HeaderMenu from "./HeaderMenu";
 
 export const Header = (props: { menuItems: string[] }) => {
     return (
         <StyledHeader>
             <StyledHeaderContainer>
-                <DesktopMenu menuItems={props.menuItems}/>
+                <HeaderMenu menuItems={props.menuItems}/>
             </StyledHeaderContainer>
         </StyledHeader>
     )
 }
 
 const StyledHeader = styled.header`
-  min-height: 100px;
+  min-height: 50px;
+  padding-top: 20px;
   position: fixed;
   min-width: 100vw;
   z-index: 2;
