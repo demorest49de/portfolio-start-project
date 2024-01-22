@@ -12,7 +12,7 @@ export const Header = (props: { menuItems: string[] }) => {
 }
 
 const StyledHeader = styled.header`
-  height: 50px;
+  height: 65px;
   width: 100%;
 
   @media ${theme.media.tablet} {

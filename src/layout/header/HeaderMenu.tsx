@@ -22,6 +22,6 @@ export default HeaderMenu;
 const StyledHeaderContainer = styled(Container)`
   max-width: 1170px;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: space-between;
 `

@@ -35,14 +35,6 @@ const StyledNavigation = styled.nav`
   padding: 0;
   width: fit-content;
 
-  li {
-    color: ${theme.colors.accent};
-    font-family: Josefin Sans;
-    font-size: 35px;
-    font-weight: 400;
-    line-height: 55px;
-  }
-
   @media ${theme.media.tablet} {
     display: none;
   }
@@ -51,7 +43,7 @@ const StyledNavigation = styled.nav`
 const StyledListNavigation = styled.ul`
   display: flex;
   gap: 20px;
-  align-items: center;
+  align-items: end;
 `
 
 const Mask = styled.span`
@@ -74,6 +66,12 @@ const Mask = styled.span`
 
 const ListItem = styled.li`
   position: relative;
+  
+  color: ${theme.colors.accent};
+  font-family: Josefin Sans;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 55px;
 
   &::before {
     content: "";
