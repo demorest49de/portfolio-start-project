@@ -3,13 +3,14 @@ import theme from "../../../styles/Theme.Styled";
 
 export const MobileMenu = (props: { menuItems: string[] }) => {
     return (
+        // todo poprobuju perenesti knopku v headermenu
         <StyledNavigation>
-            <BurgerButton
-                isOpen={false}
-            >
-                <span>
-                </span>
-            </BurgerButton>
+
+            {/*<BurgerButton isOpen={false}>*/}
+            {/*    <span>*/}
+            {/*    </span>*/}
+            {/*</BurgerButton>*/}
+
             <MobileMenuPopup
                 isOpen={false}
             >
@@ -49,60 +50,59 @@ const StyledNavigation = styled.nav`
     display: block;
   }
 `
-
-const BurgerButton = styled.button<{ isOpen: boolean }>`
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  top: -100px;
-  right: -100px;
-  z-index: 3;
-
-  // srednjaja cherta burger menu
-  span {
-    display: block;
-    width: 36px;
-    height: 2px;
-    background-color: ${theme.colors.accent};
-    position: absolute;
-    left: 40px;
-    bottom: 50px;
-
-    ${props => props.isOpen && css<{ isOpen: boolean }>`
-      background-color: rgba(255, 255, 255, 0);
-      //pochemu ne opacity => togda k before i after tozhe primenitsja opacity 
-    `}
-    
-    &::before {
-      content: '';
-      display: block;
-      width: 36px;
-      height: 2px;
-      background-color: ${theme.colors.accent};
-      position: absolute;
-      transform: translateY(-10px);
-
-      ${props => props.isOpen && css<{ isOpen: boolean }>`
-        transform: rotate(-45deg) translateY(0px); 
-      `}
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 2px;
-      background-color: ${theme.colors.accent};
-      position: absolute;
-      transform: translateY(10px);
-
-      ${props => props.isOpen && css<{ isOpen: boolean }>`
-        transform: rotate(45deg) translateY(0px);
-        width: 36px;
-      `}
-    }
-  }
-`
+// todo poprobuju perenesti knopku v headermenu
+// const BurgerButton = styled.button<{ isOpen: boolean }>`
+//   position: fixed;
+//   width: 100px;
+//   height: 100px;
+//   top: 20px;
+//   right: 20px;
+//   z-index: 3;
+//
+//   // srednjaja cherta burger menu
+//   span {
+//     display: block;
+//     width: 36px;
+//     height: 2px;
+//     background-color: ${theme.colors.accent};
+//     position: absolute;
+//     left: 40px;
+//     bottom: 50px;
+//
+//     ${props => props.isOpen && css<{ isOpen: boolean }>`
+//       background-color: rgba(255, 255, 255, 0);
+//       //pochemu ne opacity => togda k before i after tozhe primenitsja opacity
+//     `}
+//     &::before {
+//       content: '';
+//       display: block;
+//       width: 36px;
+//       height: 2px;
+//       background-color: ${theme.colors.accent};
+//       position: absolute;
+//       transform: translateY(-10px);
+//
+//       ${props => props.isOpen && css<{ isOpen: boolean }>`
+//         transform: rotate(-45deg) translateY(0px);
+//       `}
+//     }
+//
+//     &::after {
+//       content: '';
+//       display: block;
+//       width: 24px;
+//       height: 2px;
+//       background-color: ${theme.colors.accent};
+//       position: absolute;
+//       transform: translateY(10px);
+//
+//       ${props => props.isOpen && css<{ isOpen: boolean }>`
+//         transform: rotate(45deg) translateY(0px);
+//         width: 36px;
+//       `}
+//     }
+//   }
+// `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
@@ -114,7 +114,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   background-color: rgba(31, 31, 32, 0.9);
 
   display: none;
-  
+
   // propisivaem chto budet pri otkritii popupa
   ${props => props.isOpen && css<{ isOpen: boolean }>`
     display: flex;
@@ -125,7 +125,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 `
 
 const StyledListNavigation = styled.ul`
-  
+
   display: flex;
   gap: 20px;
   align-items: center;

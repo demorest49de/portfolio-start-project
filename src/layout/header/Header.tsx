@@ -15,10 +15,6 @@ const StyledHeader = styled.header`
   height: 60px;
   width: 100%;
 
-  @media ${theme.media.tablet} {
-    height: 80px;
-  }
-
   position: fixed;
   
   // todo max-width: 1170px; razobratsja s kostilem
