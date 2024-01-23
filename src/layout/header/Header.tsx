@@ -16,14 +16,13 @@ const StyledHeader = styled.header`
   width: 100%;
 
   @media ${theme.media.tablet} {
-    //width: 0;
-    //height: 0;
     height: 80px;
-
   }
 
   position: fixed;
-  max-width: 1170px;
+  
+  // todo max-width: 1170px; razobratsja s kostilem
+  max-width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
