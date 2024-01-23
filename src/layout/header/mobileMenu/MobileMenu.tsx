@@ -11,9 +11,7 @@ export const MobileMenu = (props: { menuItems: string[] }) => {
             {/*    </span>*/}
             {/*</BurgerButton>*/}
 
-            <MobileMenuPopup
-                isOpen={false}
-            >
+            <MobileMenuPopup isOpen={false}>
                 <StyledListNavigation>
                     {
                         props.menuItems.map((item, index) => {

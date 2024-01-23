@@ -8,8 +8,10 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
     //  esli nuzhno posmotret kakoy block vilazit na adaptive
-    outline: 1px solid indianred;
+    
+    //outline: 1px solid indianred;
   }
 
   html {
@@ -23,8 +25,9 @@ export const GlobalStyles = createGlobalStyle`
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    min-width: 320px;
+    // todo na 360px pokazivaet - ok, menshe vert skroll!
+    // oshibka to pojavljaetsja to propodaet!
+    min-width: 360px;
     min-height: 100vh;
     background-color: ${theme.backgroundColor.primary};
     color: ${theme.colors.white};

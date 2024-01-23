@@ -38,6 +38,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   z-index: 3;
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
   
   @media ${theme.media.tablet} {
     display: flex;
