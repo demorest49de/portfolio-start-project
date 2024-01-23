@@ -2,7 +2,7 @@ import React from 'react';
 import {StyledSection} from "../../../components/section/Section";
 import SectionHeader from "../../../components/headers/SectionHeader";
 import styled, {css} from 'styled-components';
-import FlexWrapper, {FlexWrapperPropsType} from "../../../components/flexWrapper/FlexWrapper";
+import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import {Container} from "../../../components/container/Container";
 import {Button} from "../../../components/button/Button";
 import theme from "../../../styles/Theme.Styled";

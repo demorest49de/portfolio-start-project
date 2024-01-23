@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
 import theme from "../../../styles/Theme.Styled";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
@@ -60,8 +59,3 @@ export const Skills = (props: HeaderPropsType) => {
         </StyledSection>
     );
 };
-
-
-const SSkillsSection = styled(StyledSection)`
-  background-color: ${theme.backgroundColor.secondary};
-`

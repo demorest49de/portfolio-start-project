@@ -1,7 +1,6 @@
 import React from 'react';
 import Icon from "../Icon/Icon";
 import styled from "styled-components";
-import theme from "../../styles/Theme.Styled";
 
 const Logo = () => {
     return (
