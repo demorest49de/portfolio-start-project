@@ -73,6 +73,10 @@ const ListItem = styled.li`
   font-weight: 400;
   line-height: 55px;
 
+  @media ${theme.media.tablet971px} {
+    font-size: 25px;
+  }
+
   &::before {
     content: "";
     display: inline-block;

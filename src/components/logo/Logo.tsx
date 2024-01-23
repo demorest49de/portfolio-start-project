@@ -15,8 +15,7 @@ export default Logo;
 
 const SLogo = styled.a`
   width: 50px;
-
-  // @media ${theme.media.tablet}{
-  //   display: none;
-  // }
+  height: inherit;
+  display: flex;
+  align-items: center;
 `

@@ -23,12 +23,5 @@ export default HeaderMenu;
 const StyledHeaderContainer = styled(Container)`
   max-width: 1170px;
   display: flex;
-  align-items: end;
   justify-content: space-between;
-  padding-left: 0;
-  
-  // todo razobratsja s kostilem
-  @media ${theme.media.tablet971px}{
-    padding-left: 15px;
-  }
 `

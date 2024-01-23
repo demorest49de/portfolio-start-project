@@ -29,5 +29,5 @@ const StyledHeader = styled.header`
   z-index: 2;
   backdrop-filter: blur(4px);
   background-color: rgba(31, 31, 32, .6);
-  top: 0;right: 0;
+  top: 0;
 `

@@ -47,7 +47,6 @@ const StyledNavigation = styled.nav`
 
   @media ${theme.media.tablet} {
     display: block;
-    
   }
 `
 
@@ -133,7 +132,6 @@ const StyledListNavigation = styled.ul`
   flex-direction: column;
 
 `
-
 
 const Mask = styled.span`
   color: ${theme.colors.accent};
