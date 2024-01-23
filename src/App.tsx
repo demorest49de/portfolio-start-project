@@ -9,7 +9,7 @@ const menuItems = ["Hero", "Skills", "Works", "Testimony", "Contact"];
 function App() {
     return (
         <StyledApp className="App">
-            <h1 className={"visually-hidden"}>Web Developer, Svetlana Dyablo, promo page</h1>
+            <h1 className={"visually-hidden"}>Web Developer, Svetlana Dyablo</h1>
             <Header menuItems={menuItems}/>
             <Main menuItems={menuItems}/>
             <Footer/>
