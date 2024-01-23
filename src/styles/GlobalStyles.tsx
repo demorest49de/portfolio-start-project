@@ -8,7 +8,8 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    //outline: 1px solid indianred;
+    //  esli nuzhno posmotret kakoy block vilazit na adaptive
+    outline: 1px solid indianred;
   }
 
   html {
@@ -23,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    min-width: 360px;
+    min-width: 320px;
     min-height: 100vh;
     background-color: ${theme.backgroundColor.primary};
     color: ${theme.colors.white};
