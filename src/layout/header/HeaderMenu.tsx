@@ -8,7 +8,7 @@ import theme from "../../styles/Theme.Styled";
 
 
 const HeaderMenu = (props: { menuItems: string[] }) => {
-// todo poprobuju Button perenesti sujda
+
     return (
         <StyledHeaderContainer>
             <Logo/>
@@ -30,7 +30,7 @@ const StyledHeaderContainer = styled(Container)`
   justify-content: space-between;
 `
 
-// todo poprobuju Button perenesti sujda
+
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   display: none;
   width: 50px;

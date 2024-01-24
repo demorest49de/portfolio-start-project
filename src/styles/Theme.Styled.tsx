@@ -25,6 +25,7 @@ const theme = {
         mobile597px: "screen and (max-width: 597px)",
         mobile: "screen and (max-width: 576px)",
         mobile459px: "screen and (max-width: 459px)",
+        mobile349px: "screen and (max-width: 349px)",
     }
 }
 

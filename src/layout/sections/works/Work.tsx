@@ -49,21 +49,26 @@ const ImageWrapper = styled.div`
   max-height: 260px;
   margin-bottom: 25px;
 
-  
-  &:hover {
-    &::before {
-      position: absolute;
-      content: '';
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 
-      // todo ne rabotaet transition dlja blur effekta
-      background-color: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    &:hover {
+      // todo ne rabotaet transition dlja blur effekta - height!
+      opacity: 1;
     }
+  }
 
+
+  &:hover {
     ${Button} {
       transition: all .3s ease-in-out;
       opacity: 1;
@@ -76,6 +81,7 @@ const ImageWrapper = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
     &:before {
       width: 100%;
       height: 100%;

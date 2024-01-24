@@ -25,9 +25,8 @@ export const GlobalStyles = createGlobalStyle`
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    // todo na 360px pokazivaet - ok, menshe vert skroll!
-    // oshibka to pojavljaetsja to propodaet!
-    min-width: 360px;
+   
+    min-width: 320px;
     min-height: 100vh;
     background-color: ${theme.backgroundColor.primary};
     color: ${theme.colors.white};

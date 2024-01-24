@@ -29,7 +29,7 @@ const HeroContent = () => {
         <SHeroDiv1>
             <SHeroDiv2>
                 <p>Hi There</p>
-                <StyledWhoAmI><li>I am</li> <li><span>Svetlana</span> <span>Dyablo</span></li>
+                <StyledWhoAmI><span>I am</span> <span>Svetlana Dyablo</span>
                 </StyledWhoAmI>
                 <p>A Web Developer. |</p>
             </SHeroDiv2>
@@ -40,7 +40,7 @@ const HeroContent = () => {
     )
 }
 
-const StyledWhoAmI = styled.ul`
+const StyledWhoAmI = styled.div`
 
   font-weight: ${theme.fontWeight.bold};
   font-size: 50px;
@@ -60,6 +60,10 @@ const StyledWhoAmI = styled.ul`
     gap: 0px;
   }
 
+  @media ${theme.media.mobile349px} {
+    font-size: 32px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -72,40 +76,20 @@ const StyledWhoAmI = styled.ul`
     z-index: -1;
 
     @media ${theme.media.mobile597px} {
-      width: 0;
+      width: 99.5%;
+      height: 20px;
+      top: 127px;
+      right: 1px;
+      bottom: 1px;
+    }
+    @media ${theme.media.mobile459px} {
+      top: 90px;
+    }
+
+    @media ${theme.media.mobile349px} {
+      top: 82px;
     }
   }
-
-  // todo razobratsja
-  @media ${theme.media.mobile597px} {
-
-    span {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 98%;
-        height: 20px;
-        top: 32px;
-        right: 2px;
-        background-color: ${theme.colors.accent};
-        opacity: .8;
-        z-index: -1;
-      }
-    }
-  }
-
-  @media ${theme.media.mobile459px} {
-
-    span {
-      &::before {
-        top: 23px;
-        right: 2px;
-      }
-    }
-  }
-  
 `
 
 
@@ -151,6 +135,10 @@ const SHeroDiv3 = styled.div`
     height: 380px;
   }
 
+  @media screen and (max-width: 368px) {
+    width: 266px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -166,7 +154,7 @@ const SHeroDiv3 = styled.div`
     }
 
     @media screen and (max-width: 368px) {
-      width: 305px;
+      width: 266px;
     }
   }
 
