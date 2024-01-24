@@ -61,9 +61,12 @@ const ImageWrapper = styled.div`
     backdrop-filter: blur(4px);
     opacity: 0;
     transition: all .3s ease-in-out;
+
     &:hover {
       // todo ne rabotaet transition dlja blur effekta - height!
       opacity: 1;
+
+      backdrop-filter: blur(4px);
     }
   }
 

@@ -8,16 +8,18 @@ export const Link = styled.a`
   letter-spacing: 1px;
   text-transform: uppercase;
   color: ${theme.colors.white};
-
+  
   &:hover {
     &:before {
       height: 10px;
+      transform: scale(1);
     }
   }
 
   // TODO transition ne rabotaet tabmenu
   &:before {
     transition: all .3s ease-in-out;
+    transform: scale(0);
     content: '';
     display: inline-block;
     position: absolute;
@@ -26,5 +28,6 @@ export const Link = styled.a`
     right: 0px;
     background-color: ${theme.colors.accent};
     z-index: -2;
+    //height: 0;
   }
 `

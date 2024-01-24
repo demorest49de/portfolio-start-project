@@ -16,8 +16,6 @@ const StyledHeader = styled.header`
 
   position: fixed;
   
-  // todo max-width: 1170px; razobratsja s kostilem
-  //max-width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
