@@ -1,34 +1,49 @@
 import styled, {css} from "styled-components";
 import theme from "../../../styles/Theme.Styled";
+import React, {useState} from "react";
+
 
 export const MobileMenu = (props: { menuItems: string[] }) => {
-    return (
 
-        <StyledNavigation>
-            <MobileMenuPopup isOpen={false}>
-                <StyledListNavigation>
-                    {
-                        props.menuItems.map((item, index) => {
-                            return (
-                                <ListItem key={index}>
-                                    <Link href={`#${item}`} aria-label={item}>
-                                        {item}
-                                        <Mask>
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
+    const onBurgerBtnClick = () => {
+        setMenuIsOpen(!menuIsOpen)
+    }
+    return (
+        <>
+            <StyledNavigation>
+                <MobileMenuPopup isOpen={menuIsOpen} onClick={() => {
+                    setMenuIsOpen(false)
+                }}>
+                    <StyledListNavigation>
+                        {
+                            props.menuItems.map((item, index) => {
+                                return (
+                                    <ListItem key={index}>
+                                        <Link href={`#${item}`} aria-label={item}>
                                             {item}
-                                        </Mask>
-                                        <Mask>
-                                    <span>
-                                        {item}
-                                    </span>
-                                        </Mask>
-                                    </Link>
-                                </ListItem>
-                            )
-                        })
-                    }
-                </StyledListNavigation>
-            </MobileMenuPopup>
-        </StyledNavigation>
+                                            <Mask>
+                                                {item}
+                                            </Mask>
+                                            <Mask>
+                    <span>
+                {item}
+                    </span>
+                                            </Mask>
+                                        </Link>
+                                    </ListItem>
+                                )
+                            })
+                        }
+                    </StyledListNavigation>
+                </MobileMenuPopup>
+            </StyledNavigation>
+
+            <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
+                    <span>
+                    </span>
+            </BurgerButton>
+        </>
     )
 }
 
@@ -43,25 +58,27 @@ const StyledNavigation = styled.nav`
   }
 `
 
-const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  background-color: rgba(31, 31, 32, 0.9);
+const MobileMenuPopup = styled.div
+    <
+    {isOpen: boolean} > `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                background-color: rgba(31, 31, 32, 0.9);
 
-  display: none;
+                display: none;
 
-  // propisivaem chto budet pri otkritii popupa
-  ${props => props.isOpen && css<{ isOpen: boolean }>`
+                // propisivaem chto budet pri otkritii popupa
+                ${props => props.isOpen && css<{ isOpen: boolean }>`
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  `}
-`
+    `}
+                `
 
 const StyledListNavigation = styled.ul`
 
@@ -137,3 +154,58 @@ const ListItem = styled.li`
 const Link = styled.a`
   color: transparent;
 `
+const BurgerButton = styled.button
+    <
+    {isOpen: boolean} > `
+                display: none;
+                width: 50px;
+                height: 50px;
+                z-index: 3;
+                justify-content: center;
+                align-items: center;
+                padding-top: 10px;
+
+                @media ${theme.media.tablet} {
+                display: flex;
+            }
+                // srednjaja cherta burger menu
+                span {
+                display: block;
+                width: 36px;
+                height: 2px;
+                background-color: ${theme.colors.accent};
+
+                ${props => props.isOpen && css<{ isOpen: boolean }>`
+    background-color: rgba(255, 255, 255, 0);
+    //pochemu ne opacity => togda k before i after tozhe primenitsja opacity 
+    `}
+                &::before {
+                content: '';
+                display: block;
+                width: 36px;
+                height: 2px;
+                background-color: ${theme.colors.accent};
+                position: absolute;
+                transform: translateY(-10px);
+
+                ${props => props.isOpen && css<{ isOpen: boolean }>`
+    transform: rotate(-45deg) translateY(0px);
+    `}
+                }
+
+                &::after {
+                content: '';
+                display: block;
+                width: 24px;
+                height: 2px;
+                background-color: ${theme.colors.accent};
+                position: absolute;
+                transform: translateY(10px);
+
+                ${props => props.isOpen && css<{ isOpen: boolean }>`
+    transform: rotate(45deg) translateY(0px);
+    width: 36px;
+    `}
+                }
+                }
+                `

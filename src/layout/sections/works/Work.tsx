@@ -49,25 +49,6 @@ const ImageWrapper = styled.div`
   max-height: 260px;
   margin-bottom: 25px;
 
-  //&::before {
-  //  position: absolute;
-  //  content: '';
-  //  left: 0;
-  //  right: 0;
-  //  top: 0;
-  //  bottom: 0;
-  //
-  //  background-color: rgba(0, 0, 0, 0.3);
-  //  backdrop-filter: blur(4px);
-  //  opacity: 0;
-  //  transition: opacity .3s ease-in-out;
-  //  z-index: 999;
-  //  &:hover {
-  //    // todo ne rabotaet transition dlja blur effekta
-  //    opacity: 1;
-  //  }
-  //}
-
   &::before {
     position: absolute;
     content: '';
