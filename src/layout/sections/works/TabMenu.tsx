@@ -2,15 +2,16 @@ import styled from "styled-components";
 import {Link} from "../../../components/link/Link";
 import theme from "../../../styles/Theme.Styled";
 
-export const TabMenu = (props: { menuItems: string[] }) => {
+
+export const TabMenu = (props: { tabsItems: Array<{ status: "all" | "landing" | "react" | "spa", title: string }> }) => {
     return (
         <StyledTabMenu>
             {
-                props.menuItems.map((item, index) => {
+                props.tabsItems.map((item, index) => {
                     return (
                         <ListItem key={index}>
-                            <Link href={`#${item}`} aria-label={item}>
-                                {item}
+                            <Link href={`#${item.status}`} aria-label={item.title}>
+                                {item.title}
                             </Link>
                         </ListItem>
                     )
@@ -28,7 +29,7 @@ const StyledTabMenu = styled.ul`
   align-items: center;
   justify-content: space-between;
 
-  @media ${theme.media.tablet}{
+  @media ${theme.media.tablet} {
     gap: 10px;
   }
 `
