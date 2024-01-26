@@ -70,18 +70,22 @@ const ListItem = styled.li
   position: relative;
   color: ${theme.colors.accent};
   font-family: Josefin Sans;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 55px;
 
   @media ${theme.media.tablet971px} {
     font-size: 25px;
   }
+`
+
+const Link = styled.a`
+  color: transparent;
 
   &::before {
     content: "";
     display: inline-block;
-    height: 4px;
+    height: 2px;
     background-color: ${theme.colors.accent};
 
     position: absolute;
@@ -109,11 +113,5 @@ const ListItem = styled.li
         transform: skewX(12deg) translateX(-5px);
       }
     }
-
   }
-
-`
-
-const Link = styled.a`
-  color: transparent;
 `

@@ -114,7 +114,7 @@ const ListItem = styled.li
       position: relative;
       color: ${theme.colors.accent};
       font-family: Josefin Sans;
-      font-size: 38px;
+      font-size: 30px;
       font-weight: 400;
       line-height: 55px;
     `
