@@ -55,10 +55,30 @@ const ImageWrapper = styled.div`
     transition: all .3s ease-in-out;
   }
 
+  ${Button} {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 0;
+
+    opacity: 0;
+    height: 43px;
+    transition: opacity 1.3s ease-in-out;
+
+    &:before {
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+
   &:hover {
+    // dlja blura
     &::before {
       opacity: 1;
     }
+    
     ${Button} {
       opacity: 1;
     }
@@ -77,24 +97,6 @@ const ImageWrapper = styled.div`
       &::before {
         opacity: 0;
       }
-    }
-  }
-
-  ${Button} {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding-bottom: 0;
-    
-    opacity: 0;
-    height: 43px;
-    transition: opacity 1.3s ease-in-out;
-
-    &:before {
-      width: 100%;
-      height: 100%;
-      z-index: -1;
     }
   }
 `
