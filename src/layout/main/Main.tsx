@@ -19,15 +19,9 @@ const Main: React.FC<{ menuItems: string[] }> = (props: { menuItems: string[] })
             <Hero headerName={itemsObj.Hero}/>
             <Skills headerName={itemsObj.Skills}/>
             <Works headerName={itemsObj.Works}/>
-            <Testimony headerName={itemsObj.Testimony} paragraphText={`
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci amet,
-             commodi consectetur corporis cum, distinctio dolorem, doloribus earum enim 
-             est fugit harum impedit molestias nam quaerat qui voluptate! Eligendi!
-            `}
-                       spanText={'@ivan ivanow'}
-            />
+            <Testimony headerName={itemsObj.Testimony}/>
             <Contact headerName={itemsObj.Contact}/>
-            <HireMe />
+            <HireMe/>
         </main>
     );
 };

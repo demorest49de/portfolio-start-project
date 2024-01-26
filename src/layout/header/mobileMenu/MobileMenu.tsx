@@ -4,6 +4,7 @@ import React, {useState} from "react";
 
 export const MobileMenu: React.FC<{ menuItems: string[] }> = (props: { menuItems: string[] }) => {
 
+    // todo plavnost' pri otkritii cherez react ili css??
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const onBurgerBtnClick = () => {
         setMenuIsOpen(!menuIsOpen)

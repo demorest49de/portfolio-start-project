@@ -4,14 +4,12 @@ import SectionHeader from "../../../components/headers/SectionHeader";
 import {RombusWithIcon} from "../skills/Skill";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import theme from "../../../styles/Theme.Styled";
-import {Slider} from "../../../components/slider/Slider";
+// import {Slider} from "../../../components/slider/Slider";
 import {Container} from "../../../components/container/Container";
+import {Slider} from '../../../components/slider/Slider';
 
 type TestimonyPropsType = {
     headerName: string,
-    paragraphText: string,
-
-    spanText: string,
 }
 
 export const Testimony = (props: TestimonyPropsType) => {
@@ -23,11 +21,7 @@ export const Testimony = (props: TestimonyPropsType) => {
                 <SectionHeader text={props.headerName} mb={'60px'}/>
                 <FlexWrapper justify={'center'} direction={'column'} align={'center'}>
                     <RombusWithIcon skillIconId={'code'}/>
-                    <Slider
-                        paragraphText={props.paragraphText}
-                        spanText={props.spanText}
-                    />
-
+                    <Slider/>
                 </FlexWrapper>
             </Container>
         </StyledSection>
