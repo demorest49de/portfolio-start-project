@@ -2,7 +2,7 @@ import styled, {css} from "styled-components";
 import theme from "../../../styles/Theme.Styled";
 import React, {useState} from "react";
 
-export const MobileMenu = (props: { menuItems: string[] }) => {
+export const MobileMenu: React.FC<{ menuItems: string[] }> = (props: { menuItems: string[] }) => {
 
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const onBurgerBtnClick = () => {
@@ -45,7 +45,6 @@ export const MobileMenu = (props: { menuItems: string[] }) => {
         </>
     )
 }
-
 
 
 const StyledNavigation = styled.nav

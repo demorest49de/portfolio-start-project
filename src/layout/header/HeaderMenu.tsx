@@ -6,13 +6,13 @@ import {Container} from "../../components/container/Container";
 import {MobileMenu} from "./mobileMenu/MobileMenu";
 
 
-const HeaderMenu = (props: { menuItems: string[] }) => {
+const HeaderMenu: React.FC<{ menuItems: string[] }> = (props: { menuItems: string[] }) => {
 
     return (
         <StyledHeaderContainer>
             <Logo/>
-            <DesktopMenu menuItems={props.menuItems} />
-            <MobileMenu menuItems={props.menuItems} />
+            <DesktopMenu menuItems={props.menuItems}/>
+            <MobileMenu menuItems={props.menuItems}/>
         </StyledHeaderContainer>
     )
 };

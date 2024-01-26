@@ -9,7 +9,7 @@ type SliderPropsType = {
     spanText: string,
 }
 
-export const Slider = (props: SliderPropsType) => {
+export const Slider: React.FC<SliderPropsType> = (props: SliderPropsType) => {
     return (
         <StyledSlider direction={'column'} align={'center'}>
             <Slide justify={'center'}
@@ -37,7 +37,7 @@ export const Slider = (props: SliderPropsType) => {
 };
 
 const StyledSlider = styled(FlexWrapper)`
-    
+
 `
 
 const Slide = styled(FlexWrapper)``
@@ -54,7 +54,7 @@ const StyledSpan = styled.span`
 
 
 const Pagination = styled.div`
-  
+
   span {
     display: inline-block;
     width: 10px;
@@ -65,8 +65,8 @@ const Pagination = styled.div`
     & + span {
       margin-left: 5px;
     }
-    
-    &.active{
+
+    &.active {
       background-color: ${theme.colors.accent};
       width: 25px;
     }

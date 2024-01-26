@@ -2,10 +2,10 @@ import React from 'react'
 import HeaderMenu from "./HeaderMenu";
 import styled from "styled-components";
 
-export const Header = (props: { menuItems: string[] }) => {
+export const Header: React.FC<{ menuItems: string[] }> = (props: { menuItems: string[] }) => {
     return (
         <StyledHeader>
-                <HeaderMenu menuItems={props.menuItems}/>
+            <HeaderMenu menuItems={props.menuItems}/>
         </StyledHeader>
     )
 }
@@ -15,7 +15,7 @@ const StyledHeader = styled.header`
   width: 100%;
 
   position: fixed;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import theme from "../../../styles/Theme.Styled";
+import React from "react";
 
-export const DesktopMenu = (props: { menuItems: string[] }) => {
+export const DesktopMenu: React.FC<{ menuItems: string[] }> = (props: { menuItems: string[] }) => {
     return (
         <StyledNavigation>
             <StyledListNavigation>
