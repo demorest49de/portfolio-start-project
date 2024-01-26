@@ -33,22 +33,14 @@ export const Work = (props: WorkPropsType) => {
     );
 };
 
-const LinkList = styled.ul`
-  display: flex;
-  gap: 20px;
-`
-
-const ListItem = styled.li`
-  position: relative;
-  padding: 0 2px;
-  z-index: 1;
-`
-
+// div dlja dobablenija blur effecta
 const ImageWrapper = styled.div`
   position: relative;
   max-height: 260px;
   margin-bottom: 25px;
 
+  // before rastyagivaetsya na ves div s kartinkoy
+  // i dobavlyaetsya blur s transition  i opacity 0 (0 - nachanl'noe sostoyanie)
   &::before {
     position: absolute;
     content: '';
@@ -60,7 +52,32 @@ const ImageWrapper = styled.div`
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(4px);
     opacity: 0;
-    transition: opacity .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+    ${Button} {
+      opacity: 1;
+    }
+  }
+
+  &:not(:hover) {
+
+    &::before {
+      opacity: 0;
+      transition: 1s ease-in-out;
+    }
+    
+    ${Button} {
+      opacity: 0;
+
+      &::before {
+        opacity: 0;
+      }
+    }
   }
 
   ${Button} {
@@ -68,36 +85,16 @@ const ImageWrapper = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
-    height: 0;
-    transition: all 1.3s ease-in-out;
     padding-bottom: 0;
+    
+    opacity: 0;
+    height: 43px;
+    transition: opacity 1.3s ease-in-out;
 
     &:before {
-      transition: all 1.3s ease-in-out;
       width: 100%;
       height: 100%;
       z-index: -1;
-    }
-  }
-
-  &:hover {
-    ${Button} {
-      opacity: 1;
-      height: 43px;
-    }
-
-    &::before {
-      opacity: 1;
-    }
-  }
-
-  &:not(:hover) {
-    ${Button} {
-      &:before {
-        opacity: 0;
-        height: 0px;
-      }
     }
   }
 `
@@ -131,4 +128,15 @@ const Text = styled.p`
 
 const StyledAboutSubblock = styled.div`
   padding: 0 20px 30px 20px;
+`
+
+const LinkList = styled.ul`
+  display: flex;
+  gap: 20px;
+`
+
+const ListItem = styled.li`
+  position: relative;
+  padding: 0 2px;
+  z-index: 1;
 `
