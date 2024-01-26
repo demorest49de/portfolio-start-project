@@ -19,7 +19,6 @@ const Slide = (props: sliderPropsType) => {
                      mb={'42px'}
         >
             <StyledParagraph
-                // maxWidth={'500px'}
                 maxHeight={'63px'}
                 clamp={'3'}
                 mb={'22px'}
@@ -100,6 +99,7 @@ export const Slider: React.FC = () => (
 
 const StyledSlider = styled(FlexWrapper)`
   max-width: 500px;
+  width: 100%;
 `
 
 const StyledSpan = styled.span`
