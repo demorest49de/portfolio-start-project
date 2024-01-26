@@ -52,7 +52,7 @@ const ImageWrapper = styled.div`
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(4px);
     opacity: 0;
-    transition: all .3s ease-in-out;
+    transition: all 1s ease-in-out;
   }
 
   ${Button} {
@@ -64,7 +64,7 @@ const ImageWrapper = styled.div`
 
     opacity: 0;
     height: 43px;
-    transition: opacity 1.3s ease-in-out;
+    transition: opacity 1s ease-in-out;
 
     &:before {
       width: 100%;
@@ -74,7 +74,6 @@ const ImageWrapper = styled.div`
   }
 
   &:hover {
-    // dlja blura
     &::before {
       opacity: 1;
     }
@@ -85,18 +84,14 @@ const ImageWrapper = styled.div`
   }
 
   &:not(:hover) {
-
     &::before {
       opacity: 0;
-      transition: 1s ease-in-out;
+      transition: 1.5s ease-in-out;
     }
-    
+
     ${Button} {
       opacity: 0;
-
-      &::before {
-        opacity: 0;
-      }
+      transition: 1.5s ease-in-out;
     }
   }
 `

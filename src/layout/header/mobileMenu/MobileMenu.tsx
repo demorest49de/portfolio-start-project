@@ -114,14 +114,20 @@ const ListItem = styled.li
       position: relative;
       color: ${theme.colors.accent};
       font-family: Josefin Sans;
-      font-size: 35px;
+      font-size: 38px;
       font-weight: 400;
       line-height: 55px;
+    `
+
+const Link = styled.a
+    `
+      color: transparent;
+
 
       &::before {
         content: "";
         display: inline-block;
-        height: 4px;
+        height: 2px;
         background-color: ${theme.colors.accent};
 
         position: absolute;
@@ -149,14 +155,7 @@ const ListItem = styled.li
             transform: skewX(12deg) translateX(-5px);
           }
         }
-
       }
-
-    `
-
-const Link = styled.a
-    `
-      color: transparent;
     `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>
@@ -179,6 +178,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>
         height: 2px;
         background-color: ${theme.colors.accent};
 
+
+        transition: .5s ease-in-out;
         ${props => props.isOpen && css<{ isOpen: boolean }>`
           background-color: rgba(255, 255, 255, 0);
           //pochemu ne opacity => togda k before i after tozhe primenitsja opacity 
@@ -191,7 +192,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>
           background-color: ${theme.colors.accent};
           position: absolute;
           transform: translateY(-10px);
-
+          transition: 1s ease-in-out;
+          
           ${props => props.isOpen && css<{ isOpen: boolean }>`
             transform: rotate(-45deg) translateY(0px);
           `}
@@ -205,7 +207,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>
           background-color: ${theme.colors.accent};
           position: absolute;
           transform: translateY(10px);
-
+          transition: 1s ease-in-out;
+          
           ${props => props.isOpen && css<{ isOpen: boolean }>`
             transform: rotate(45deg) translateY(0px);
             width: 36px;
