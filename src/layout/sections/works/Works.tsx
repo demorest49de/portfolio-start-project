@@ -34,13 +34,13 @@ const worksData = [
     {
         title: 'Social Network',
         source: socialImg,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
+        text: 'Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
         type: 'spa',
     },
     {
         title: 'Timer',
         source: timer,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
+        text: 'Lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
         type: 'react',
     },
 ]
@@ -75,7 +75,7 @@ export const Works: React.FC<HeaderPropsType> = (props: HeaderPropsType) => {
             id={props.headerName}>
             <Container>
                 <SectionTitle text={`My ${props.headerName}`} mb={"69px"}/>
-                <FlexWrapper wrap={'wrap'} justify={'center'} minHeight={'30px'}>
+                <FlexWrapper wrap={'wrap'} justify={'center'} align={'center'} minHeight={'30px'} direction={'column'}>
                     <StyledWorkNav>
                         <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus}/>
                     </StyledWorkNav>
