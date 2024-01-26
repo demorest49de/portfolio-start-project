@@ -64,9 +64,9 @@ const Mask = styled.span`
   }
 `
 
-const ListItem = styled.li`
+const ListItem = styled.li
+    `
   position: relative;
-  
   color: ${theme.colors.accent};
   font-family: Josefin Sans;
   font-size: 35px;

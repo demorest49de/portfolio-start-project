@@ -6,7 +6,7 @@ import {Testimony} from "../sections/testimony/Testimony";
 import {Contact} from "../sections/contact/Contact";
 import {HireMe} from '../sections/hireme/HireMe';
 
-const Main = (props: { menuItems: string[] }) => {
+const Main: React.FC<{ menuItems: string[] }> = (props: { menuItems: string[] }) => {
 
     const itemsObj: { [index: string]: string } = {};
 

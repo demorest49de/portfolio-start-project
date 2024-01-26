@@ -11,8 +11,6 @@ import socialImg from './../../../assets/images/0f6c9eae25a0122b383d52e1e9a7182e
 import {HeaderPropsType} from '../../../components/types/types';
 import {TabMenu} from "./TabMenu";
 
-// const tabsItems = ["All", "landing page", "React", "spa"];
-
 const tabsItems: Array<{ status: "all" | "landing" | "react" | "spa", title: string }> = [
     {
         title: "All",
@@ -32,7 +30,7 @@ const tabsItems: Array<{ status: "all" | "landing" | "react" | "spa", title: str
     },
 ]
 
-const workData = [
+const worksData = [
     {
         title: 'Social Network',
         source: socialImg,
@@ -46,7 +44,7 @@ const workData = [
 ]
 
 
-export const Works = (props: HeaderPropsType) => {
+export const Works: React.FC<HeaderPropsType> = (props: HeaderPropsType) => {
     return (
         <StyledSection
             id={props.headerName}
@@ -58,10 +56,10 @@ export const Works = (props: HeaderPropsType) => {
                         <TabMenu tabsItems={tabsItems}/>
                     </StyledWorkNav>
                     <FlexWrapper wrap={'wrap'} gap={'60px'} justify={'center'}>
-                        {workData.map(w => {
-                        return <Work title={w.title}
-                                     src={w.source}
-                                     text={w.text}
+                        {worksData.map((v, i) => {
+                        return <Work key={i} title={v.title}
+                                     src={v.source}
+                                     text={v.text}
                         />
                     })}
 

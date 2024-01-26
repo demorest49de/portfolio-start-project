@@ -7,7 +7,7 @@ import FlexWrapper, {FlexWrapperPropsType} from "../../components/flexWrapper/Fl
 import Icon from "../../components/Icon/Icon";
 import theme from '../../styles/Theme.Styled';
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
         <StyledFooter id={'footer'}>
             <Container>

@@ -9,7 +9,7 @@ type SectionHeaderPropsType = {
     fontSize?: string,
 }
 
-const SectionHeader = (props: SectionHeaderPropsType) => {
+const SectionHeader: React.FC<SectionHeaderPropsType> = (props: SectionHeaderPropsType) => {
     return (
         <FWSectionHeader justify={'center'} direction={"column"} align={'center'} mb={props.mb}>
             <SH2 fontSize={props.fontSize}>

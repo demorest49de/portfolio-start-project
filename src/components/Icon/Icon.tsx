@@ -11,13 +11,12 @@ type IconTypeProps = {
     fill?: string,
 }
 
-const Icon = (props: IconTypeProps) => {
+const Icon: React.FC<IconTypeProps> = (props: IconTypeProps) => {
     return (
         <StyledIcon width={props.width}
                     height={props.height}
                     transform={`rotate(${props.rotate || '0'} 0 0)`}
                     viewBox={`0 0 ${props.width} ${props.height}`}
-                    // fill={props.fill || theme.colors.accent}
                     xmlns="http://www.w3.org/2000/svg">
             <use xlinkHref={`${iconsSprite}#${props.iconId}`}/>
         </StyledIcon>
