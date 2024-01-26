@@ -16,7 +16,7 @@ export const Link = styled.a`
     }
   }
 
-  // TODO transition ne rabotaet tabmenu
+
   &:before {
     transition: all .3s ease-in-out;
     transform: scale(0);

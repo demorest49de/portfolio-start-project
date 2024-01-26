@@ -63,29 +63,31 @@ const ImageWrapper = styled.div`
     transition: opacity .3s ease-in-out;
   }
 
-  &:hover {
-    ${Button} {
-      transition: all .3s ease-in-out;
-      opacity: 1;
-    }
-
-    &::before {
-      opacity: 1;
-    }
-  }
-
   ${Button} {
-    opacity: 0;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
+    height: 0;
+    transition: opacity 1.3s ease-in-out;
+    padding-bottom: 0;
 
     &:before {
       width: 100%;
       height: 100%;
       z-index: -1;
-      min-height: 43px;
+    }
+  }
+
+  &:hover {
+    ${Button}{
+      opacity: 1;
+      height: 43px;
+    }
+    
+    &::before {
+      opacity: 1;
     }
   }
 `

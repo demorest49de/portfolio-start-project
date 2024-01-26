@@ -3,14 +3,20 @@ import {Link} from "../../../components/link/Link";
 import theme from "../../../styles/Theme.Styled";
 
 
-export const TabMenu = (props: { tabsItems: Array<{ status: "all" | "landing" | "react" | "spa", title: string }> }) => {
+type tabMenuPropsType = {
+    tabsItems: Array<{ status: "all" | "landing" | "react" | "spa", title: string }>,
+    changeFilterStatus: (value: "all" | "landing" | "react" | "spa") => void,
+}
+
+
+export const TabMenu = (props: tabMenuPropsType) => {
     return (
         <StyledTabMenu>
             {
                 props.tabsItems.map((item, index) => {
                     return (
                         <ListItem key={index}>
-                            <Link href={`#${item.status}`} aria-label={item.title}>
+                            <Link as={"button"} aria-label={item.title}>
                                 {item.title}
                             </Link>
                         </ListItem>

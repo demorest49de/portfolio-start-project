@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
 import theme from "../../../styles/Theme.Styled";
@@ -35,33 +35,57 @@ const worksData = [
         title: 'Social Network',
         source: socialImg,
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
+        type: 'spa',
     },
     {
         title: 'Timer',
         source: timer,
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
+        type: 'react',
     },
 ]
 
 
 export const Works: React.FC<HeaderPropsType> = (props: HeaderPropsType) => {
+
+    const [currentFilterStatus, setCurrentFilterStatus] = useState('all')
+    let filteredWorks;
+
+    switch (currentFilterStatus) {
+        case 'landing':
+            filteredWorks = worksData.filter(x => x.type === 'landing');
+            break;
+        case 'react':
+            filteredWorks = worksData.filter(x => x.type === 'react');
+            break;
+        case 'spa':
+            filteredWorks = worksData.filter(x => x.type === 'spa');
+            break;
+        default:
+            filteredWorks = worksData;
+            break;
+    }
+
+    function changeFilterStatus(value: "all" | "landing" | "react" | "spa") {
+        setCurrentFilterStatus(value);
+    }
+
     return (
         <StyledSection
-            id={props.headerName}
-        >
+            id={props.headerName}>
             <Container>
                 <SectionTitle text={`My ${props.headerName}`} mb={"69px"}/>
                 <FlexWrapper wrap={'wrap'} justify={'center'} minHeight={'30px'}>
                     <StyledWorkNav>
-                        <TabMenu tabsItems={tabsItems}/>
+                        <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus}/>
                     </StyledWorkNav>
                     <FlexWrapper wrap={'wrap'} gap={'60px'} justify={'center'}>
-                        {worksData.map((v, i) => {
-                        return <Work key={i} title={v.title}
-                                     src={v.source}
-                                     text={v.text}
-                        />
-                    })}
+                        {filteredWorks.map((v, i) => {
+                            return <Work key={i} title={v.title}
+                                         src={v.source}
+                                         text={v.text}
+                            />
+                        })}
 
                     </FlexWrapper>
                 </FlexWrapper>

@@ -9,23 +9,24 @@ export const Button = styled.button`
   text-transform: uppercase;
 
   width: 170px;
-  min-height: 32px;
+  height: 32px;
   position: relative;
   text-align: center;
   padding-bottom: 10px;
   z-index: 1;
+  
 
   &:hover {
     &:before {
       height: 100%;
       width: 100%;
       z-index: -1;
-      min-height: 43px;
-      transition: all .3s ease-in-out;
+      height: 43px;
     }
   }
 
   &:before {
+    transition: all .3s ease-in-out;
     content: '';
     display: inline-block;
     height: 10px;
