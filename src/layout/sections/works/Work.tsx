@@ -70,10 +70,11 @@ const ImageWrapper = styled.div`
     transform: translate(-50%, -50%);
     opacity: 0;
     height: 0;
-    transition: opacity 1.3s ease-in-out;
+    transition: all 1.3s ease-in-out;
     padding-bottom: 0;
 
     &:before {
+      transition: all 1.3s ease-in-out;
       width: 100%;
       height: 100%;
       z-index: -1;
@@ -81,13 +82,22 @@ const ImageWrapper = styled.div`
   }
 
   &:hover {
-    ${Button}{
+    ${Button} {
       opacity: 1;
       height: 43px;
     }
-    
+
     &::before {
       opacity: 1;
+    }
+  }
+
+  &:not(:hover) {
+    ${Button} {
+      &:before {
+        opacity: 0;
+        height: 0px;
+      }
     }
   }
 `
