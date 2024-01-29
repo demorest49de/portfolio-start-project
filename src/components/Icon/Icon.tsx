@@ -1,7 +1,8 @@
 import React from 'react';
 import iconsSprite from '../../assets/images/icons-sprite.svg'
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import theme from "../../styles/Theme.Styled";
+
 
 type IconTypeProps = {
     iconId: string,
@@ -9,12 +10,14 @@ type IconTypeProps = {
     height: string,
     rotate?: string,
     fill?: string,
+    color?: string,
 }
 
 const Icon: React.FC<IconTypeProps> = (props: IconTypeProps) => {
     return (
         <StyledIcon width={props.width}
                     height={props.height}
+                    color={props.color}
                     transform={`rotate(${props.rotate || '0'} 0 0)`}
                     viewBox={`0 0 ${props.width} ${props.height}`}
                     xmlns="http://www.w3.org/2000/svg">
@@ -25,6 +28,17 @@ const Icon: React.FC<IconTypeProps> = (props: IconTypeProps) => {
 
 export default Icon;
 
-const StyledIcon = styled.svg`
+type StyledIconPropsType = {
+    color?: string,
+}
+
+const StyledIcon = styled.svg<StyledIconPropsType>`
+  // color: ${theme.colors.accent} ${props => props.color && css<StyledIconPropsType>`
+  //   color: ${props.color}
+  // `}
+
   color: ${theme.colors.accent}
+  ${props => props.color && css<StyledIconPropsType>`
+    color: ${props.color}
+  `}
 `

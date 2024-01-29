@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import styled from "styled-components";
 import FlexWrapper from "../flexWrapper/FlexWrapper";
 import {Slide} from './Slide';
 import './../../styles/slider.scss'
+import Icon from "../Icon/Icon";
 
 const lorem20 = `Lorem ipsum dolor sit amet, 
             consectetur adipisicing elit.
@@ -24,12 +25,35 @@ const items = [
     />,
 ];
 
+const renderPrevButton = ({isDisabled}: { isDisabled?: boolean | undefined }) => {
+    return <span style={{opacity: isDisabled ? '0.5' : 1}}>
+        <Icon
+            iconId={"slider-prev-button"}
+            width={"34"}
+            height={"66"}
+            color={"#6C0287"}
+        />
+    </span>;
+};
+//
+// const renderNextButton = ({ isDisabled }) => {
+//     return <span style={{ opacity: isDisabled ? '0.5' : 1 }}>&gt;</span>;
+// };
+//
+// const renderPlayPauseButton = ({ isPlaying }) => {
+//     return isPlaying ? 'PAUSE' : 'PLAY';
+// };
+
 export const Slider: React.FC = () => (
     <StyledSlider direction={'column'} align={'center'}>
 
         <AliceCarousel
-            mouseTracking
             items={items}
+            mouseTracking
+            renderPrevButton={renderPrevButton}
+            // renderNextButton={renderNextButton}
+            // renderPlayPauseButton={renderPlayPauseButton}
+
         />
 
     </StyledSlider>
