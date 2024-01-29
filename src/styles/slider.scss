@@ -6,12 +6,12 @@
   }
 }
 
- .alice-carousel__dots-item:not(.__custom).__active {
+.alice-carousel__dots-item:not(.__custom).__active {
   width: 25px;
   background-color: #7572D5;
 }
 
-.alice-carousel__dots-item:not(.__custom):hover{
+.alice-carousel__dots-item:not(.__custom):hover {
   background-color: #8f89fc;
 }
 
@@ -33,4 +33,35 @@
 
 .alice-carousel {
   cursor: pointer;
+}
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  padding: 0;
+  width: fit-content;
+  height: 66px;
+  position: absolute;
+}
+
+.alice-carousel__prev-btn
+{
+  bottom: calc(50% - 33px);
+  left: -27px
+}
+
+.alice-carousel__next-btn
+{
+  bottom: calc(50% - 33px);
+  right: -37px
+}
+
+.next-btn-span,
+.prev-btn-span {
+  height: inherit;
+  display: inline-block;
+}
+
+.next-btn-span svg,
+.prev-btn-span svg {
+  filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 10px #fff) drop-shadow(0px 0px 50px #fff) drop-shadow(0px 0px 80px #fff);
 }

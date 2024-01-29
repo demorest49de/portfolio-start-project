@@ -127,8 +127,15 @@
     </g>
 
     <g id="slider-prev-button">
-        <path d="M25.4558 0L26.5626 1.10678L1.10674 26.5626L-3.31402e-05 25.4558L25.4558 0Z" fill="currentColor"></path>
+        <path d="M25.4558 0L26.5626 1.10678L1.10674 26.5626L-3.31402e-05 25.4558L25.4558 0Z" fill="currentColor"/>
         <path d="M-3.31402e-05 25.4558L1.10674 24.3491L26.5626 49.8049L25.4558 50.9117L-3.31402e-05 25.4558Z"
-              fill="currentColor"></path>
+              fill="currentColor"/>
+    </g>
+
+    <g id="slider-next-button">
+        <path d="M1.45581 0L0.349035 1.10678L25.8049 26.5626L26.9117 25.4558L1.45581 0Z"
+              fill="currentColor"/>
+        <path d="M26.9117 25.4558L25.8049 24.3491L0.349036 49.8049L1.45581 50.9117L26.9117 25.4558Z"
+              fill="currentColor"/>
     </g>
 </svg>
