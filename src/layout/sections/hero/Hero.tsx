@@ -32,17 +32,17 @@ const HeroContent = () => {
                 <p>Hi There</p>
                 <StyledWhoAmI><span>I am</span> <span>Svetlana Dyablo</span>
                 </StyledWhoAmI>
-                <p className={"visually-hidden"}>A Web Developer.</p>
-                <p>
+                <h2 className={"visually-hidden"}>A Web Developer.</h2>
+                <StyledH2Text>
                     <Typewriter
                         options={{
-                            strings:  ['A Web Developer.', 'A React Developer.',  'A FrontEnd Developer.' ],
+                            strings: ['A Web Developer.', 'A React Developer.', 'A FrontEnd Developer.'],
                             autoStart: true,
                             // loop: true,
                             delay: 150,
                         }}
                     />
-                </p>
+                </StyledH2Text>
             </SHeroDiv2>
             <SHeroDiv3>
                 <img src={DeveloperPhoto} alt="Svetlana Dyablo"/>
@@ -114,20 +114,25 @@ const SHeroDiv2 = styled.div`
     margin-bottom: 10px;
   }
 
-  p:nth-child(3) {
-    font-weight: ${theme.fontWeight.regular};
-    font-size: 27px;
-  }
-
   @media screen and (max-width: 597px) {
     p:nth-child(2) {
       font-size: 36px;
       letter-spacing: 1.8px;
     }
 
-    p:nth-child(3) {
+    div:nth-child(3) {
       font-size: 20px;
     }
+  }
+`
+
+const StyledH2Text = styled.h2`
+  
+  font-weight: ${theme.fontWeight.regular};
+  font-size: 27px;
+
+  @media screen and (max-width: 597px) {
+    font-size: 20px;
   }
 `
 
