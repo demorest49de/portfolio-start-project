@@ -32,7 +32,7 @@ const HeroContent = () => {
         <SHeroDiv1>
             <SHeroDiv2>
                 <p>Hi There</p>
-                <StyledWhoAmI><span>I am</span> <span>Svetlana Dyablo</span>
+                <StyledWhoAmI><span>I&nbsp;am</span> <span>Andrey Shevchenko</span>
                 </StyledWhoAmI>
                 <h2 className={"visually-hidden"}>A Web Developer.</h2>
                 <StyledH2Text>
@@ -67,7 +67,7 @@ const HeroContent = () => {
 const StyledWhoAmI = styled.div`
 
   font-weight: ${theme.fontWeight.bold};
-  font-size: 50px;
+  font-size: 42px;
   letter-spacing: 2.5px;
   font-family: ${theme.fonts.JosefinSans};
   max-width: 584px;
@@ -84,16 +84,20 @@ const StyledWhoAmI = styled.div`
     gap: 0px;
   }
 
-  @media ${theme.media.mobile349px} {
-    font-size: 32px;
+  @media screen and (max-width: 461px) {
+    font-size: 26.5px;
+    
+    span {
+      line-height: 33px;
+    }
   }
 
   &::before {
     content: "";
     position: absolute;
-    width: 76%;
+    width: 79%;
     height: 20px;
-    top: 64px;
+    top: 57px;
     right: 1px;
     background-color: ${theme.colors.accent};
     opacity: .8;
@@ -102,18 +106,19 @@ const StyledWhoAmI = styled.div`
     @media ${theme.media.mobile597px} {
       width: 99.5%;
       height: 20px;
-      top: 127px;
+      top: 114px;
       right: 1px;
       bottom: 1px;
     }
-    @media ${theme.media.mobile459px} {
-      top: 90px;
+    @media screen and (max-width: 461px) {
+      top: 97px;
     }
-
-    @media ${theme.media.mobile349px} {
+    
+    @media screen and (max-width: 459px) {
       top: 82px;
     }
   }
+
 `
 
 const SHeroDiv3 = styled.div`
