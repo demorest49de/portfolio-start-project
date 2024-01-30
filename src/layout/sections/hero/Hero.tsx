@@ -4,6 +4,7 @@ import {Container} from "../../../components/container/Container";
 import theme from "../../../styles/Theme.Styled";
 import DeveloperPhoto from '../../../assets/images/7b1f8f2f0bdbca351355bd3fe1aab143.jpg'
 import {HeaderPropsType} from '../../../components/types/types';
+import Typewriter from 'typewriter-effect';
 
 const Hero = (props: HeaderPropsType) => {
     return (
@@ -31,10 +32,20 @@ const HeroContent = () => {
                 <p>Hi There</p>
                 <StyledWhoAmI><span>I am</span> <span>Svetlana Dyablo</span>
                 </StyledWhoAmI>
-                <p>A Web Developer. |</p>
+                <p className={"visually-hidden"}>A Web Developer.</p>
+                <p>
+                    <Typewriter
+                        options={{
+                            strings:  ['A Web Developer.', 'A React Developer.',  'A FrontEnd Developer.' ],
+                            autoStart: true,
+                            // loop: true,
+                            delay: 150,
+                        }}
+                    />
+                </p>
             </SHeroDiv2>
             <SHeroDiv3>
-                    <img src={DeveloperPhoto} alt="Svetlana Dyablo"/>
+                <img src={DeveloperPhoto} alt="Svetlana Dyablo"/>
             </SHeroDiv3>
         </SHeroDiv1>
     )
@@ -46,7 +57,7 @@ const StyledWhoAmI = styled.div`
   font-size: 50px;
   letter-spacing: 2.5px;
   font-family: ${theme.fonts.JosefinSans};
-  max-width: 578px;
+  max-width: 584px;
   margin-bottom: 10px;
   display: flex;
   gap: 15px;
@@ -129,7 +140,7 @@ const SHeroDiv3 = styled.div`
   @media screen and (max-width: 971px) {
     transform: translateX(0px);
   }
-  
+
   @media screen and (max-width: 597px) {
     width: 310px;
     height: 380px;
@@ -176,7 +187,7 @@ const SHeroDiv1 = styled.div`
   @media screen and (max-width: 998px) {
     justify-content: center;
   }
-  
+
   @media screen and (max-width: 414px) {
     justify-content: start;
   }
