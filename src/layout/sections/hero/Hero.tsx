@@ -2,7 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
 import theme from "../../../styles/Theme.Styled";
-import DeveloperPhoto from '../../../assets/images/7b1f8f2f0bdbca351355bd3fe1aab143.jpg'
+import DeveloperPhoto from '../../../assets/images/hero-photo.jpg'
+import backgroundImage from '../../../assets/images/photo-background.jpg'
 import {HeaderPropsType} from '../../../components/types/types';
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
@@ -46,10 +47,14 @@ const HeroContent = () => {
                 </StyledH2Text>
             </SHeroDiv2>
             <Tilt
-                  tiltMaxAngleX={5}
-                  tiltMaxAngleY={5}
-                  gyroscope={true}
-                  trackOnWindow={true}
+                className="parallax-effect-img"
+                tiltMaxAngleX={15}
+                tiltMaxAngleY={15}
+                perspective={800}
+                transitionSpeed={1500}
+                scale={1.1}
+                gyroscope={true}
+                trackOnWindow={true}
             >
                 <SHeroDiv3>
                     <img src={DeveloperPhoto} alt="Svetlana Dyablo"/>
@@ -111,39 +116,6 @@ const StyledWhoAmI = styled.div`
   }
 `
 
-
-const SHeroDiv2 = styled.div`
-  position: relative;
-  margin-bottom: 45px;
-
-  p:nth-child(1) {
-    font-weight: ${theme.fontWeight.regular};
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  @media screen and (max-width: 597px) {
-    p:nth-child(2) {
-      font-size: 36px;
-      letter-spacing: 1.8px;
-    }
-
-    div:nth-child(3) {
-      font-size: 20px;
-    }
-  }
-`
-
-const StyledH2Text = styled.h2`
-
-  font-weight: ${theme.fontWeight.regular};
-  font-size: 27px;
-
-  @media screen and (max-width: 597px) {
-    font-size: 20px;
-  }
-`
-
 const SHeroDiv3 = styled.div`
   width: 350px;
   height: 430px;
@@ -180,13 +152,51 @@ const SHeroDiv3 = styled.div`
     @media screen and (max-width: 368px) {
       width: 266px;
     }
-  }
 
+
+    background-image: url(${backgroundImage});
+    background-size: cover;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    background-repeat: no-repeat;
+  }
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+`
+
+const SHeroDiv2 = styled.div`
+  position: relative;
+  margin-bottom: 45px;
+
+  p:nth-child(1) {
+    font-weight: ${theme.fontWeight.regular};
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 597px) {
+    p:nth-child(2) {
+      font-size: 36px;
+      letter-spacing: 1.8px;
+    }
+
+    div:nth-child(3) {
+      font-size: 20px;
+    }
+  }
+`
+
+const StyledH2Text = styled.h2`
+
+  font-weight: ${theme.fontWeight.regular};
+  font-size: 27px;
+
+  @media screen and (max-width: 597px) {
+    font-size: 20px;
   }
 `
 
