@@ -5,6 +5,7 @@ import theme from "../../../styles/Theme.Styled";
 import DeveloperPhoto from '../../../assets/images/7b1f8f2f0bdbca351355bd3fe1aab143.jpg'
 import {HeaderPropsType} from '../../../components/types/types';
 import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 const Hero = (props: HeaderPropsType) => {
     return (
@@ -44,9 +45,16 @@ const HeroContent = () => {
                     />
                 </StyledH2Text>
             </SHeroDiv2>
-            <SHeroDiv3>
-                <img src={DeveloperPhoto} alt="Svetlana Dyablo"/>
-            </SHeroDiv3>
+            <Tilt
+                  tiltMaxAngleX={5}
+                  tiltMaxAngleY={5}
+                  gyroscope={true}
+                  trackOnWindow={true}
+            >
+                <SHeroDiv3>
+                    <img src={DeveloperPhoto} alt="Svetlana Dyablo"/>
+                </SHeroDiv3>
+            </Tilt>
         </SHeroDiv1>
     )
 }
@@ -127,7 +135,7 @@ const SHeroDiv2 = styled.div`
 `
 
 const StyledH2Text = styled.h2`
-  
+
   font-weight: ${theme.fontWeight.regular};
   font-size: 27px;
 
