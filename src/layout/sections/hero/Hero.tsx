@@ -38,9 +38,9 @@ const HeroContent = () => {
                 <StyledH2Text>
                     <Typewriter
                         options={{
-                            strings: ['A Web Developer.', 'A React Developer.', 'A FrontEnd Developer.'],
+                            strings: ['A Web Developer.', 'A React Developer.', 'A Frontend Developer.'],
                             autoStart: true,
-                            // loop: true,
+                            loop: true,
                             delay: 150,
                         }}
                     />

@@ -11,6 +11,9 @@ type IconTypeProps = {
     rotate?: string,
     fill?: string,
     color?: string,
+    changeViewBox?: boolean,
+    boxWidth?: string,
+    boxHeight?: string,
 }
 
 const Icon: React.FC<IconTypeProps> = (props: IconTypeProps) => {
@@ -19,7 +22,8 @@ const Icon: React.FC<IconTypeProps> = (props: IconTypeProps) => {
                     height={props.height}
                     color={props.color}
                     transform={`rotate(${props.rotate || '0'} 0 0)`}
-                    viewBox={`0 0 ${props.width} ${props.height}`}
+                    //4 0 20 50
+                    viewBox={`0 0 ${props.changeViewBox ? props.boxWidth : props.width} ${props.changeViewBox ? props.boxHeight : props.height}`}
                     xmlns="http://www.w3.org/2000/svg">
             <use xlinkHref={`${iconsSprite}#${props.iconId}`}/>
         </StyledIcon>
@@ -33,12 +37,11 @@ type StyledIconPropsType = {
 }
 
 const StyledIcon = styled.svg<StyledIconPropsType>`
-  // color: ${theme.colors.accent} ${props => props.color && css<StyledIconPropsType>`
+    // color: ${theme.colors.accent} ${props => props.color && css<StyledIconPropsType>`
   //   color: ${props.color}
   // `}
 
-  color: ${theme.colors.accent}
-  ${props => props.color && css<StyledIconPropsType>`
+  color: ${theme.colors.accent} ${props => props.color && css<StyledIconPropsType>`
     color: ${props.color}
   `}
 `

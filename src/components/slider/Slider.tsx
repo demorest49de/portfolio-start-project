@@ -25,7 +25,14 @@ const items = [
     />,
 ];
 
-const sliderBtnHeight = 66;
+const sliderBtns = {
+    width: "33",
+    height: "66",
+    boxWidth: '20',
+    boxHeight: '50',
+    changeViewBox: true,
+    color: '#af05db'
+}
 
 const renderPrevButton = ({isDisabled}: { isDisabled?: boolean | undefined }) => {
     return <span className={'prev-btn-span'} style={
@@ -34,9 +41,12 @@ const renderPrevButton = ({isDisabled}: { isDisabled?: boolean | undefined }) =>
         }}>
         <Icon
             iconId={"slider-prev-button"}
-            width={"34"}
-            height={"66"}
-            color={"#af05db"}
+            width={sliderBtns.width}
+            height={sliderBtns.height}
+            changeViewBox={sliderBtns.changeViewBox}
+            boxWidth={sliderBtns.boxWidth}
+            boxHeight={sliderBtns.boxHeight}
+            color={sliderBtns.color}
         />
     </span>;
 };
@@ -49,16 +59,16 @@ const renderNextButton = ({isDisabled}: { isDisabled?: boolean | undefined }) =>
                  }}>
         <Icon
             iconId={"slider-next-button"}
-            width={"34"}
-            height={`${sliderBtnHeight}`}
-            color={"#af05db"}
+            width={sliderBtns.width}
+            height={sliderBtns.height}
+            changeViewBox={sliderBtns.changeViewBox}
+            boxWidth={sliderBtns.boxWidth}
+            boxHeight={sliderBtns.boxHeight}
+            color={sliderBtns.color}
         />
     </span>;
 };
-//
-// const renderPlayPauseButton = ({ isPlaying }) => {
-//     return isPlaying ? 'PAUSE' : 'PLAY';
-// };
+
 
 
 export const Slider: React.FC = () => (
@@ -69,8 +79,6 @@ export const Slider: React.FC = () => (
             mouseTracking
             renderPrevButton={renderPrevButton}
             renderNextButton={renderNextButton}
-            // renderPlayPauseButton={renderPlayPauseButton}
-
         />
 
     </StyledSlider>
