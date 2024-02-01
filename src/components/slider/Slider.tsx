@@ -62,8 +62,8 @@ const renderNextButton = ({isDisabled}: { isDisabled?: boolean | undefined }) =>
             width={sliderBtns.width}
             height={sliderBtns.height}
             changeViewBox={sliderBtns.changeViewBox}
-            boxWidth={sliderBtns.boxWidth}
-            boxHeight={sliderBtns.boxHeight}
+            boxWidth={'27'}
+            boxHeight={'50'}
             color={sliderBtns.color}
         />
     </span>;
@@ -87,6 +87,6 @@ export const Slider: React.FC = () => (
 
 const StyledSlider = styled(FlexWrapper)`
   max-width: 500px;
-  padding: 0 33px;
+  padding: 0 35px;
   width: 100%;
 `

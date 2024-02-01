@@ -37,10 +37,6 @@ type StyledIconPropsType = {
 }
 
 const StyledIcon = styled.svg<StyledIconPropsType>`
-    // color: ${theme.colors.accent} ${props => props.color && css<StyledIconPropsType>`
-  //   color: ${props.color}
-  // `}
-
   color: ${theme.colors.accent} ${props => props.color && css<StyledIconPropsType>`
     color: ${props.color}
   `}
