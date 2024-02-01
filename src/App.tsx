@@ -3,13 +3,16 @@ import React from "react";
 import Main from "./layout/main/Main";
 import {Footer} from "./layout/footer/Footer";
 import styled from "styled-components";
+import {Particle} from "./components/particle/Particle";
+import Particles from "react-tsparticles";
 
 const menuItems = ["Hero", "Skills", "Works", "Testimony", "Contact"];
 
 function App() {
     return (
         <StyledApp className="App">
-            {/*<Particle/>*/}
+            <Particle />
+
             <h1 className={"visually-hidden"}>Web Developer, Svetlana Dyablo</h1>
             <Header menuItems={menuItems}/>
             <Main menuItems={menuItems}/>
@@ -17,6 +20,12 @@ function App() {
         </StyledApp>
     );
 }
+
+const StyledParticle = styled(Particles)`
+  height: 100vh;
+  //position: absolute;
+`
+
 
 export default App;
 
