@@ -5,11 +5,12 @@ import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import {Button} from "../../../components/button/Button";
 import React from "react";
 import theme from "../../../styles/Theme.Styled";
+import styled from "styled-components";
 
 
 export const HireMe = () => {
     return (
-        <StyledSection id='HireMe' backGrColor={theme.backgroundColor.secondary}>
+        <HireMeStyledSection id='HireMe' backGrColor={theme.backgroundColor.secondary}>
             <Container>
                 <SectionHeader text={
                     "I Am Available For Freelance"
@@ -18,6 +19,10 @@ export const HireMe = () => {
                     <Button>Hire me</Button>
                 </FlexWrapper>
             </Container>
-        </StyledSection>
+        </HireMeStyledSection>
     );
 };
+
+const HireMeStyledSection = styled(StyledSection)`
+position: relative;
+`

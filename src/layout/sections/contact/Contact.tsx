@@ -66,7 +66,7 @@ const StyledField = styled.input`
   padding: 0 15px;
   
   outline: 1px solid ${theme.colors.greyTwo}; 
-
+  position: relative;
   &::placeholder {
     color: ${theme.colors.greyThree};
   }

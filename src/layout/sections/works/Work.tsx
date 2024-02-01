@@ -101,6 +101,7 @@ const StyledWorkCards = styled.div`
   width: 100%;
   max-height: fit-content;
   background-color: ${theme.backgroundColor.secondary};
+  position: relative;
 `
 
 const Image = styled.img`

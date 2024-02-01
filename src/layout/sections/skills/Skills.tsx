@@ -6,6 +6,7 @@ import SectionTitle from '../../../components/headers/SectionHeader';
 import {Skill} from '../skills/Skill';
 import {StyledSection} from "../../../components/section/Section";
 import {HeaderPropsType} from '../../../components/types/types';
+import styled from "styled-components";
 
 export const Skills = (props: HeaderPropsType) => {
     const skillStuff = [
@@ -41,7 +42,7 @@ export const Skills = (props: HeaderPropsType) => {
         },
     ]
     return (
-        <StyledSection
+        <SkillsStyledSection
             id={props.headerName}
             backGrColor={theme.backgroundColor.secondary}
         >
@@ -56,6 +57,10 @@ export const Skills = (props: HeaderPropsType) => {
                     })}
                 </FlexWrapper>
             </Container>
-        </StyledSection>
+        </SkillsStyledSection>
     );
 };
+
+const SkillsStyledSection = styled(StyledSection)`
+position: relative;
+`

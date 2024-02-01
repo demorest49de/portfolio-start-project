@@ -7,6 +7,7 @@ import theme from "../../../styles/Theme.Styled";
 // import {Slider} from "../../../components/slider/Slider";
 import {Container} from "../../../components/container/Container";
 import {Slider} from '../../../components/slider/Slider';
+import styled from "styled-components";
 
 type TestimonyPropsType = {
     headerName: string,
@@ -14,7 +15,7 @@ type TestimonyPropsType = {
 
 export const Testimony = (props: TestimonyPropsType) => {
     return (
-        <StyledSection id={props.headerName}
+        <TestimonyStyledSection id={props.headerName}
                        backGrColor={theme.backgroundColor.secondary}
         >
             <Container>
@@ -24,6 +25,10 @@ export const Testimony = (props: TestimonyPropsType) => {
                     <Slider/>
                 </FlexWrapper>
             </Container>
-        </StyledSection>
+        </TestimonyStyledSection>
     );
 };
+
+const TestimonyStyledSection = styled(StyledSection)`
+position: relative;
+`
