@@ -37,7 +37,7 @@ const StyledNavigation = styled.nav`
   width: fit-content;
 
   @media ${theme.media.tablet} {
-    display: none;
+    //display: none;
   }
 `
 

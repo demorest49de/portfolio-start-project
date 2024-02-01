@@ -50,7 +50,7 @@ export const MobileMenu: React.FC<{ menuItems: string[] }> = (props: { menuItems
 
 const StyledNavigation = styled.nav
     `
-      display: none;
+      //display: none;
       padding: 0;
       width: 0;
       height: 0;
