@@ -2,6 +2,8 @@ import styled from "styled-components";
 import theme from "../../../styles/Theme.Styled";
 import React from "react";
 
+import {Link} from "react-scroll"
+
 export const DesktopMenu: React.FC<{ menuItems: string[] }> = (props: { menuItems: string[] }) => {
     return (
         <StyledNavigation>
@@ -10,7 +12,12 @@ export const DesktopMenu: React.FC<{ menuItems: string[] }> = (props: { menuItem
                     props.menuItems.map((item, index) => {
                         return (
                             <ListItem key={index}>
-                                <Link href={`#${item}`} aria-label={item}>
+                                <NavLink to={item}
+                                         activeClass="active"
+                                         smooth={true}
+                                         spy={true}
+                                         // href={`#${item}`}
+                                         aria-label={item}>
                                     {item}
                                     <Mask>
                                         {item}
@@ -20,7 +27,7 @@ export const DesktopMenu: React.FC<{ menuItems: string[] }> = (props: { menuItem
                                         {item}
                                     </span>
                                     </Mask>
-                                </Link>
+                                </NavLink>
                             </ListItem>
                         )
                     })
@@ -79,7 +86,7 @@ const ListItem = styled.li
   }
 `
 
-const Link = styled.a`
+const NavLink = styled(Link)`
   color: transparent;
 
   &::before {
@@ -97,7 +104,7 @@ const Link = styled.a`
   }
 
 
-  &:hover {
+  &:hover, &.active {
     &::before {
       transition: all .3s ease-in-out;
       transform: scale(1);
