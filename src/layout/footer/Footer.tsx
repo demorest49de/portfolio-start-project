@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
         <StyledFooter id={'footer'}>
             <Container>
                 <SectionHeader text={
-                    "Svetlana"
+                    "Andrey"
                 } mb={'26px'} fontSize={'22px'}/>
                 <FlexWrapper justify={'center'}>
                     <SocialsList>
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
                     fontWeight={'400'}
                     color={'rgba(255, 255, 255, 0.50)'}
                 >
-                    © 2023 Svetlana Dyablo, All Rights Reserved.
+                    © 2023 Andrey Shevchenko, All Rights Reserved.
                 </StyledParagraph>
             </Container>
         </StyledFooter>
