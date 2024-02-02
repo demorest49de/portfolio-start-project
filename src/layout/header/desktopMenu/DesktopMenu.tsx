@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import theme from "../../../styles/Theme.Styled";
 import React from "react";
-
-import {Link} from "react-scroll"
+import {Link} from "react-scroll";
 
 export const DesktopMenu: React.FC<{ menuItems: string[] }> = (props: { menuItems: string[] }) => {
     return (

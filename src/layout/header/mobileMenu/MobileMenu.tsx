@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 import theme from "../../../styles/Theme.Styled";
 import React, {useState} from "react";
+import {Link} from "react-scroll";
 
 export const MobileMenu: React.FC<{ menuItems: string[] }> = (props: { menuItems: string[] }) => {
 
@@ -20,7 +21,11 @@ export const MobileMenu: React.FC<{ menuItems: string[] }> = (props: { menuItems
                             props.menuItems.map((item, index) => {
                                 return (
                                     <ListItem key={index}>
-                                        <Link href={`#${item}`} aria-label={item}>
+                                        <NavLink
+                                            // to={item}
+                                            //      smooth={true}
+                                            href={`#${item}`}
+                                            aria-label={item}>
                                             {item}
                                             <Mask>
                                                 {item}
@@ -30,7 +35,7 @@ export const MobileMenu: React.FC<{ menuItems: string[] }> = (props: { menuItems
                                                 {item}
                                             </span>
                                             </Mask>
-                                        </Link>
+                                        </NavLink>
                                     </ListItem>
                                 )
                             })
@@ -120,7 +125,8 @@ const ListItem = styled.li
       line-height: 55px;
     `
 
-const Link = styled.a
+// const NavLink = styled(Link)
+const NavLink = styled.a
     `
       color: transparent;
 
