@@ -41,13 +41,13 @@ const worksData = [
         title: 'Timer',
         source: timer,
         text: 'Lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
-        type: 'landing',
+        type: 'react',
     },
     {
         title: 'Social Network',
         source: socialImg,
         text: 'Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
-        type: 'landing',
+        type: 'spa',
     },
     {
         title: 'Timer',
@@ -99,11 +99,15 @@ export const Works: React.FC<HeaderPropsType> = (props: HeaderPropsType) => {
             id={props.headerName}>
             <Container>
                 <SectionTitle text={`My ${props.headerName}`} mb={"69px"}/>
+
                 <FlexWrapper wrap={'wrap'} justify={'center'} align={'center'} minHeight={'30px'} direction={'column'}>
+
                     <StyledWorkNav>
                         <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus}/>
                     </StyledWorkNav>
+
                     <FlexWrapper wrap={'wrap'} gap={'60px'} justify={'center'}>
+
                         {filteredWorks.map((v, i) => {
                             return <Work key={i} title={v.title}
                                          src={v.source}

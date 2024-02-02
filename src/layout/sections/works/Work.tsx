@@ -12,7 +12,7 @@ type WorkPropsType = {
 
 export const Work = (props: WorkPropsType) => {
     return (
-        <StyledWorkCards>
+        <StyledWork>
             <ImageWrapper>
                 <Image src={props.src} alt=""/>
                 <Button>view project</Button>
@@ -29,7 +29,7 @@ export const Work = (props: WorkPropsType) => {
                     </ListItem>
                 </LinkList>
             </StyledAboutSubblock>
-        </StyledWorkCards>
+        </StyledWork>
     );
 };
 
@@ -96,7 +96,7 @@ const ImageWrapper = styled.div`
   }
 `
 
-const StyledWorkCards = styled.div`
+const StyledWork = styled.div`
   max-width: 540px;
   width: 100%;
   max-height: fit-content;
