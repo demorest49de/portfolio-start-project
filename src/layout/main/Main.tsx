@@ -18,10 +18,10 @@ const Main: React.FC<{ menuItems: string[] }> = (props: { menuItems: string[] })
         <main>
             <Hero headerName={itemsObj.Hero}/>
             <Skills headerName={itemsObj.Skills}/>
-            {/*<Works headerName={itemsObj.Works}/>*/}
-            {/*<Testimony headerName={itemsObj.Testimony}/>*/}
-            {/*<Contact headerName={itemsObj.Contact}/>*/}
-            {/*<HireMe/>*/}
+            <Works headerName={itemsObj.Works}/>
+            <Testimony headerName={itemsObj.Testimony}/>
+            <Contact headerName={itemsObj.Contact}/>
+            <HireMe/>
         </main>
     );
 };

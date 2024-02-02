@@ -41,6 +41,30 @@ const worksData = [
         title: 'Timer',
         source: timer,
         text: 'Lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
+        type: 'landing',
+    },
+    {
+        title: 'Social Network',
+        source: socialImg,
+        text: 'Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
+        type: 'landing',
+    },
+    {
+        title: 'Timer',
+        source: timer,
+        text: 'Lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
+        type: 'react',
+    },
+    {
+        title: 'Social Network',
+        source: socialImg,
+        text: 'Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
+        type: 'spa',
+    },
+    {
+        title: 'Timer',
+        source: timer,
+        text: 'Lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Autem cupiditate doloribus, ea eaque eius eum facere fugit laboriosam magni molestiae nemo nostrum quaerat quam quos recusandae reprehenderit sit tempore! Ullam.',
         type: 'react',
     },
 ]
