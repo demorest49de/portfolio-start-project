@@ -4,7 +4,6 @@ import SectionHeader from "../../../components/headers/SectionHeader";
 import {RombusWithIcon} from "../skills/Skill";
 import FlexWrapper from "../../../components/flexWrapper/FlexWrapper";
 import theme from "../../../styles/Theme.Styled";
-// import {Slider} from "../../../components/slider/Slider";
 import {Container} from "../../../components/container/Container";
 import {Slider} from '../../../components/slider/Slider';
 import styled from "styled-components";
