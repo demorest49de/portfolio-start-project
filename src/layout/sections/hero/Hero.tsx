@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
 import theme from "../../../styles/Theme.Styled";
@@ -7,6 +7,8 @@ import backgroundImage from '../../../assets/images/photo-background.jpg'
 import {HeaderPropsType} from '../../../components/types/types';
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
+import {MobileMenu} from "../../header/mobileMenu/MobileMenu";
+import {DesktopMenu} from "../../header/desktopMenu/DesktopMenu";
 
 const Hero = (props: HeaderPropsType) => {
     return (
@@ -28,6 +30,7 @@ const SHeroSection = styled.section
     `
 
 const HeroContent = () => {
+
     return (
         <SHeroDiv1>
             <SHeroDiv2>
@@ -46,6 +49,53 @@ const HeroContent = () => {
                     />
                 </StyledH2Text>
             </SHeroDiv2>
+            {/*<Tilt*/}
+            {/*    className="parallax-effect-img"*/}
+            {/*    tiltMaxAngleX={15}*/}
+            {/*    tiltMaxAngleY={15}*/}
+            {/*    perspective={800}*/}
+            {/*    transitionSpeed={1500}*/}
+            {/*    scale={1.1}*/}
+            {/*    gyroscope={true}*/}
+            {/*    trackOnWindow={true}*/}
+            {/*    tiltEnable={false}*/}
+            {/*>*/}
+            {/*    <SHeroDiv3>*/}
+            {/*        <img src={DeveloperPhoto} alt="Svetlana Dyablo"/>*/}
+            {/*    </SHeroDiv3>*/}
+            {/*</Tilt>*/}
+            <TiltChanger/>
+        </SHeroDiv1>
+    )
+}
+
+const HeroImageWrapper = () => {
+    return <SHeroDiv3>
+        <img src={DeveloperPhoto} alt="Svetlana Dyablo"/>
+    </SHeroDiv3>
+}
+
+const TiltChanger = () => {
+    const breakPoint = 768;
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setWidth(window.innerWidth)
+        })
+    })
+
+    return width < breakPoint ?
+        <Tilt
+            className="parallax-effect-img"
+            tiltMaxAngleX={0}
+            tiltMaxAngleY={15}
+            gyroscope={true}
+        >
+            <HeroImageWrapper/>
+        </Tilt>
+        :
+        <>
             <Tilt
                 className="parallax-effect-img"
                 tiltMaxAngleX={15}
@@ -56,12 +106,10 @@ const HeroContent = () => {
                 gyroscope={true}
                 trackOnWindow={true}
             >
-                <SHeroDiv3>
-                    <img src={DeveloperPhoto} alt="Svetlana Dyablo"/>
-                </SHeroDiv3>
+                <HeroImageWrapper/>
             </Tilt>
-        </SHeroDiv1>
-    )
+        </>
+        ;
 }
 
 const StyledWhoAmI = styled.div`
@@ -86,7 +134,7 @@ const StyledWhoAmI = styled.div`
 
   @media screen and (max-width: 461px) {
     font-size: 26.5px;
-    
+
     span {
       line-height: 33px;
     }
@@ -113,7 +161,7 @@ const StyledWhoAmI = styled.div`
     @media screen and (max-width: 461px) {
       top: 97px;
     }
-    
+
     @media screen and (max-width: 459px) {
       top: 82px;
     }
