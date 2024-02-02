@@ -1,10 +1,16 @@
 import React from 'react';
 import Icon from "../Icon/Icon";
 import styled from "styled-components";
+import {animateScroll as scroll} from "react-scroll";
 
 const Logo: React.FC = () => {
+    const options = {
+        // your options here, for example:
+        duration: 500,
+        smooth: true,
+    };
     return (
-        <SLogo href="#">
+        <SLogo onClick={() => scroll.scrollToTop(options)}>
             <Icon iconId={'code'} width={'50'} height={'50'}/>
         </SLogo>
     );
