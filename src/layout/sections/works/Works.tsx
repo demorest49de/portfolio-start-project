@@ -106,21 +106,30 @@ export const Works: React.FC<HeaderPropsType> = (props: HeaderPropsType) => {
                         <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus}/>
                     </StyledWorkNav>
 
-                    <FlexWrapper wrap={'wrap'} gap={'60px'} justify={'space-between'}>
+                    <StyledWorkFlexWrapper wrap={'wrap'} gap={'60px'} justify={'space-between'}>
 
                         {filteredWorks.map((v, i) => {
                             return <Work key={i} title={v.title}
                                          src={v.source}
                                          text={v.text}
+                                         id={i}
                             />
                         })}
 
-                    </FlexWrapper>
+                    </StyledWorkFlexWrapper>
                 </FlexWrapper>
             </Container>
         </StyledSection>
     );
 };
+
+
+const StyledWorkFlexWrapper = styled(FlexWrapper)`
+  width: 100%;
+  @media ${theme.media.mobile689px} {
+    justify-content: center;
+  }
+`
 
 
 const StyledWorkNav = styled.nav`

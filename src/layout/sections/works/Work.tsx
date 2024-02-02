@@ -1,53 +1,72 @@
 import styled from "styled-components";
 import theme from "../../../styles/Theme.Styled";
 import {Link} from "../../../components/link/Link";
-import { Button } from "../../../components/button/Button";
+import {Button} from "../../../components/button/Button";
+import {AnimatePresence, motion} from "framer-motion";
 
 
 type WorkPropsType = {
     title: string,
     text: string,
     src: string,
+    id: number,
 }
 
 export const Work = (props: WorkPropsType) => {
+
     return (
-        <StyledWork>
+        <AnimatePresence>
+            <StyledWork
+                layout={true}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                key={props.id}
+            >
 
-            <ImageWrapper>
-                <Image src={props.src} alt=""/>
-                <Button>view project</Button>
-            </ImageWrapper>
+                <ImageWrapper>
+                    <Image src={props.src} alt=""/>
+                    <Button>view project</Button>
+                </ImageWrapper>
 
-            <StyledAboutSubblock>
-                <Title>{props.title}</Title>
-                <Text>{props.text}</Text>
-                <LinkList>
-                    <ListItem>
-                        <Link href={'#'}>demo</Link>
-                    </ListItem>
-                    <ListItem>
-                        <Link href={'#'}>code</Link>
-                    </ListItem>
-                </LinkList>
-            </StyledAboutSubblock>
+                <StyledAboutSubblock>
+                    <Title>{props.title}</Title>
+                    <Text>{props.text}</Text>
+                    <LinkList>
+                        <ListItem>
+                            <Link href={'#'}>demo</Link>
+                        </ListItem>
+                        <ListItem>
+                            <Link href={'#'}>code</Link>
+                        </ListItem>
+                    </LinkList>
+                </StyledAboutSubblock>
 
-        </StyledWork>
+            </StyledWork>
+        </AnimatePresence>
     );
 };
 
-const StyledWork = styled.div`
+const StyledWork = styled(motion.div)`
   max-width: 540px;
   width: 300px;
+  flex-grow: 1;
   max-height: fit-content;
   background-color: ${theme.backgroundColor.secondary};
   position: relative;
+
+  @media ${theme.media.mobile689px} {
+    width: 100%;
+  }
+
+  @media ${theme.media.mobile349px} {
+    width: unset;
+  }
 `
 
 const Image = styled.img`
-  max-width: 540px;
   width: 100%;
-  max-height: inherit;
+  height: inherit;
   object-fit: cover;
   object-position: left center;
 `
@@ -55,7 +74,7 @@ const Image = styled.img`
 // div dlja dobablenija blur effecta
 const ImageWrapper = styled.div`
   position: relative;
-  max-height: 260px;
+  height: 260px;
   margin-bottom: 25px;
 
   // before rastyagivaetsya na ves div s kartinkoy
@@ -96,7 +115,7 @@ const ImageWrapper = styled.div`
     &::before {
       opacity: 1;
     }
-    
+
     ${Button} {
       opacity: 1;
     }
