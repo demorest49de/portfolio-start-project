@@ -31,7 +31,7 @@ export const RombusWithIcon = (props: {skillIconId: string}) => {
 
 
 const StyledSkillBlock = styled(FlexWrapper)`
-  width: 380px;
+  max-width: 380px;
   height: 338px;
   padding: 70px 20px 0px 20px;
 `

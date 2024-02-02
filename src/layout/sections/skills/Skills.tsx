@@ -10,6 +10,7 @@ import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
 
 export const Skills = (props: HeaderPropsType) => {
+
     const skillStuff = [
         {
             skillIconId: "code",
