@@ -7,6 +7,7 @@ import {Skill} from '../skills/Skill';
 import {StyledSection} from "../../../components/section/Section";
 import {HeaderPropsType} from '../../../components/types/types';
 import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 
 export const Skills = (props: HeaderPropsType) => {
     const skillStuff = [
@@ -49,12 +50,14 @@ export const Skills = (props: HeaderPropsType) => {
             <Container>
                 <SectionTitle text={`My ${props.headerName}`} mb={'80px'}/>
                 <FlexWrapper wrap={'wrap'} justify={'center'}>
-                    {skillStuff.map((item, index) => {
-                        return <Skill key={index} skillIconId={item.skillIconId}
-                                      skillTitle={item.skillTitle}
-                                      skillText={item.skillText}
-                        />
-                    })}
+                    <Fade cascade={true} damping={0.25}>
+                        {skillStuff.map((item, index) => {
+                            return <Skill key={index} skillIconId={item.skillIconId}
+                                          skillTitle={item.skillTitle}
+                                          skillText={item.skillText}
+                            />
+                        })}
+                    </Fade>
                 </FlexWrapper>
             </Container>
         </SkillsStyledSection>
@@ -62,5 +65,5 @@ export const Skills = (props: HeaderPropsType) => {
 };
 
 const SkillsStyledSection = styled(StyledSection)`
-position: relative;
+  position: relative;
 `
