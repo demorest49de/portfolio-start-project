@@ -104,7 +104,7 @@ const TiltChanger = () => {
                 transitionSpeed={1500}
                 scale={1.1}
                 gyroscope={true}
-                trackOnWindow={true}
+                // trackOnWindow={true}
             >
                 <HeroImageWrapper/>
             </Tilt>
