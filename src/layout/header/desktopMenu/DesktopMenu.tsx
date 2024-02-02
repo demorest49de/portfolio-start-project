@@ -80,7 +80,7 @@ const ListItem = styled.li
   font-weight: 400;
   line-height: 55px;
 
-  @media ${theme.media.tablet971px} {
+  @media ${theme.media.desktop971px} {
     font-size: 25px;
   }
 `

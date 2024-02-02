@@ -9,48 +9,41 @@ type WorkPropsType = {
     title: string,
     text: string,
     src: string,
-    id: number,
 }
 
 export const Work = (props: WorkPropsType) => {
 
     return (
-        <AnimatePresence>
-            <StyledWork
-                layout={true}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                key={props.id}
-            >
+        <StyledWork>
 
-                <ImageWrapper>
-                    <Image src={props.src} alt=""/>
-                    <Button>view project</Button>
-                </ImageWrapper>
+            <ImageWrapper>
+                <Image src={props.src} alt=""/>
+                <Button>view project</Button>
+            </ImageWrapper>
 
-                <StyledAboutSubblock>
-                    <Title>{props.title}</Title>
-                    <Text>{props.text}</Text>
-                    <LinkList>
-                        <ListItem>
-                            <Link href={'#'}>demo</Link>
-                        </ListItem>
-                        <ListItem>
-                            <Link href={'#'}>code</Link>
-                        </ListItem>
-                    </LinkList>
-                </StyledAboutSubblock>
+            <StyledAboutSubblock>
+                <Title>{props.title}</Title>
+                <Text>{props.text}</Text>
+                <LinkList>
+                    <ListItem>
+                        <Link href={'#'}>demo</Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link href={'#'}>code</Link>
+                    </ListItem>
+                </LinkList>
+            </StyledAboutSubblock>
 
-            </StyledWork>
-        </AnimatePresence>
+        </StyledWork>
+
     );
 };
 
-const StyledWork = styled(motion.div)`
+const StyledWork = styled.div`
   max-width: 540px;
-  width: 300px;
+  //width: 300px;
   flex-grow: 1;
+  width: 100%;
   max-height: fit-content;
   background-color: ${theme.backgroundColor.secondary};
   position: relative;
@@ -68,7 +61,7 @@ const Image = styled.img`
   width: 100%;
   height: inherit;
   object-fit: cover;
-  object-position: left center;
+  object-position: center center;
 `
 
 // div dlja dobablenija blur effecta
