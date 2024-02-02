@@ -13,10 +13,12 @@ type WorkPropsType = {
 export const Work = (props: WorkPropsType) => {
     return (
         <StyledWork>
+
             <ImageWrapper>
                 <Image src={props.src} alt=""/>
                 <Button>view project</Button>
             </ImageWrapper>
+
             <StyledAboutSubblock>
                 <Title>{props.title}</Title>
                 <Text>{props.text}</Text>
@@ -29,9 +31,26 @@ export const Work = (props: WorkPropsType) => {
                     </ListItem>
                 </LinkList>
             </StyledAboutSubblock>
+
         </StyledWork>
     );
 };
+
+const StyledWork = styled.div`
+  max-width: 540px;
+  width: 100%;
+  max-height: fit-content;
+  background-color: ${theme.backgroundColor.secondary};
+  position: relative;
+`
+
+const Image = styled.img`
+  max-width: 540px;
+  width: 100%;
+  max-height: inherit;
+  object-fit: cover;
+  object-position: left center;
+`
 
 // div dlja dobablenija blur effecta
 const ImageWrapper = styled.div`
@@ -94,22 +113,6 @@ const ImageWrapper = styled.div`
       transition: 1.5s ease-in-out;
     }
   }
-`
-
-const StyledWork = styled.div`
-  max-width: 540px;
-  width: 100%;
-  max-height: fit-content;
-  background-color: ${theme.backgroundColor.secondary};
-  position: relative;
-`
-
-const Image = styled.img`
-  max-width: 540px;
-  width: 100%;
-  max-height: inherit;
-  object-fit: cover;
-  object-position: left center;
 `
 
 const Title = styled.h3`
