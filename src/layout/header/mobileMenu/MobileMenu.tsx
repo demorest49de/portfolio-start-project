@@ -22,6 +22,7 @@ export const MobileMenu: React.FC<{ menuItems: string[] }> = (props: { menuItems
                                 return (
                                     <ListItem key={index}>
                                         <NavLink
+                                            // TODO ne rabotaet s mobilemenu react-scroll
                                             // to={item}
                                             //      smooth={true}
                                             href={`#${item}`}
