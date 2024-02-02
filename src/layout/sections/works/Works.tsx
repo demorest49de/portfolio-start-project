@@ -106,7 +106,7 @@ export const Works: React.FC<HeaderPropsType> = (props: HeaderPropsType) => {
                         <TabMenu tabsItems={tabsItems} changeFilterStatus={changeFilterStatus}/>
                     </StyledWorkNav>
 
-                    <FlexWrapper wrap={'wrap'} gap={'60px'} justify={'center'}>
+                    <FlexWrapper wrap={'wrap'} gap={'60px'} justify={'space-between'}>
 
                         {filteredWorks.map((v, i) => {
                             return <Work key={i} title={v.title}

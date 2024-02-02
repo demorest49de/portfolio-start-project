@@ -38,7 +38,7 @@ export const Work = (props: WorkPropsType) => {
 
 const StyledWork = styled.div`
   max-width: 540px;
-  width: 100%;
+  width: 300px;
   max-height: fit-content;
   background-color: ${theme.backgroundColor.secondary};
   position: relative;
